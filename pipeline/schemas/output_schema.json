@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SEO Data Schema",
+  "description": "Schema for seo.json configuration file",
+  "type": "object",
+  "required": ["site", "seo"],
+  "properties": {
+    "site": {
+      "type": "object",
+      "required": ["name", "url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "author": { "type": "string" },
+        "twitterHandle": { "type": "string" },
+        "defaultImage": { "type": "string" }
+      }
+    },
+    "seo": {
+      "type": "object",
+      "required": ["metaTitle", "metaDescription", "focusKeyword"],
+      "properties": {
+        "metaTitle": { 
+          "type": "string", 
+          "minLength": 1, 
+          "maxLength": 60,
+          "description": "Page title, max 60 characters"
+        },
+        "metaDescription": { 
+          "type": "string", 
+          "minLength": 1, 
+          "maxLength": 160,
+          "description": "Meta description, max 160 characters"
+        },
+        "focusKeyword": { 
+          "type": "string", 
+          "minLength": 1,
+          "description": "Primary target keyword"
+        },
+        "lsiKeywords": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Latent Semantic Indexing keywords"
+        },
+        "targetAudience": { "type": "string" },
+        "pageGoal": { 
+          "type": "string", 
+          "enum": ["ToFu", "MoFu", "BoFu"],
+          "description": "Marketing funnel stage"
+        },
+        "competitorSentence": { "type": "string" }
+      }
+    },
+    "keywords": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "description": "Page section content (preserved during updates)"
+    },
+    "_lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of last update"
+    }
+  }
+}

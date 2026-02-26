@@ -1,0 +1,50 @@
+pipeline:
+  name: "AutoSEO Pipeline"
+  version: "1.0.0"
+
+input:
+  directory: "data/input"
+  processed_directory: "data/processed"
+  cache_directory: "data/cache"
+  max_keywords: 100
+  required_columns:
+    - "Keyword"
+    - "Search Volume"
+    - "Keyword Difficulty"
+    - "CPC"
+    - "Position"
+    - "URL"
+    - "Trends"
+    - "Keyword Intents"
+    - "SERP Features by Keyword"
+
+llm:
+  provider: "n8n"
+  endpoint: "https://n8n.crownitsolution.com/webhook/f33386cb-3518-4a91-b928-011a6de0589e"
+  timeout: 120
+  batch_size: 30
+  max_retries: 3
+  retry_delay: 2
+
+generation:
+  meta_title_max_length: 60
+  meta_description_max_length: 160
+  primary_keywords_count: 15
+  lsi_keywords_count: 20
+
+output:
+  site: "salamtalk"
+  seo_json_path: "sites/salamtalk/src/data/seo.json"
+  backup_enabled: true
+  backup_directory: "data/backups"
+
+git:
+  auto_commit: true
+  auto_push: true
+  branch: "main"
+  commit_message_template: "chore(seo): update SEO content - {timestamp}"
+
+logging:
+  level: "INFO"
+  directory: "logs"
+  file_prefix: "pipeline"
