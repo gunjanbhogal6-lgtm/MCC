@@ -1,0 +1,32 @@
+---
+import seo from "../data/seo.json";
+const faqData = seo.sections.faq;
+---
+
+<section class="py-24 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        {faqData.title}
+      </h2>
+      <p class="text-gray-600">
+        Everything you need to know about SalamTalk AI Pro
+      </p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="space-y-4">
+      {faqData.items.map((faq, index) => (
+        <details class="bg-white rounded-lg shadow-md hover:shadow-lg transition border border-gray-200">
+          <summary class="cursor-pointer p-6 font-bold text-gray-900 flex items-center justify-between">
+            {faq.question}
+            <span class="text-indigo-600 text-xl">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 border-t border-gray-200 pt-4">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

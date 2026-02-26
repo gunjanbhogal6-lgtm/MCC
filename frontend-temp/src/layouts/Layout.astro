@@ -1,0 +1,25 @@
+---
+import '../styles/global.css'
+
+import SEO from "../components/SEO.astro";
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <SEO
+      title={title}
+      description={description}
+      pathname={Astro.url.pathname}
+    />
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <slot />
+  </body>
+</html>

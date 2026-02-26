@@ -1,0 +1,32 @@
+---
+import seo from "../data/seo.json";
+const clarityData = seo.sections.h2_clarity;
+---
+
+<section class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- H2 Title with Problem Statement -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        {clarityData.title}
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        {clarityData.description}
+      </p>
+    </div>
+
+    <!-- H3 Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+      {clarityData.h3_items.map((item, index) => (
+        <div class="border-l-4 border-indigo-600 pl-6 py-4">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            {item.heading}
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            {item.content}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
