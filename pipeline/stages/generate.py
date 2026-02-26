@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from ..prompts.seo_prompts import SEO_SYSTEM_PROMPT, get_seo_prompt, validate_seo_content
+from ..prompts.seo_prompts import SEO_MASTER_PROMPT, get_seo_prompts, validate_seo_content
 from ..utils.config import get_config
 from ..utils.json_handler import extract_json_from_text
 from ..utils.llm_client import LLMClient
@@ -82,7 +82,7 @@ class GenerateStage:
         result.total_batches = num_batches
         all_generated = []
         
-        prompt = system_prompt or SEO_SYSTEM_PROMPT
+        sys_prompt = system_prompt or SEO_MASTER_PROMPT
         
         for i in range(num_batches):
             start_idx = i * batch_sz
@@ -93,7 +93,7 @@ class GenerateStage:
             
             csv_text = batch_df.to_csv(index=False)
             
-            llm_result = self.llm_client.generate(csv_text, prompt)
+            llm_result = self.llm_client.generate(csv_text, sys_prompt)
             
             if llm_result["success"] and llm_result["response"]:
                 try:
