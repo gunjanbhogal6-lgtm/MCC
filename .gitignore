@@ -58,3 +58,15 @@ data/cache/*.json
 data/processed/*.csv
 data/backups/*.json
 !data/*/.gitkeep
+
+# Data files
+*.txt
+!requirements.txt
+
+# IDE configs
+opencode.json
+
+# Temporary/dev directories
+frontend-temp/
+sys-prompt gen/
+salamtalk1/

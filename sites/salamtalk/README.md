@@ -1,46 +1,66 @@
-# Astro Starter Kit: Basics
+# SalamTalk Frontend
 
-```sh
-npm create astro@latest -- --template basics
+SalamTalk business communication platform website built with Astro.
+
+## Tech Stack
+
+- **Framework**: Astro 5
+- **Styling**: Tailwind CSS 4
+- **Deployment**: Docker + Nginx
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Project Structure
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```
+salamtalk/
+├── src/
+│   ├── components/     # Astro components
+│   ├── pages/          # Route pages
+│   ├── layouts/        # Page layouts
+│   ├── data/           # SEO data (seo.json)
+│   └── styles/         # Global styles
+├── public/             # Static assets
+├── Dockerfile          # Docker configuration
+└── nginx.conf          # Nginx config for production
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Pages
 
-## 🧞 Commands
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage |
+| `/about` | About page |
+| `/features` | Features page |
+| `/pricing` | Pricing page |
+| `/contact` | Contact page |
 
-All commands are run from the root of the project, from a terminal:
+## SEO Data
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+SEO metadata is stored in `src/data/seo.json` and is automatically updated by the AutoSEO pipeline.
 
-## 👀 Want to learn more?
+## Deployment
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Deployed as a separate service in Coolify with the following configuration:
+
+- Build Pack: Dockerfile
+- Port: 80
+- Watch Paths: `sites/salamtalk/**`
+
+## Contributing
+
+See root README.md for project-wide contribution guidelines.
