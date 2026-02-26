@@ -1,10 +1,10 @@
 ---
 import seo from "../data/seo.json";
 
-const { pathname = "/" } = Astro.props;
+const { pathname = "/", title: propTitle, description: propDescription } = Astro.props;
 
-const title = seo.seo.metaTitle;
-const description = seo.seo.metaDescription;
+const title = propTitle || seo.seo.metaTitle;
+const description = propDescription || seo.seo.metaDescription;
 
 const allKeywords = [
   ...seo.keywords.primary,
