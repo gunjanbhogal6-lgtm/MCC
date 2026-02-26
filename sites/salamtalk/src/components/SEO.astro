@@ -19,6 +19,7 @@ const canonicalURL = `${seo.site.url}${pathname}`;
 <meta name="description" content={description} />
 <meta name="keywords" content={allKeywords} />
 <meta name="author" content={seo.site.author} />
+<meta name="robots" content="index, follow" />
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Open Graph -->
@@ -27,6 +28,14 @@ const canonicalURL = `${seo.site.url}${pathname}`;
 <meta property="og:image" content={`${seo.site.url}${seo.site.defaultImage}`} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content={seo.site.name} />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={seo.site.twitterHandle} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={`${seo.site.url}${seo.site.defaultImage}`} />
 
 <!-- Structured Data -->
 <script
@@ -38,6 +47,12 @@ const canonicalURL = `${seo.site.url}${pathname}`;
     applicationCategory: "BusinessApplication",
     description: description,
     keywords: allKeywords,
-    url: seo.site.url
+    url: seo.site.url,
+    offers: {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free trial available"
+    }
   })}
 />

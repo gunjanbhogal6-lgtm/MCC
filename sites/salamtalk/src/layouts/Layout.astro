@@ -2,6 +2,7 @@
 import '../styles/global.css'
 
 import SEO from "../components/SEO.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 
 const { title, description } = Astro.props;
 ---
@@ -17,6 +18,8 @@ const { title, description } = Astro.props;
       description={description}
       pathname={Astro.url.pathname}
     />
+    
+    <GoogleAnalytics />
   </head>
 
   <body class="bg-gray-50 text-gray-800">
