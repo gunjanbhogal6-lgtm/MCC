@@ -2,9 +2,14 @@
 Main Pipeline Orchestrator - Coordinates all stages
 """
 
+import os
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any, Dict, List, Optional
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from .stages.deploy import DeployStage, DeployResult
 from .stages.generate import GenerateStage, GenerateResult

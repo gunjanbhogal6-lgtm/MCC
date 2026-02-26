@@ -9,6 +9,14 @@ from pathlib import Path
 from typing import List, Optional, Tuple
 
 
+def get_github_credentials() -> Tuple[Optional[str], Optional[str], Optional[str]]:
+    """Get GitHub credentials from environment variables"""
+    username = os.getenv("GITHUB_USERNAME")
+    token = os.getenv("GITHUB_TOKEN")
+    repo = os.getenv("GITHUB_REPO")
+    return username, token, repo
+
+
 class GitManager:
     """Manage git operations for the pipeline"""
     
@@ -23,6 +31,7 @@ class GitManager:
         self.branch = branch
         self.auto_commit = auto_commit
         self.auto_push = auto_push
+        self._configured_remote = False
     
     def _run_command(
         self,
@@ -38,6 +47,24 @@ class GitManager:
         )
         
         return result.returncode, result.stdout.strip(), result.stderr.strip()
+    
+    def _ensure_remote_credentials(self):
+        """Ensure remote URL has credentials for push"""
+        if self._configured_remote:
+            return
+        
+        username, token, repo = get_github_credentials()
+        
+        if username and token and repo:
+            code, stdout, _ = self._run_command(["remote", "get-url", "origin"], check=False)
+            
+            if code == 0:
+                current_url = stdout
+                if "github.com" in current_url and "@" not in current_url:
+                    auth_url = f"https://{username}:{token}@github.com/{repo}.git"
+                    self._run_command(["remote", "set-url", "origin", auth_url], check=False)
+        
+        self._configured_remote = True
     
     def is_git_repo(self) -> bool:
         """Check if the path is a git repository"""
@@ -123,6 +150,7 @@ class GitManager:
         Push to remote repository.
         Returns (success, message)
         """
+        self._ensure_remote_credentials()
         target_branch = branch or self.branch
         code, stdout, stderr = self._run_command(
             ["push", remote, target_branch],
@@ -165,11 +193,12 @@ class GitManager:
             return False, "Failed to create commit", None
         
         if self.auto_push:
+            self._ensure_remote_credentials()
             success, push_msg = self.push()
             if not success:
                 return False, f"Commit created but push failed: {push_msg}", commit_hash
         
-        return True, f"Successfully committed and pushed", commit_hash
+        return True, "Successfully committed and pushed", commit_hash
     
     def get_last_commit_info(self) -> Optional[dict]:
         """Get information about the last commit"""
