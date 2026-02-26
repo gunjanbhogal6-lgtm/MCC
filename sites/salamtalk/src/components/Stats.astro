@@ -1,0 +1,24 @@
+---
+import seo from "../data/seo.json";
+const statsData = seo.sections.stats;
+---
+
+<section class="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white border-y">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
+
+    {statsData.map((stat) => (
+      <div>
+        <h3 class="text-5xl font-bold mb-2">
+          {stat.number}
+        </h3>
+        <p class="text-lg font-semibold mb-3">
+          {stat.label}
+        </p>
+        <span class="text-xs bg-white bg-opacity-20 text-white px-3 py-1 rounded-full inline-block">
+          {stat.keywords}
+        </span>
+      </div>
+    ))}
+
+  </div>
+</section>

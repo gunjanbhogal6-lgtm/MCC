@@ -1,0 +1,32 @@
+---
+import seo from "../data/seo.json";
+const speedData = seo.sections.h2_speed;
+---
+
+<section class="py-24 bg-gradient-to-r from-indigo-50 to-purple-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- H2 Title with Competitive Advantage -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        {speedData.title}
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        {speedData.description}
+      </p>
+    </div>
+
+    <!-- H3 Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+      {speedData.h3_items.map((item) => (
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-indigo-600 mb-3">
+            {item.heading}
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            {item.content}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

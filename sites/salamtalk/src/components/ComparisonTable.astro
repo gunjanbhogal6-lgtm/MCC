@@ -1,0 +1,59 @@
+---
+import seo from "../data/seo.json";
+const tableData = seo.sections.comparison_table;
+---
+
+<section class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        {tableData.title}
+      </h2>
+      <p class="text-gray-600 text-lg">
+        See why SalamTalk AI Pro outperforms legacy systems
+      </p>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="overflow-x-auto rounded-lg border border-gray-200 shadow-lg">
+      <table class="w-full">
+        <thead>
+          <tr class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+            {tableData.headers.map((header) => (
+              <th class="px-6 py-4 text-left font-bold whitespace-nowrap">
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {tableData.rows.map((row, index) => (
+            <tr class={index % 2 === 0 ? "bg-gray-50" : "bg-white"} class:list={{"border-b": index < tableData.rows.length - 1}}>
+              <td class="px-6 py-4 font-semibold text-gray-900">
+                {row.feature}
+              </td>
+              <td class="px-6 py-4 text-green-600 font-semibold">
+                {row.salamtalk}
+              </td>
+              <td class="px-6 py-4 text-red-600 font-semibold">
+                {row.traditional}
+              </td>
+              <td class="px-6 py-4 text-yellow-600 font-semibold">
+                {row.generic}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-gray-600 mb-4">
+        Ready to upgrade? SalamTalk AI Pro is built for teams that can't afford to miss opportunities.
+      </p>
+      <a href="/contact" class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">
+        See SalamTalk in Action
+      </a>
+    </div>
+  </div>
+</section>
