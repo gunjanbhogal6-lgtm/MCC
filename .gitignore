@@ -10,6 +10,7 @@ develop-eggs/
 dist/
 downloads/
 eggs/
+opencode.json
 .eggs/
 lib/
 lib64/
@@ -62,6 +63,7 @@ data/backups/*.json
 # Data files
 *.txt
 !requirements.txt
+!**/robots.txt
 
 # IDE configs
 opencode.json
