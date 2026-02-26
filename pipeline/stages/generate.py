@@ -9,36 +9,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+from ..prompts.seo_prompts import SEO_SYSTEM_PROMPT, get_seo_prompt, validate_seo_content
 from ..utils.config import get_config
 from ..utils.json_handler import extract_json_from_text
 from ..utils.llm_client import LLMClient
 from ..utils.logger import get_logger
-
-
-SEO_SYSTEM_PROMPT = """You are an expert SEO content specialist. Analyze the provided keyword data and generate optimized SEO metadata for a business communication platform.
-
-Your task is to generate SEO-optimized content based on keyword research data. Focus on keywords that represent the best opportunity (high search volume, lower difficulty).
-
-OUTPUT FORMAT: Return ONLY valid JSON with this exact structure, no markdown, no comments:
-{
-  "metaTitle": "Page title (max 60 chars, include primary keyword naturally)",
-  "metaDescription": "Compelling description (max 160 chars, include CTA)",
-  "focusKeyword": "The primary target keyword",
-  "lsiKeywords": ["related keyword 1", "related keyword 2", "..."],
-  "primaryKeywords": ["primary keyword 1", "primary keyword 2", "..."],
-  "targetAudience": "Brief description of target audience",
-  "pageGoal": "MoFu/BoFu/ToFu (marketing funnel stage)",
-  "competitorSentence": "Brief mention of competitor landscape"
-}
-
-RULES:
-1. Meta title must be under 60 characters
-2. Meta description must be under 160 characters and include a clear value proposition
-3. Focus on keywords with high opportunity (volume vs difficulty balance)
-4. Include 15-20 LSI keywords semantically related to the main topic
-5. Primary keywords should be the top 10-15 keywords by opportunity
-6. Ensure all content is relevant to AI-powered business communication
-7. Return ONLY the JSON object, no additional text"""
 
 
 @dataclass
@@ -142,17 +117,20 @@ class GenerateStage:
         
         if all_generated:
             merged_content = self._merge_generated_content(all_generated)
-            result.generated_content = merged_content
-            self._generated_content = merged_content
+            validated_content = validate_seo_content(merged_content)
+            result.generated_content = validated_content
+            self._generated_content = validated_content
             result.success = True
             
             cache_dir = self.config.cache_dir
             cache_file = os.path.join(cache_dir, "generated_content.json")
             with open(cache_file, 'w', encoding='utf-8') as f:
-                json.dump(merged_content, f, indent=2)
+                json.dump(validated_content, f, indent=2)
             result.output_path = cache_file
             
             self.logger.success(f"Generated SEO content from {result.successful_batches}/{num_batches} batches")
+            self.logger.info(f"Meta Title: {validated_content.get('metaTitle', '')[:60]} chars")
+            self.logger.info(f"Meta Description: {len(validated_content.get('metaDescription', ''))} chars")
         else:
             result.errors.append("No content was successfully generated")
         
@@ -174,11 +152,26 @@ class GenerateStage:
         all_lsi = set()
         all_primary = set()
         
+        best_title = ""
+        best_title_score = 0
+        best_desc = ""
+        best_desc_score = 0
+        
         for content in content_list:
-            if not merged["metaTitle"] and content.get("metaTitle"):
-                merged["metaTitle"] = content["metaTitle"]
-            if not merged["metaDescription"] and content.get("metaDescription"):
-                merged["metaDescription"] = content["metaDescription"]
+            title = content.get("metaTitle", "")
+            if 50 <= len(title) <= 60 and len(title) > best_title_score:
+                best_title = title
+                best_title_score = len(title)
+            elif not merged["metaTitle"] and title:
+                merged["metaTitle"] = title
+            
+            desc = content.get("metaDescription", "")
+            if 150 <= len(desc) <= 160 and len(desc) > best_desc_score:
+                best_desc = desc
+                best_desc_score = len(desc)
+            elif not merged["metaDescription"] and desc:
+                merged["metaDescription"] = desc
+            
             if not merged["focusKeyword"] and content.get("focusKeyword"):
                 merged["focusKeyword"] = content["focusKeyword"]
             if not merged["targetAudience"] and content.get("targetAudience"):
@@ -190,6 +183,11 @@ class GenerateStage:
                 all_lsi.update(content["lsiKeywords"])
             if content.get("primaryKeywords"):
                 all_primary.update(content["primaryKeywords"])
+        
+        if best_title:
+            merged["metaTitle"] = best_title
+        if best_desc:
+            merged["metaDescription"] = best_desc
         
         merged["lsiKeywords"] = list(all_lsi)[:25]
         merged["primaryKeywords"] = list(all_primary)[:15]
