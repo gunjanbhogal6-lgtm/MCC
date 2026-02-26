@@ -17,8 +17,8 @@ COPY run.py .
 # Create necessary directories
 RUN mkdir -p data/input data/processed data/cache data/backups logs
 
-# Expose port
-EXPOSE 8000
+# Expose port 9000 (Coolify uses 8000)
+EXPOSE 9000
 
-# Start server
-CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+# Start server on port 9000
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "9000"]
