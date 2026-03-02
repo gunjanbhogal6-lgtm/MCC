@@ -185,3 +185,9 @@ pytest tests/ --cov=pipeline
 ## License
 
 MIT
+
+
+```bash
+export VERTEX_ACCESS_TOKEN=$(gcloud auth print-access-token)
+opencode
+```

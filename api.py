@@ -9,8 +9,10 @@ Endpoints:
 - POST /pipeline/deploy     - Run deploy stage
 - GET  /pipeline/status     - Get pipeline status
 - POST /upload              - Upload CSV file
+- GET  /dashboard           - Dashboard UI
 """
 
+import json
 import os
 import shutil
 import tempfile
@@ -18,8 +20,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, File, HTTPException, UploadFile, BackgroundTasks
+from fastapi import FastAPI, File, HTTPException, UploadFile, BackgroundTasks, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from pipeline import Pipeline
@@ -28,6 +32,7 @@ from pipeline.stages.generate import GenerateResult
 from pipeline.stages.ingest import IngestResult
 from pipeline.stages.transform import TransformResult
 from pipeline.utils.config import get_config
+from dashboard_api import router as dashboard_router
 
 app = FastAPI(
     title="AutoSEO Pipeline API",
@@ -42,6 +47,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(dashboard_router)
 
 pipeline = Pipeline()
 config = get_config()
@@ -111,7 +118,9 @@ async def root():
     return {
         "name": "AutoSEO Pipeline API",
         "version": "1.0.0",
-        "status": "running"
+        "status": "running",
+        "dashboard": "/dashboard",
+        "docs": "/docs"
     }
 
 
@@ -244,7 +253,7 @@ async def run_deploy(request: StageRequest):
 @app.post("/upload")
 async def upload_csv(file: UploadFile = File(...)):
     """Upload a CSV file to the input directory"""
-    if not file.filename.endswith('.csv'):
+    if not file.filename or not file.filename.endswith('.csv'):
         raise HTTPException(status_code=400, detail="Only CSV files are allowed")
     
     input_dir = Path(config.input_dir)
@@ -278,6 +287,16 @@ async def get_current_seo():
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
+
+
+@app.get("/dashboard", response_class=HTMLResponse)
+async def serve_dashboard():
+    """Serve the dashboard UI"""
+    dashboard_path = Path(__file__).parent / "dashboard" / "index.html"
+    if dashboard_path.exists():
+        with open(dashboard_path, 'r', encoding='utf-8') as f:
+            return HTMLResponse(content=f.read())
+    return HTMLResponse(content="<h1>Dashboard not found</h1>", status_code=404)
 
 
 if __name__ == "__main__":

@@ -10,7 +10,6 @@ develop-eggs/
 dist/
 downloads/
 eggs/
-opencode.json
 .eggs/
 lib/
 lib64/
@@ -60,11 +59,6 @@ data/processed/*.csv
 data/backups/*.json
 !data/*/.gitkeep
 
-# Data files
-*.txt
-!requirements.txt
-!**/robots.txt
-
 # IDE configs
 opencode.json
 
@@ -72,3 +66,7 @@ opencode.json
 frontend-temp/
 sys-prompt gen/
 salamtalk1/
+
+# Large JSON files (not needed in repo)
+schema.json
+workflow.json

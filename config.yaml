@@ -1,6 +1,6 @@
 pipeline:
   name: "AutoSEO Pipeline"
-  version: "1.0.0"
+  version: "2.0.0"  # Updated for Phase 1 enhancements
 
 input:
   directory: "data/input"
@@ -17,6 +17,22 @@ input:
     - "Trends"
     - "Keyword Intents"
     - "SERP Features by Keyword"
+
+# DATA COLLECTION - New Phase 1 Features
+data_collection:
+  enabled: true
+  gsc_enabled: true
+  serp_api_enabled: true
+  sample_serp_keywords: 20  # Limit SERP API calls due to rate limits
+  default_date_range_days: 28  # Default to last 28 days
+
+google_search_console:
+  credentials_path: "credentials/gsc_credentials.json"
+  token_path: "credentials/gsc_token.json"
+
+serp_api:
+  # Set SERPAPI_KEY environment variable
+  rate_limit_warning_threshold: 10  # Warn when remaining < 10
 
 llm:
   provider: "n8n"
