@@ -61,12 +61,14 @@ class PipelineRequest(BaseModel):
     dry_run: bool = False
     no_deploy: bool = False
     input_file: Optional[str] = None
+    force_push: bool = True
 
 
 class StageRequest(BaseModel):
     input_file: Optional[str] = None
     max_keywords: Optional[int] = None
     dry_run: bool = False
+    force_push: bool = True
 
 
 class PipelineResponse(BaseModel):
@@ -158,7 +160,8 @@ async def run_pipeline(request: PipelineRequest, background_tasks: BackgroundTas
             input_csv=request.input_file,
             max_keywords=request.max_keywords,
             dry_run=request.dry_run,
-            no_deploy=request.no_deploy
+            no_deploy=request.no_deploy,
+            force_push=request.force_push
         )
         
         last_run_result = {
@@ -237,7 +240,7 @@ async def run_transform():
 async def run_deploy(request: StageRequest):
     """Run only the deploy stage"""
     try:
-        result = pipeline.run_deploy_only(dry_run=request.dry_run)
+        result = pipeline.run_deploy_only(dry_run=request.dry_run, force_push=request.force_push)
         
         return PipelineResponse(
             success=result.success,

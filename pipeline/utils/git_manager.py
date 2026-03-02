@@ -144,7 +144,8 @@ class GitManager:
     def push(
         self,
         remote: str = "origin",
-        branch: Optional[str] = None
+        branch: Optional[str] = None,
+        force: bool = False
     ) -> Tuple[bool, str]:
         """
         Push to remote repository.
@@ -152,14 +153,27 @@ class GitManager:
         """
         self._ensure_remote_credentials()
         target_branch = branch or self.branch
-        code, stdout, stderr = self._run_command(
-            ["push", remote, target_branch],
-            check=False
-        )
+        
+        args = ["push", remote, target_branch]
+        if force:
+            args.insert(1, "--force")
+        
+        code, stdout, stderr = self._run_command(args, check=False)
         
         if code == 0:
             return True, f"Pushed to {remote}/{target_branch}"
         return False, stderr or "Push failed"
+    
+    def force_push(
+        self,
+        remote: str = "origin",
+        branch: Optional[str] = None
+    ) -> Tuple[bool, str]:
+        """
+        Force push to remote repository.
+        Returns (success, message)
+        """
+        return self.push(remote, branch, force=True)
     
     def pull(self, remote: str = "origin", branch: Optional[str] = None) -> bool:
         """Pull latest changes from remote"""
@@ -170,7 +184,8 @@ class GitManager:
     def auto_deploy(
         self,
         files: Optional[List[str]] = None,
-        message_template: str = "chore(seo): update SEO content - {timestamp}"
+        message_template: str = "chore(seo): update SEO content - {timestamp}",
+        force_push: bool = False
     ) -> Tuple[bool, str, Optional[str]]:
         """
         Automatically add, commit, and push changes.
@@ -194,7 +209,7 @@ class GitManager:
         
         if self.auto_push:
             self._ensure_remote_credentials()
-            success, push_msg = self.push()
+            success, push_msg = self.push(force=force_push)
             if not success:
                 return False, f"Commit created but push failed: {push_msg}", commit_hash
         

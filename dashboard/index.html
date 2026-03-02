@@ -265,6 +265,10 @@
                                     <input type="checkbox" id="skipDeploy" class="mr-2">
                                     <span class="text-gray-700">Skip Auto Deploy</span>
                                 </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="forcePush" class="mr-2" checked>
+                                    <span class="text-gray-700">Force Push (auto-resolve conflicts)</span>
+                                </label>
                             </div>
                         </div>
 
@@ -893,6 +897,7 @@
         async function runPipeline() {
             const dryRun = document.getElementById('dryRun').checked;
             const skipDeploy = document.getElementById('skipDeploy').checked;
+            const forcePush = document.getElementById('forcePush').checked;
             const maxKeywords = document.getElementById('maxKeywords').value;
             
             showToast('Starting pipeline...', 'info');
@@ -905,7 +910,8 @@
                     body: JSON.stringify({
                         max_keywords: parseInt(maxKeywords),
                         dry_run: dryRun,
-                        no_deploy: skipDeploy
+                        no_deploy: skipDeploy,
+                        force_push: forcePush
                     })
                 });
                 
@@ -1042,7 +1048,8 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         dry_run: false,
-                        no_deploy: false
+                        no_deploy: false,
+                        force_push: true
                     })
                 });
                 

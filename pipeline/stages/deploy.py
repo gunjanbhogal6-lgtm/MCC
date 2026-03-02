@@ -38,7 +38,8 @@ class DeployStage:
         self,
         files: Optional[List[str]] = None,
         commit_message: Optional[str] = None,
-        dry_run: bool = False
+        dry_run: bool = False,
+        force_push: bool = False
     ) -> DeployResult:
         """
         Run the deploy stage.
@@ -47,6 +48,7 @@ class DeployStage:
             files: Specific files to commit (None = all changes)
             commit_message: Custom commit message
             dry_run: If True, don't actually commit/push
+            force_push: If True, use force push to overwrite remote
             
         Returns:
             DeployResult with deployment information
@@ -94,9 +96,13 @@ class DeployStage:
         
         result.commit_message = message
         
+        if force_push:
+            self.logger.info("Force push enabled - will overwrite remote changes")
+        
         success, msg, commit_hash = self.git_manager.auto_deploy(
             files=files,
-            message_template=message if not commit_message else commit_message
+            message_template=message if not commit_message else commit_message,
+            force_push=force_push
         )
         
         if success:

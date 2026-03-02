@@ -71,7 +71,8 @@ class Pipeline:
         max_keywords: Optional[int] = None,
         skip_stages: Optional[List[str]] = None,
         dry_run: bool = False,
-        no_deploy: bool = False
+        no_deploy: bool = False,
+        force_push: bool = True
     ) -> PipelineResult:
         """
         Run the complete pipeline.
@@ -82,6 +83,7 @@ class Pipeline:
             skip_stages: List of stage names to skip
             dry_run: If True, don't make actual changes
             no_deploy: If True, skip the deploy stage
+            force_push: If True, use force push to overwrite remote
             
         Returns:
             PipelineResult with complete execution details
@@ -141,7 +143,7 @@ class Pipeline:
             
             # Stage 4: Deploy
             if not no_deploy and "deploy" not in skip_stages and not dry_run:
-                deploy_result = self._deploy_stage.run()
+                deploy_result = self._deploy_stage.run(force_push=force_push)
                 result.deploy = deploy_result
                 
                 if not deploy_result.success:
@@ -200,10 +202,11 @@ class Pipeline:
     def run_deploy_only(
         self,
         files: Optional[List[str]] = None,
-        dry_run: bool = False
+        dry_run: bool = False,
+        force_push: bool = True
     ) -> DeployResult:
         """Run only the deploy stage"""
-        return self._deploy_stage.run(files=files, dry_run=dry_run)
+        return self._deploy_stage.run(files=files, dry_run=dry_run, force_push=force_push)
     
     def _build_summary(self, result: PipelineResult) -> Dict[str, Any]:
         """Build execution summary"""
