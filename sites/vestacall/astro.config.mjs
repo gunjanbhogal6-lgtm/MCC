@@ -37,6 +37,7 @@ function customSitemap() {
 
 export default defineConfig({
   site: 'https://vestacall.com',
+  output: 'static',
   integrations: [
     tailwind(),
     customSitemap(),
@@ -56,7 +57,6 @@ export default defineConfig({
       Image: true,
     }),
   ],
-  output: 'static',
   build: {
     inlineStylesheets: 'auto',
   },

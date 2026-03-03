@@ -4,15 +4,17 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "prebuild": "astro check",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 SKIP_DEPENDENCY_INSTALL=true astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
+    "@astrojs/cloudflare": "^10.4.2",
     "@astrojs/sitemap": "^3.7.0",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.16.19",
+    "astro": "4.16.19",
     "astro-breadcrumbs": "^3.3.3",
     "astro-capo": "^0.0.1",
     "astro-compress": "^2.3.9",
