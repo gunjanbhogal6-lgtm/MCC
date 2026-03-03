@@ -1,0 +1,273 @@
+{
+  "navbar": {
+    "logo": {
+      "text": "VestaCall",
+      "image": "/logo.svg",
+      "imageWhite": "/white-loog.png"
+    },
+    "cta": {
+      "primary": {
+        "text": "Start Free Trial",
+        "url": "/#signup"
+      },
+      "secondary": {
+        "text": "Book a Demo",
+        "url": "/contact"
+      }
+    },
+    "menu": [
+      {
+        "label": "Products",
+        "url": "#",
+        "dropdown": [
+          {
+            "name": "Cloud PBX",
+            "url": "/cloud-pbx",
+            "description": "Enterprise virtual phone system",
+            "keywords": "Virtual Phone System",
+            "icon": "Phone"
+          },
+          {
+            "name": "SIP Trunking",
+            "url": "/sip-trunking",
+            "description": "Wholesale VoIP termination",
+            "keywords": "VoIP Termination",
+            "icon": "Network"
+          },
+          {
+            "name": "Conversational AI",
+            "url": "/conversational-ai",
+            "description": "AI voice bots & agents",
+            "keywords": "AI Voice Bot",
+            "icon": "MessageSquare"
+          },
+          {
+            "name": "Cloud Contact Center",
+            "url": "/products/cloud-contact-center",
+            "description": "Complete CCaaS solution",
+            "keywords": "CCaaS",
+            "icon": "Headset"
+          },
+          {
+            "name": "Live Analytics",
+            "url": "/live-analytics",
+            "description": "Real-time call analytics",
+            "keywords": "Call Analytics",
+            "icon": "BarChart3"
+          }
+        ]
+      },
+      {
+        "label": "Solutions",
+        "url": "#",
+        "dropdown": [
+          {
+            "name": "Inbound Support",
+            "url": "/solutions/inbound-support",
+            "description": "Customer support solutions",
+            "keywords": "Customer Support",
+            "icon": "LifeBuoy"
+          },
+          {
+            "name": "Outbound Sales",
+            "url": "/solutions/outbound-sales",
+            "description": "Sales acceleration",
+            "keywords": "Sales Acceleration",
+            "icon": "Target"
+          },
+          {
+            "name": "Global Remote Teams",
+            "url": "/solutions/global-remote-teams",
+            "description": "Remote work solutions",
+            "keywords": "Remote Work",
+            "icon": "Globe"
+          },
+          {
+            "name": "Enterprise",
+            "url": "/solutions/enterprise",
+            "description": "Enterprise solutions",
+            "keywords": "Enterprise",
+            "icon": "Building2"
+          }
+        ]
+      },
+      {
+        "label": "Resources",
+        "url": "#",
+        "dropdown": [
+          {
+            "name": "Blog",
+            "url": "/resources/blog",
+            "description": "Insights & guides",
+            "keywords": "Insights",
+            "icon": "FileText"
+          },
+          {
+            "name": "Case Studies",
+            "url": "/resources/case-studies",
+            "description": "Success stories",
+            "keywords": "Success Stories",
+            "icon": "Lightbulb"
+          },
+          {
+            "name": "Help Center",
+            "url": "/resources/help-center",
+            "description": "Documentation",
+            "keywords": "Documentation",
+            "icon": "HelpCircle"
+          }
+        ]
+      },
+      {
+        "label": "Company",
+        "url": "#",
+        "dropdown": [
+          {
+            "name": "About",
+            "url": "/company/about",
+            "description": "Our story",
+            "keywords": "Our Story",
+            "icon": "Users"
+          },
+          {
+            "name": "Careers",
+            "url": "/company/careers",
+            "description": "Join our team",
+            "keywords": "Join Our Team",
+            "icon": "Briefcase"
+          },
+          {
+            "name": "Security",
+            "url": "/company/security",
+            "description": "Compliance & security",
+            "keywords": "Compliance",
+            "icon": "Shield"
+          },
+          {
+            "name": "Contact",
+            "url": "/contact",
+            "description": "Get in touch",
+            "keywords": "Get in Touch",
+            "icon": "Mail"
+          }
+        ]
+      },
+      {
+        "label": "Pricing",
+        "url": "/pricing"
+      }
+    ]
+  },
+  "footer": {
+    "brand": {
+      "name": "VestaCall",
+      "tagline": "AI-powered cloud contact center for modern businesses. Connect, support, and grow globally."
+    },
+    "sections": {
+      "products": {
+        "title": "Products",
+        "links": [
+          {
+            "name": "Cloud PBX",
+            "url": "/cloud-pbx",
+            "keywords": "Virtual Phone System"
+          },
+          {
+            "name": "SIP Trunking",
+            "url": "/sip-trunking",
+            "keywords": "VoIP Termination"
+          },
+          {
+            "name": "Conversational AI",
+            "url": "/conversational-ai",
+            "keywords": "AI Voice Bot"
+          },
+          {
+            "name": "Live Analytics",
+            "url": "/live-analytics",
+            "keywords": "Call Analytics"
+          }
+        ]
+      },
+      "solutions": {
+        "title": "Solutions",
+        "links": [
+          {
+            "name": "Inbound Support",
+            "url": "/solutions/inbound-support",
+            "keywords": "Customer Support"
+          },
+          {
+            "name": "Outbound Sales",
+            "url": "/solutions/outbound-sales",
+            "keywords": "Sales Acceleration"
+          },
+          {
+            "name": "Global Remote Teams",
+            "url": "/solutions/global-remote-teams",
+            "keywords": "Remote Work"
+          },
+          {
+            "name": "Pricing",
+            "url": "/pricing",
+            "keywords": "Transparent Pricing"
+          }
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "links": [
+          {
+            "name": "About",
+            "url": "/company/about",
+            "keywords": "Our Story"
+          },
+          {
+            "name": "Careers",
+            "url": "/company/careers",
+            "keywords": "Join Our Team"
+          },
+          {
+            "name": "Security",
+            "url": "/company/security",
+            "keywords": "Compliance"
+          },
+          {
+            "name": "Contact",
+            "url": "/contact",
+            "keywords": "Get in Touch"
+          }
+        ]
+      },
+      "resources": {
+        "title": "Resources",
+        "links": [
+          {
+            "name": "Blog",
+            "url": "/resources/blog",
+            "keywords": "Insights"
+          },
+          {
+            "name": "Case Studies",
+            "url": "/resources/case-studies",
+            "keywords": "Success Stories"
+          },
+          {
+            "name": "Help Center",
+            "url": "/resources/help-center",
+            "keywords": "Documentation"
+          }
+        ]
+      }
+    },
+    "certifications": [
+      "SOC 2 Type II Certified",
+      "GDPR Compliant",
+      "HIPAA Compliant",
+      "PCI DSS Compliant"
+    ],
+    "trust": "Trusted by 50,000+ businesses worldwide",
+    "copyright": "© 2026 VestaCall. All rights reserved."
+  },
+  "_lastUpdated": "2026-03-03T00:00:00.000000"
+}

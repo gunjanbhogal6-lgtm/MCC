@@ -49,8 +49,8 @@ generation:
   lsi_keywords_count: 20
 
 output:
-  site: "salamtalk"
-  seo_json_path: "sites/salamtalk/src/data/seo.json"
+  site: "vestacall"
+  seo_json_path: "sites/vestacall/src/data/seo.json"
   backup_enabled: true
   backup_directory: "data/backups"
 

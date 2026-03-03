@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-vesta-dark text-white;
+  }
+  img {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+}
+
+@keyframes dashOffset {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes dashOffsetSingle {
+  0% {
+    stroke-dashoffset: 1500;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -1500;
+    opacity: 0;
+  }
+}
+
+.animate-dash-single {
+  animation: dashOffsetSingle 8s linear infinite;
+}
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -1500;
+    opacity: 0;
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-dash-single {
+  animation: dashOffsetSingle 4s linear infinite;
+}
+
+.animate-ping-slow {
+  animation: ping 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(108, 43, 217, 0.1) 0%, transparent 50%);
+}
+
+.card-hover {
+  @apply transition-all duration-500 hover:shadow-md hover:shadow-vesta-purple/5 hover:border-vesta-purple/10;
+}
+
+.btn-primary {
+  @apply px-8 py-4 rounded-full bg-vesta-purple text-white font-bold text-lg hover:bg-[#5a24b5] transition-all;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 rounded-full border border-gray-200 bg-white text-gray-900 font-bold text-lg hover:border-vesta-purple hover:text-vesta-purple transition-all;
+}

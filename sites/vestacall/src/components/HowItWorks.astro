@@ -1,0 +1,76 @@
+---
+const steps = [
+  {
+    number: 1,
+    title: "Setup",
+    subtitle: "Create your account and configure your workflows.",
+    description: "We've ensured that getting started feels instantaneous. In under 5 minutes, you can import your existing numbers, configure agent profiles, and safely integrate your core CRM without writing a single line of code.",
+    icon: "settings"
+  },
+  {
+    number: 2,
+    title: "Customize",
+    subtitle: "Design IVR, routing, and integrations to match your needs.",
+    description: "Take full control of your customer journey. Use our visual drag-and-drop builder to set intelligent conditions, time-based routing, and VIP queues so callers always reach the most qualified agent securely.",
+    icon: "sliders"
+  },
+  {
+    number: 3,
+    title: "Launch & Scale",
+    subtitle: "Start connecting with customers and scale without limits.",
+    description: "Deploy dynamically worldwide. As your call volume fluctuates, our cloud infrastructure seamlessly auto-scales, providing enterprise-grade reliability and crystalline voice quality around the globe without latency limit.",
+    icon: "rocket"
+  }
+];
+---
+
+<section class="bg-gray-50 relative border-t border-gray-200 py-24">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black mb-4 text-gray-900 tracking-tight">
+        Experience Seamless Communication in <span class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600">3 Simple Steps</span>
+      </h2>
+      <p class="text-gray-600 text-lg font-medium">Smart Technology. Seamless Experience.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {steps.map((step, i) => (
+        <div class="relative group">
+          <div class="bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl hover:border-vesta-purple/20 transition-all duration-300 h-full flex flex-col">
+            <div class="w-20 h-20 shrink-0 rounded-full bg-gradient-to-br from-vesta-purple to-[#9b51e0] flex items-center justify-center shadow-[0_15px_30px_rgba(108,43,217,0.3)] border-4 border-gray-50 relative group z-10 mb-6">
+              {step.icon === "settings" && (
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              )}
+              {step.icon === "sliders" && (
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+              )}
+              {step.icon === "rocket" && (
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              )}
+              <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-white border-2 border-vesta-purple flex items-center justify-center font-black text-lg text-vesta-purple shadow-sm">
+                {step.number}
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">{step.title}</h3>
+            <p class="text-vesta-purple text-lg font-bold mb-3">{step.subtitle}</p>
+            <p class="text-gray-600 leading-relaxed font-medium flex-grow">{step.description}</p>
+          </div>
+          {i < steps.length - 1 && (
+            <div class="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
+              <svg class="w-8 h-8 text-vesta-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

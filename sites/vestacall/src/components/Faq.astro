@@ -1,0 +1,123 @@
+---
+import homeData from '../data/home.json';
+import schemaData from '../data/schemas.json';
+
+const faqData = homeData.faq;
+
+// Map keywords to relevant pages
+const keywordLinks: Record<string, string> = {
+  "AI-powered features": "/conversational-ai",
+  "global coverage": "/sip-trunking",
+  "SIP trunking": "/sip-trunking",
+  "CRM integrations": "/products/crm-integrations",
+  "99.999% uptime": "/company/security",
+  "HIPAA": "/company/security",
+  "GDPR": "/company/security",
+  "sentiment analysis": "/products/sentiment-analysis",
+  "AI receptionist": "/conversational-ai"
+};
+
+// Function to process answers with links
+function processAnswerWithLinks(answer: string): string {
+  let processedAnswer = answer;
+  for (const [keyword, url] of Object.entries(keywordLinks)) {
+    const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
+    processedAnswer = processedAnswer.replace(regex, `<a href="${url}" class="text-vesta-purple font-semibold hover:underline">${keyword}</a>`);
+  }
+  return processedAnswer;
+}
+---
+
+<section class="py-24 bg-gray-50 relative border-t border-gray-200">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-vesta-purple/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 max-w-3xl relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black mb-4 text-gray-900 tracking-tight">
+        {faqData.title}
+      </h2>
+      <p class="text-gray-600 text-lg font-medium">{faqData.description}</p>
+    </div>
+
+    <div class="space-y-4" id="faq-container">
+      {faqData.items.map((faq, index) => (
+        <div class="faq-item border rounded-2xl overflow-hidden transition-all duration-300 bg-white border-gray-200 hover:border-vesta-purple/40 hover:shadow-sm" data-index={index}>
+          <button
+            class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none group"
+            onclick="toggleFaq(this)"
+          >
+            <span class="text-lg font-bold text-gray-900 group-hover:text-vesta-purple transition-colors faq-question">{faq.question}</span>
+            <span class="flex-shrink-0 ml-4 p-1.5 rounded-full border text-gray-400 border-gray-200 bg-gray-50 group-hover:bg-vesta-purple/10 group-hover:text-vesta-purple group-hover:border-vesta-purple/20 transition-colors faq-icon">
+              <svg class="w-4.5 h-4.5 plus-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+              <svg class="w-4.5 h-4.5 minus-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg>
+            </span>
+          </button>
+          <div class="faq-answer hidden overflow-hidden bg-white">
+            <div class="px-6 pb-6 pt-2 text-gray-600 font-medium leading-relaxed border-t border-gray-50 mt-2" set:html={processAnswerWithLinks(faq.answer)} />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schemaData.faq)} />
+
+<script is:inline>
+  function toggleFaq(button) {
+    const item = button.closest('.faq-item');
+    const answer = item.querySelector('.faq-answer');
+    const plusIcon = item.querySelector('.plus-icon');
+    const minusIcon = item.querySelector('.minus-icon');
+    const question = item.querySelector('.faq-question');
+    const iconContainer = item.querySelector('.faq-icon');
+    
+    const isOpen = !answer.classList.contains('hidden');
+    
+    document.querySelectorAll('.faq-item').forEach(otherItem => {
+      if (otherItem !== item) {
+        const otherAnswer = otherItem.querySelector('.faq-answer');
+        const otherPlus = otherItem.querySelector('.plus-icon');
+        const otherMinus = otherItem.querySelector('.minus-icon');
+        const otherQuestion = otherItem.querySelector('.faq-question');
+        const otherIcon = otherItem.querySelector('.faq-icon');
+        
+        // Add null checks
+        if (!otherAnswer || !otherPlus || !otherMinus || !otherQuestion || !otherIcon) return;
+        
+        otherAnswer.classList.add('hidden');
+        otherPlus.classList.remove('hidden');
+        otherMinus.classList.add('hidden');
+        otherQuestion.classList.remove('text-vesta-purple');
+        otherQuestion.classList.add('text-gray-900');
+        otherIcon.classList.remove('text-white', 'border-vesta-purple', 'bg-vesta-purple');
+        otherIcon.classList.add('text-gray-400', 'border-gray-200', 'bg-gray-50');
+        otherItem.classList.remove('border-vesta-purple', 'shadow-md', 'shadow-vesta-purple/10');
+        otherItem.classList.add('border-gray-200');
+      }
+    });
+    
+    if (isOpen) {
+      answer.classList.add('hidden');
+      plusIcon.classList.remove('hidden');
+      minusIcon.classList.add('hidden');
+      question.classList.remove('text-vesta-purple');
+      question.classList.add('text-gray-900');
+      iconContainer.classList.remove('text-white', 'border-vesta-purple', 'bg-vesta-purple');
+      iconContainer.classList.add('text-gray-400', 'border-gray-200', 'bg-gray-50');
+      item.classList.remove('border-vesta-purple', 'shadow-md', 'shadow-vesta-purple/10');
+      item.classList.add('border-gray-200');
+    } else {
+      answer.classList.remove('hidden');
+      plusIcon.classList.add('hidden');
+      minusIcon.classList.remove('hidden');
+      question.classList.add('text-vesta-purple');
+      question.classList.remove('text-gray-900');
+      iconContainer.classList.add('text-white', 'border-vesta-purple', 'bg-vesta-purple');
+      iconContainer.classList.remove('text-gray-400', 'border-gray-200', 'bg-gray-50');
+      item.classList.add('border-vesta-purple', 'shadow-md', 'shadow-vesta-purple/10');
+      item.classList.remove('border-gray-200');
+    }
+  }
+  window.toggleFaq = toggleFaq;
+</script>

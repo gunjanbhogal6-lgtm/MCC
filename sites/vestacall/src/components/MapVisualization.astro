@@ -1,0 +1,354 @@
+---
+import landTopoJSON from "../data/land-110m.json";
+// @ts-ignore
+import { feature } from "topojson-client";
+// @ts-ignore
+import { geoNaturalEarth1, geoPath, geoGraticule } from "d3-geo";
+
+const width = 900;
+const height = 450;
+
+// Build real world map from TopoJSON at build time
+const land = feature(landTopoJSON, landTopoJSON.objects.land);
+const projection = geoNaturalEarth1().fitExtent(
+  [
+    [15, 15],
+    [width - 15, height - 15],
+  ],
+  land,
+);
+
+const pathGen = geoPath(projection);
+const landPathD = pathGen(land) || "";
+const graticulePathD = pathGen(geoGraticule().step([30, 30])()) || "";
+const spherePathD = pathGen({ type: "Sphere" }) || "";
+
+// Global tech hub cities
+const cities = [
+  { name: "New York", lon: -74.006, lat: 40.7128 },
+  { name: "London", lon: -0.1276, lat: 51.5072 },
+  { name: "Tokyo", lon: 139.6917, lat: 35.6895 },
+  { name: "Sydney", lon: 151.2093, lat: -33.8688 },
+  { name: "São Paulo", lon: -46.6333, lat: -23.5505 },
+  { name: "Cape Town", lon: 18.4232, lat: -33.9249 },
+  { name: "Mumbai", lon: 72.8777, lat: 19.076 },
+  { name: "Dubai", lon: 55.2708, lat: 25.2048 },
+  { name: "Singapore", lon: 103.8198, lat: 1.3521 },
+  { name: "Frankfurt", lon: 8.6821, lat: 50.1109 },
+  { name: "San Francisco", lon: -122.4194, lat: 37.7749 },
+];
+
+// Project cities onto map
+const projected = cities.map((city) => {
+  const coords = projection([city.lon, city.lat]);
+  return { ...city, x: coords ? coords[0] : 0, y: coords ? coords[1] : 0 };
+});
+
+// Network connections [fromIndex, toIndex]
+const connections: [number, number][] = [
+  [0, 1], // New York → London
+  [0, 10], // New York → San Francisco
+  [0, 4], // New York → São Paulo
+  [1, 9], // London → Frankfurt
+  [1, 5], // London → Cape Town
+  [1, 7], // London → Dubai
+  [9, 7], // Frankfurt → Dubai
+  [7, 6], // Dubai → Mumbai
+  [6, 8], // Mumbai → Singapore
+  [8, 2], // Singapore → Tokyo
+  [2, 3], // Tokyo → Sydney
+  [5, 6], // Cape Town → Mumbai
+  [10, 2], // San Francisco → Tokyo
+  [4, 5], // São Paulo → Cape Town
+  [7, 8], // Dubai → Singapore
+  [3, 8], // Sydney → Singapore
+];
+
+// Generate deterministic curved Bezier paths
+const connectionPaths = connections.map(([fi, ti], idx) => {
+  const from = projected[fi];
+  const to = projected[ti];
+  const dx = to.x - from.x;
+  const dy = to.y - from.y;
+  const dist = Math.sqrt(dx * dx + dy * dy);
+  if (dist === 0) return { d: "", delay: 0, speed: 3 };
+
+  const mx = (from.x + to.x) / 2;
+  const my = (from.y + to.y) / 2;
+  const curvature = 0.22;
+
+  // Perpendicular unit vector
+  let px = -dy / dist;
+  let py = dx / dist;
+  let cpx = mx + px * dist * curvature;
+  let cpy = my + py * dist * curvature;
+
+  // Always arc upward (smaller Y in SVG)
+  if (cpy > my) {
+    cpx = mx - px * dist * curvature;
+    cpy = my - py * dist * curvature;
+  }
+
+  return {
+    d: `M${from.x.toFixed(1)},${from.y.toFixed(1)} Q${cpx.toFixed(1)},${cpy.toFixed(1)} ${to.x.toFixed(1)},${to.y.toFixed(1)}`,
+    delay: (idx * 0.45) % 4,
+    speed: 1.8 + dist / 150,
+  };
+});
+---
+
+<div class="map-viz-container">
+  <svg
+    viewBox={`0 0 ${width} ${height}`}
+    xmlns="http://www.w3.org/2000/svg"
+    class="map-svg"
+    aria-label="VestaCall Global Network Map"
+    role="img"
+  >
+    <defs>
+      <linearGradient id="vc-connGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.9"></stop>
+        <stop offset="100%" stop-color="#c084fc" stop-opacity="0.9"></stop>
+      </linearGradient>
+      <linearGradient id="vc-connGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#6C2BD9" stop-opacity="0.8"></stop>
+        <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8"></stop>
+      </linearGradient>
+      <radialGradient id="vc-nodeGlow">
+        <stop offset="0%" stop-color="#c084fc" stop-opacity="0.6"></stop>
+        <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.15"></stop>
+        <stop offset="100%" stop-color="#6C2BD9" stop-opacity="0"></stop>
+      </radialGradient>
+      <filter id="vc-glowFilter" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"
+        ></feGaussianBlur>
+        <feMerge>
+          <feMergeNode in="blur"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <filter id="vc-softGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
+      </filter>
+    </defs>
+
+    <!-- Graticule grid lines -->
+    <path
+      d={graticulePathD}
+      fill="none"
+      stroke="rgba(108,43,217,0.06)"
+      stroke-width="0.4"></path>
+
+    <!-- Globe outline -->
+    <path
+      d={spherePathD}
+      fill="none"
+      stroke="rgba(139,92,246,0.12)"
+      stroke-width="0.8"></path>
+
+    <!-- Land masses -->
+    <path
+      d={landPathD}
+      fill="rgba(108,43,217,0.1)"
+      stroke="rgba(139,92,246,0.2)"
+      stroke-width="0.5"
+      stroke-linejoin="round"></path>
+
+    <!-- Connection glow underlays -->
+    {
+      connectionPaths.map(
+        (conn) =>
+          conn.d && (
+            <path
+              d={conn.d}
+              fill="none"
+              stroke="rgba(139,92,246,0.07)"
+              stroke-width="6"
+              stroke-linecap="round"
+              filter="url(#vc-softGlow)"
+            />
+          ),
+      )
+    }
+
+    <!-- Connection flowing dashes -->
+    {
+      connectionPaths.map(
+        (conn, i) =>
+          conn.d && (
+            <path
+              d={conn.d}
+              fill="none"
+              stroke={i % 2 === 0 ? "url(#vc-connGrad1)" : "url(#vc-connGrad2)"}
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-dasharray="8 12"
+              class="vc-conn-flow"
+              style={`--vc-speed: ${conn.speed.toFixed(1)}s; --vc-delay: ${conn.delay.toFixed(1)}s;`}
+            />
+          ),
+      )
+    }
+
+    <!-- Data packet dots -->
+    {
+      connectionPaths.map(
+        (conn) =>
+          conn.d && (
+            <path
+              d={conn.d}
+              fill="none"
+              stroke="#c084fc"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-dasharray="3 197"
+              class="vc-conn-packet"
+              style={`--vc-speed: ${(conn.speed * 1.6).toFixed(1)}s; --vc-delay: ${(conn.delay + 0.5).toFixed(1)}s;`}
+            />
+          ),
+      )
+    }
+
+    <!-- City nodes -->
+    {
+      projected.map((city, i) => (
+        <g>
+          {/* Outer glow pulse */}
+          <circle
+            cx={city.x.toFixed(1)}
+            cy={city.y.toFixed(1)}
+            r="14"
+            fill="url(#vc-nodeGlow)"
+            class="vc-node-glow"
+            style={`--vc-delay: ${(i * 0.2).toFixed(1)}s;`}
+          />
+
+          {/* Expanding signal ring */}
+          <circle
+            cx={city.x.toFixed(1)}
+            cy={city.y.toFixed(1)}
+            r="4"
+            fill="none"
+            stroke="#8b5cf6"
+            stroke-width="0.5"
+            class="vc-signal-ring"
+            style={`--vc-delay: ${(i * 0.35).toFixed(1)}s;`}
+          />
+
+          {/* Core dot */}
+          <circle
+            cx={city.x.toFixed(1)}
+            cy={city.y.toFixed(1)}
+            r="3"
+            fill="#c084fc"
+            filter="url(#vc-glowFilter)"
+          />
+
+          {/* Inner bright center */}
+          <circle
+            cx={city.x.toFixed(1)}
+            cy={city.y.toFixed(1)}
+            r="1.2"
+            fill="#ffffff"
+            opacity="0.9"
+          />
+        </g>
+      ))
+    }
+  </svg>
+</div>
+
+<style is:global>
+  .map-viz-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: linear-gradient(
+      145deg,
+      #0f0c29 0%,
+      #14103a 40%,
+      #1a1545 70%,
+      #24243e 100%
+    );
+    box-shadow:
+      0 0 60px rgba(108, 43, 217, 0.15),
+      0 25px 50px rgba(0, 0, 0, 0.4),
+      inset 0 0 30px rgba(108, 43, 217, 0.05);
+    border: 1px solid rgba(108, 43, 217, 0.15);
+    position: relative;
+  }
+
+  .map-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* SVG Animation Keyframes */
+  @keyframes vc-flowDash {
+    to {
+      stroke-dashoffset: -20;
+    }
+  }
+  @keyframes vc-flowPacket {
+    from {
+      stroke-dashoffset: 200;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes vc-pulseGlow {
+    0%,
+    100% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 0.85;
+    }
+  }
+  @keyframes vc-signalRing {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes vc-fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* SVG Animation Classes */
+  .vc-conn-flow {
+    animation: vc-flowDash var(--vc-speed, 3s) linear infinite;
+    animation-delay: var(--vc-delay, 0s);
+  }
+  .vc-conn-packet {
+    animation: vc-flowPacket var(--vc-speed, 4s) linear infinite;
+    animation-delay: var(--vc-delay, 0s);
+  }
+  .vc-node-glow {
+    animation: vc-pulseGlow 3s ease-in-out infinite;
+    animation-delay: var(--vc-delay, 0s);
+  }
+  .vc-signal-ring {
+    animation: vc-signalRing 3s ease-out infinite;
+    animation-delay: var(--vc-delay, 0s);
+  }
+  .vc-city-label {
+    animation: vc-fadeInUp 1s ease-out both;
+    animation-delay: var(--vc-delay, 0s);
+  }
+</style>

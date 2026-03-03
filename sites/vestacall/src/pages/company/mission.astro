@@ -1,0 +1,58 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Our Mission" description="What drives us forward at VestaCall." pathname="/company/mission">
+  <section class="relative pt-28 pb-16 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-vesta-purple/5">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-vesta-purple/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 bg-vesta-purple/10 border border-vesta-purple/20 rounded-full px-4 py-2 mb-6">
+          <svg class="w-4 h-4 text-vesta-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          <span class="text-sm font-bold text-vesta-purple">Company</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+          Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600">Mission</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium">
+          To democratize enterprise-grade cloud communications, making it accessible to businesses of all sizes around the world.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white border-t border-gray-100">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="prose prose-lg max-w-none">
+        <p class="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+          We believe that every business deserves access to the same powerful communication tools that were once only available to the largest enterprises. Our mission is to level the playing field.
+        </p>
+        
+        <h2 class="text-3xl font-black text-gray-900 mb-6">Our Vision</h2>
+        <p class="text-gray-600 font-medium leading-relaxed mb-8">
+          A world where distance and infrastructure don't limit business potential. Where a startup in Bangalore can serve customers as seamlessly as a Fortune 500 in New York. Where voice, video, and messaging work together to create magical customer experiences.
+        </p>
+
+        <h2 class="text-3xl font-black text-gray-900 mb-6">What Drives Us</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-gray-50 rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+            <p class="text-gray-600 font-medium">We ship fast and iterate faster. The best communications platform is the one that keeps getting better.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Accessibility</h3>
+            <p class="text-gray-600 font-medium">We're committed to making enterprise features affordable and accessible to businesses of all sizes.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Reliability</h3>
+            <p class="text-gray-600 font-medium">We build systems that work when you need them most. 99.999% uptime isn't a goal—it's our standard.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Security</h3>
+            <p class="text-gray-600 font-medium">Your customers trust you. We take that seriously with enterprise-grade security and compliance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

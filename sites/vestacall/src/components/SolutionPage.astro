@@ -1,0 +1,167 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import solutionsData from "../data/solutions.json";
+
+interface Props {
+  solutionId: string;
+}
+
+const { solutionId } = Astro.props;
+const solution = solutionsData.items.find((s) => s.id === solutionId);
+
+// Redirect to 404 if solution not found
+if (!solution) {
+  Astro.redirect("/404");
+}
+---
+
+{
+  solution && (
+    <MainLayout
+      title={`${solution.name} - ${solution.hero.subtitle} | VestaCall`}
+      description={solution.description}
+      pathname={solution.url}
+      breadcrumbs={[
+        { name: "Home", url: "/" },
+        { name: "Solutions", url: "/solutions" },
+        { name: solution.name, url: solution.url },
+      ]}
+      productSchema={{
+        "@context": "https://schema.org",
+        "@type": "Product",
+        name: solution.name,
+        description: solution.description,
+        url: `https://vestacall.com${solution.url}`,
+        category: "Solution",
+        featureList: solution.features.map((f) => f.title),
+        keywords: solution.keywords.join(", "),
+        brand: {
+          "@type": "Brand",
+          name: "VestaCall",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.8",
+          reviewCount: "2500",
+        },
+      }}
+    >
+      <section class="relative pt-12 pb-16 lg:pb-24 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-vesta-purple/5">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-vesta-purple/10 rounded-full blur-[150px] pointer-events-none" />
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-fuchsia-200/10 rounded-full blur-[120px] pointer-events-none" />
+
+        <div class="container mx-auto px-6 max-w-6xl relative z-10">
+          <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+              {solution.hero.h1}
+            </h1>
+            <p class="text-2xl md:text-3xl text-vesta-purple font-bold mb-6">
+              {solution.hero.subtitle}
+            </p>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium mb-10">
+              {solution.hero.description}
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                class="btn-primary hover:scale-105 transition-transform"
+              >
+                Start Free Trial
+              </a>
+              <a
+                href="/contact"
+                class="btn-secondary hover:scale-105 transition-transform"
+              >
+                Book a Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {solution && solution.features && solution.features.length > 0 && (
+        <section class="py-24 bg-gray-50 border-t border-gray-200">
+          <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">
+                Key Features
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {solution.features.map((feature) => (
+                <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300">
+                  <h3 class="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p class="text-gray-600 font-medium leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {solution && solution.benefits && solution.benefits.length > 0 && (
+        <section class="py-24 bg-white border-t border-gray-100">
+          <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-black text-gray-900 tracking-tight mb-12 text-center">
+              Key Benefits
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {solution.benefits.map((benefit) => (
+                <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+                  <svg
+                    class="w-6 h-6 text-vesta-purple flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700 font-medium">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-3xl text-center">
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-4">
+            Ready to get started?
+          </h2>
+          <p class="text-gray-600 text-lg font-medium mb-8">
+            Start your 14-day free trial. No credit card required.
+          </p>
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 text-vesta-purple font-bold hover:underline text-lg"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+            Back to Home
+          </a>
+        </div>
+      </section>
+    </MainLayout>
+  )
+}

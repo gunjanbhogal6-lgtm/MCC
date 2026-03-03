@@ -1,0 +1,68 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Careers" description="Join our growing team at VestaCall." pathname="/company/careers">
+  <section class="relative pt-28 pb-16 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-vesta-purple/5">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-vesta-purple/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 bg-vesta-purple/10 border border-vesta-purple/20 rounded-full px-4 py-2 mb-6">
+          <svg class="w-4 h-4 text-vesta-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+          <span class="text-sm font-bold text-vesta-purple">Company</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+          Join Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600">Team</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium">
+          We're building the future of business communication. Come build it with us.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white border-t border-gray-100">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="text-2xl font-black text-gray-900 mb-8">Open Positions</h2>
+      <div class="space-y-4">
+        {[
+          { title: "Senior Software Engineer", dept: "Engineering", location: "Remote" },
+          { title: "Product Manager", dept: "Product", location: "San Francisco" },
+          { title: "Customer Success Manager", dept: "Customer Success", location: "Remote" },
+          { title: "Sales Development Representative", dept: "Sales", location: "San Francisco" },
+          { title: "DevOps Engineer", dept: "Infrastructure", location: "Remote" },
+        ].map((job) => (
+          <a href="/company/careers" class="block p-6 bg-white border border-gray-100 rounded-2xl hover:border-vesta-purple/20 hover:shadow-md transition-all">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">{job.title}</h3>
+                <p class="text-gray-500 font-medium text-sm">{job.dept} · {job.location}</p>
+              </div>
+              <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-vesta-purple/10 text-vesta-purple font-bold text-sm">
+                Apply Now <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-2xl font-black text-gray-900 mb-8 text-center">Why VestaCall?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          { title: "Remote-First", desc: "Work from anywhere in the world. We trust you to do your best work." },
+          { title: "Competitive Pay", desc: "Top-of-market compensation with equity for all full-time employees." },
+          { title: "Great Benefits", desc: "Health, dental, vision, 401(k), and unlimited PTO." },
+        ].map((benefit) => (
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+            <p class="text-gray-600 font-medium">{benefit.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</MainLayout>

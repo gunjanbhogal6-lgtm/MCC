@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "id": "cloud_pbx",
+      "name": "Cloud PBX",
+      "shortDescription": "Enterprise-grade virtual phone system designed for modern businesses.",
+      "description": "Enterprise-grade virtual phone system designed for modern businesses. Scale from 5 to 50,000 users seamlessly with 1-second billing precision.",
+      "url": "/cloud-pbx",
+      "badge": "Core Platform",
+      "icon": "phone",
+      "features": [
+        "Global coverage in 100+ countries",
+        "SOC 2 Type II certified security",
+        "99.999% uptime SLA",
+        "HD voice quality with Opus codec"
+      ],
+      "pricing": "$19/user/month",
+      "keywords": ["cloud PBX", "virtual phone system", "business PBX", "hosted PBX"],
+      "hero": {
+        "h1": "Cloud PBX",
+        "subtitle": "Enterprise Virtual Phone System",
+        "description": "Scale from 5 to 50,000 users with enterprise-grade voice quality, global coverage, and AI-powered features. No hardware required."
+      },
+      "benefits": [
+        "Reduce phone costs by 60%",
+        "Deploy in minutes, not months",
+        "Scale instantly with your business",
+        "Works with your existing CRM",
+        "HD voice quality guaranteed",
+        "24/7 AI-powered support"
+      ],
+      "featureList": [
+        { "title": "Auto Attendant", "description": "Professional IVR with custom greetings and routing.", "icon": "phone" },
+        { "title": "Call Recording", "description": "Automatic call recording with AI transcription.", "icon": "activity" },
+        { "title": "Voicemail to Email", "description": "Transcribed voicemails delivered to your inbox.", "icon": "message" },
+        { "title": "Mobile App", "description": "Make and receive calls from anywhere on any device.", "icon": "globe" },
+        { "title": "Call Analytics", "description": "Real-time dashboards and performance metrics.", "icon": "activity" },
+        { "title": "Team Messaging", "description": "Built-in team chat and file sharing.", "icon": "users" }
+      ]
+    },
+    {
+      "id": "sip_trunking",
+      "name": "SIP Trunking",
+      "shortDescription": "Connect your existing PBX infrastructure to the cloud.",
+      "description": "Connect your existing PBX infrastructure to the cloud through pristine Wholesale VoIP Termination. Unlimited concurrent channels.",
+      "url": "/sip-trunking",
+      "badge": "Infrastructure",
+      "icon": "network",
+      "features": [
+        "Instant provisioning globally",
+        "TLS/SRTP encryption",
+        "Elastic capacity 10-10,000 channels",
+        "STIR/SHAKEN compliant"
+      ],
+      "pricing": "Pay per minute",
+      "keywords": ["SIP trunking", "wholesale VoIP", "voice termination", "SIP provider"],
+      "hero": {
+        "h1": "SIP Trunking",
+        "subtitle": "Wholesale VoIP Termination",
+        "description": "Connect your PBX to the cloud with unlimited SIP trunks, instant provisioning, and carrier-grade reliability. Pay only for what you use."
+      },
+      "benefits": [
+        "Unlimited concurrent channels",
+        "1-second billing precision",
+        "STIR/SHAKEN authentication",
+        "E911 emergency calling",
+        "Number porting included",
+        "24/7 NOC monitoring"
+      ],
+      "featureList": [
+        { "title": "Global DID Numbers", "description": "Local and toll-free numbers in 100+ countries.", "icon": "globe" },
+        { "title": "Emergency Calling", "description": "E911 compliance with dynamic location routing.", "icon": "shield" },
+        { "title": "Call Routing", "description": "Advanced routing with failover and load balancing.", "icon": "network" },
+        { "title": "Real-time Monitoring", "description": "Live call quality metrics and alerts.", "icon": "activity" },
+        { "title": "Encryption", "description": "TLS and SRTP encryption for all calls.", "icon": "shield" },
+        { "title": "API Access", "description": "REST API for provisioning and management.", "icon": "server" }
+      ]
+    },
+    {
+      "id": "conversational_ai",
+      "name": "Conversational AI",
+      "shortDescription": "Deploy AI-powered voice bots that understand context.",
+      "description": "Deploy AI-powered voice bots that understand context, handle complex queries, and seamlessly transfer to human agents.",
+      "url": "/conversational-ai",
+      "badge": "AI Platform",
+      "icon": "bot",
+      "features": [
+        "Natural language processing",
+        "Context awareness",
+        "Multi-language support (50+)",
+        "Voice biometrics"
+      ],
+      "pricing": "Enterprise pricing",
+      "keywords": ["conversational AI", "AI voice bot", "voice AI", "AI agent"],
+      "hero": {
+        "h1": "Conversational AI",
+        "subtitle": "AI Voice Bot & Agent",
+        "description": "Deploy AI-powered voice bots that handle customer inquiries 24/7, qualify leads, and seamlessly transfer to human agents when needed."
+      },
+      "benefits": [
+        "Handle 80% of routine inquiries",
+        "24/7 availability at no extra cost",
+        "Multi-language support (50+ languages)",
+        "Seamless human handoff",
+        "Voice biometrics authentication",
+        "Continuous learning & improvement"
+      ],
+      "featureList": [
+        { "title": "Natural Language", "description": "Understand intent and context in real-time.", "icon": "brain" },
+        { "title": "Call Routing", "description": "Intelligent routing based on customer needs.", "icon": "network" },
+        { "title": "Appointment Booking", "description": "Schedule appointments and send reminders.", "icon": "calendar" },
+        { "title": "Lead Qualification", "description": "Score and qualify leads automatically.", "icon": "users" },
+        { "title": "CRM Integration", "description": "Log all interactions to your CRM.", "icon": "server" },
+        { "title": "Analytics", "description": "Detailed reports on bot performance.", "icon": "activity" }
+      ]
+    },
+    {
+      "id": "cloud_contact_center",
+      "name": "Cloud Contact Center",
+      "shortDescription": "Complete inbound & outbound contact center solution.",
+      "description": "Complete inbound & outbound contact center solution with omnichannel routing and AI-powered tools.",
+      "url": "/products/cloud-contact-center",
+      "badge": "Core Communications",
+      "icon": "phone",
+      "features": [
+        "Omnichannel routing",
+        "Visual IVR builder",
+        "Agent dashboard",
+        "Quality management"
+      ],
+      "keywords": ["cloud contact center", "CCaaS", "call center software", "contact center solution"],
+      "hero": {
+        "h1": "Cloud Contact Center",
+        "subtitle": "Complete Contact Center Solution",
+        "description": "A unified platform for voice, chat, email, and social media. Empower your agents with AI-powered tools and deliver exceptional customer experiences at scale."
+      },
+      "benefits": [
+        "Reduce average handle time by 30%",
+        "Increase first-call resolution rates",
+        "Real-time agent performance monitoring",
+        "Automated quality assurance scoring",
+        "Omnichannel customer journey tracking",
+        "AI-powered agent assistance"
+      ],
+      "featureList": [
+        { "title": "Omnichannel Routing", "description": "Unified queue management across all channels.", "icon": "network" },
+        { "title": "IVR Builder", "description": "Drag-and-drop IVR designer. No coding required.", "icon": "server" },
+        { "title": "Agent Dashboard", "description": "360° customer view with interaction history.", "icon": "users" },
+        { "title": "Quality Management", "description": "Call recording and AI-powered quality scoring.", "icon": "shield" },
+        { "title": "Workforce Management", "description": "Forecasting, scheduling, and adherence.", "icon": "activity" },
+        { "title": "CRM Integration", "description": "Native Salesforce, Zendesk, HubSpot integrations.", "icon": "bot" }
+      ]
+    }
+  ],
+  "_lastUpdated": "2026-03-03T00:00:00.000000"
+}

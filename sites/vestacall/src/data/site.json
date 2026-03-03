@@ -1,0 +1,45 @@
+{
+  "name": "VestaCall",
+  "tagline": "AI-Powered Cloud Contact Center for Global Business Communication",
+  "url": "https://vestacall.com",
+  "author": "VestaCall",
+  "twitterHandle": "@vestacall",
+  "foundedYear": "2020",
+  "logo": "/logo.svg",
+  "logoWhite": "/white-loog.png",
+  "logoWide": "/logo.svg",
+  "favicon": "/favicon.svg",
+  "defaultImage": "/og-image.png",
+  "googleAnalyticsId": "",
+  "contact": {
+    "email": "hello@vestacall.com",
+    "phone": "+1 (800) 555-0199",
+    "salesEmail": "sales@vestacall.com",
+    "supportEmail": "support@vestacall.com",
+    "address": {
+      "street": "123 Innovation Drive",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94105",
+      "country": "USA"
+    }
+  },
+  "social": {
+    "twitter": "https://twitter.com/vestacall",
+    "linkedin": "https://linkedin.com/company/vestacall",
+    "github": "https://github.com/vestacall"
+  },
+  "certifications": [
+    "SOC 2 Type II Certified",
+    "GDPR Compliant",
+    "HIPAA Compliant",
+    "PCI DSS Compliant"
+  ],
+  "trustBadges": {
+    "users": "50,000+",
+    "countries": "100+",
+    "uptime": "99.999%",
+    "support": "24/7"
+  },
+  "_lastUpdated": "2026-03-03T00:00:00.000000"
+}

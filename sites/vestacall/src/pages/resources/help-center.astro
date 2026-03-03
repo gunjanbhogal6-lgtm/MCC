@@ -1,0 +1,66 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Help Center" description="Guides and documentation to get you started with VestaCall." pathname="/resources/help-center">
+  <section class="relative pt-28 pb-16 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-vesta-purple/5">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-vesta-purple/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 bg-vesta-purple/10 border border-vesta-purple/20 rounded-full px-4 py-2 mb-6">
+          <svg class="w-4 h-4 text-vesta-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <span class="text-sm font-bold text-vesta-purple">Resources</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+          Help <span class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600">Center</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium">
+          Guides, documentation, and answers to get you started quickly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white border-t border-gray-100">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        {[
+          { title: "Getting Started", desc: "Quick start guides to set up your account", icon: "zap" },
+          { title: "API Documentation", desc: "Integrate with our REST APIs", icon: "server" },
+          { title: "Telecom Glossary", desc: "Industry terms and definitions", icon: "bot" },
+        ].map((cat) => (
+          <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:border-vesta-purple/20 transition-all">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {cat.icon === "zap" && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />}
+                {cat.icon === "server" && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />}
+                {cat.icon === "bot" && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />}
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">{cat.title}</h3>
+            <p class="text-gray-600 font-medium">{cat.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="text-2xl font-black text-gray-900 mb-8">Popular Articles</h2>
+      <div class="space-y-4">
+        {[
+          "How to port your existing phone numbers",
+          "Setting up your first IVR menu",
+          "Integrating with Salesforce",
+          "Understanding ASR and ACD metrics",
+          "Configuring call recording and compliance",
+          "Setting up WhatsApp Business API",
+        ].map((article) => (
+          <a href="/resources/help-center" class="block p-6 bg-white border border-gray-100 rounded-2xl hover:border-vesta-purple/20 hover:shadow-md transition-all">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-900 font-bold">{article}</span>
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,25 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import WhyVestaCall from '../components/WhyVestaCall.astro';
+import Features from '../components/Features.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import Faq from '../components/Faq.astro';
+import Stats from '../components/Stats.astro';
+import Cta from '../components/Cta.astro';
+---
+
+<MainLayout 
+  title="AI-Powered Cloud Contact Center | UCaaS Provider | VestaCall" 
+  description="VestaCall is an AI-powered cloud contact center and UCaaS provider offering global voice termination, SIP trunking, and intelligent business phone systems. 99.999% uptime. Start free."
+  pathname="/"
+  breadcrumbs={[]}
+>
+  <Hero />
+  <WhyVestaCall />
+  <Features />
+  <ComparisonTable />
+  <Faq />
+  <Stats />
+  <Cta />
+</MainLayout>

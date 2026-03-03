@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "id": "inbound_support",
+      "name": "Inbound Support",
+      "description": "Transform your inbound support operations with AI-powered routing and intelligent IVR.",
+      "url": "/solutions/inbound-support",
+      "icon": "phone",
+      "hero": {
+        "h1": "Inbound Support",
+        "subtitle": "AI-Powered Customer Support",
+        "description": "Deliver exceptional customer experiences with intelligent call routing, AI-powered IVR, and real-time sentiment analysis."
+      },
+      "features": [
+        { "title": "Smart Call Routing", "description": "Route calls to the right agent based on skills, language, and availability." },
+        { "title": "AI-Powered IVR", "description": "Self-service options that resolve 60% of inquiries without agent transfer." },
+        { "title": "Real-time Sentiment", "description": "Detect frustrated customers and escalate automatically." },
+        { "title": "Callback Queue", "description": "Offer callbacks instead of hold times." }
+      ],
+      "benefits": [
+        "Reduce wait times by 50%",
+        "Increase first-call resolution by 35%",
+        "Improve CSAT scores by 20%",
+        "Lower cost per call by 40%"
+      ],
+      "keywords": ["inbound support", "customer support", "call routing", "IVR"]
+    },
+    {
+      "id": "outbound_sales",
+      "name": "Outbound Sales",
+      "description": "Power your sales team with predictive dialers, local presence, and AI-powered conversation intelligence.",
+      "url": "/solutions/outbound-sales",
+      "icon": "zap",
+      "hero": {
+        "h1": "Outbound Sales",
+        "subtitle": "Sales Acceleration Platform",
+        "description": "Empower your sales team with AI-powered dialers, local presence, and conversation intelligence that closes more deals."
+      },
+      "features": [
+        { "title": "Predictive Dialer", "description": "AI-powered dialing that maximizes talk time." },
+        { "title": "Local Presence", "description": "Display local numbers to increase answer rates by 400%." },
+        { "title": "Conversation Intelligence", "description": "Real-time coaching and talk ratio analysis." },
+        { "title": "CRM Sync", "description": "Automatic logging and activity tracking." }
+      ],
+      "benefits": [
+        "Increase connect rates by 300%",
+        "Double talk time per hour",
+        "Improve close rates by 25%",
+        "Reduce admin time by 80%"
+      ],
+      "keywords": ["outbound sales", "predictive dialer", "sales acceleration", "local presence"]
+    },
+    {
+      "id": "global_remote_teams",
+      "name": "Global Remote Teams",
+      "description": "Connect your global team with enterprise-grade voice, video, and messaging.",
+      "url": "/solutions/global-remote-teams",
+      "icon": "globe",
+      "hero": {
+        "h1": "Global Remote Teams",
+        "subtitle": "Unified Communications for Distributed Teams",
+        "description": "Connect your global workforce with crystal-clear voice, HD video, and seamless collaboration tools—no matter where they work."
+      },
+      "features": [
+        { "title": "Global Numbers", "description": "Local numbers in 100+ countries for your team." },
+        { "title": "Mobile App", "description": "Full phone system on any device, anywhere." },
+        { "title": "Video Conferencing", "description": "HD video meetings with screen sharing." },
+        { "title": "Team Messaging", "description": "Secure team chat with file sharing." }
+      ],
+      "benefits": [
+        "Enable work from anywhere",
+        "Reduce telecom costs by 60%",
+        "Improve team collaboration",
+        "Maintain local presence globally"
+      ],
+      "keywords": ["remote teams", "global communication", "work from anywhere", "team collaboration"]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "description": "Enterprise-grade solutions with advanced security, compliance, and dedicated support.",
+      "url": "/solutions/enterprise",
+      "icon": "shield",
+      "hero": {
+        "h1": "Enterprise Solutions",
+        "subtitle": "Secure, Scalable, Compliant",
+        "description": "Enterprise-grade cloud communications with advanced security, regulatory compliance, and dedicated support for large organizations."
+      },
+      "features": [
+        { "title": "SSO & SAML", "description": "Single sign-on with your identity provider." },
+        { "title": "Advanced Security", "description": "End-to-end encryption and access controls." },
+        { "title": "Compliance", "description": "HIPAA, GDPR, SOC 2, and PCI DSS compliance." },
+        { "title": "Dedicated Support", "description": "24/7 premium support with SLA guarantees." }
+      ],
+      "benefits": [
+        "Meet regulatory requirements",
+        "Protect sensitive communications",
+        "Scale to 50,000+ users",
+        "99.999% uptime guaranteed"
+      ],
+      "keywords": ["enterprise communication", "enterprise VoIP", "secure communication", "compliance"]
+    }
+  ],
+  "_lastUpdated": "2026-03-03T00:00:00.000000"
+}
