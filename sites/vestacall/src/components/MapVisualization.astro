@@ -351,4 +351,14 @@ const connectionPaths = connections.map(([fi, ti], idx) => {
     animation: vc-fadeInUp 1s ease-out both;
     animation-delay: var(--vc-delay, 0s);
   }
+
+  /* Disable heavy SVG animations on mobile devices to optimize Lighthouse scores */
+  @media (max-width: 768px) {
+    .vc-conn-flow,
+    .vc-conn-packet,
+    .vc-node-glow,
+    .vc-signal-ring {
+      animation: none !important;
+    }
+  }
 </style>
