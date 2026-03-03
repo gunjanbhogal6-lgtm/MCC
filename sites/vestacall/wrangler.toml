@@ -1,5 +1,4 @@
 name = "vestacall"
 compatibility_date = "2024-03-03"
 
-[pages_build_output_dir]
-value = "dist"
+pages_build_output_dir = "dist"
