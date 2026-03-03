@@ -30,16 +30,16 @@ const rows = homeData.comparison.rows as ComparisonRow[];
         <table class="w-full border-collapse">
           <thead>
             <tr class="bg-gray-50/50">
-              <th class="text-left py-6 px-8 text-xs uppercase tracking-widest font-black text-gray-400" scope="col">Capabilities</th>
+              <th class="text-left py-6 px-8 text-xs uppercase tracking-widest font-black text-gray-600" scope="col">Capabilities</th>
               <th class="py-6 px-8 text-center" scope="col">
                 <div class="flex flex-col items-center">
                   <span class="text-xl font-black text-gray-900 leading-none">Vesta<span class="text-vesta-purple">Call</span></span>
-                  <span class="text-[9px] uppercase tracking-widest font-black text-vesta-purple/60 mt-2">Recommended</span>
+                  <span class="text-[9px] uppercase tracking-widest font-black text-vesta-purple mt-2">Recommended</span>
                 </div>
               </th>
-              <th class="py-6 px-8 text-sm font-bold text-gray-400" scope="col">RingCentral</th>
-              <th class="py-6 px-8 text-sm font-bold text-gray-400" scope="col">8x8</th>
-              <th class="py-6 px-8 text-sm font-bold text-gray-400" scope="col">Nextiva</th>
+              <th class="py-6 px-8 text-sm font-bold text-gray-600" scope="col">RingCentral</th>
+              <th class="py-6 px-8 text-sm font-bold text-gray-600" scope="col">8x8</th>
+              <th class="py-6 px-8 text-sm font-bold text-gray-600" scope="col">Nextiva</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
@@ -101,7 +101,7 @@ const rows = homeData.comparison.rows as ComparisonRow[];
                 const val = row[comp.key];
                 const cleanText = val.replace(/✅|⚠️|❌/g, '').trim();
                 return (
-                  <div class="flex justify-between items-center px-3 text-gray-400">
+                  <div class="flex justify-between items-center px-3 text-gray-600">
                     <span class="text-xs font-bold uppercase">{comp.name}</span>
                     <span class="text-xs">{cleanText}</span>
                   </div>

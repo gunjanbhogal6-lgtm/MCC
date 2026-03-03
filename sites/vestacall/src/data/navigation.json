@@ -8,7 +8,7 @@
     "cta": {
       "primary": {
         "text": "Start Free Trial",
-        "url": "/#signup"
+        "url": "/contact"
       },
       "secondary": {
         "text": "Book a Demo",
