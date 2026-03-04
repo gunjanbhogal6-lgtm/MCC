@@ -17,6 +17,7 @@ interface Props {
   breadcrumbs?: Array<{ name: string; url: string }>;
   productSchema?: any;
   breadcrumbSchema?: any;
+  isDark?: boolean;
 }
 
 const {
@@ -30,6 +31,7 @@ const {
   breadcrumbs = [],
   productSchema,
   breadcrumbSchema,
+  isDark = false,
 } = Astro.props;
 ---
 
@@ -150,7 +152,7 @@ const {
     <meta name="theme-color" content="#6C2BD9" />
   </head>
   <body class="min-h-screen bg-gray-50 text-gray-900 font-sans overflow-x-clip">
-    <Navbar />
+    <Navbar isDark={isDark} />
 
     {/* Breadcrumbs */}
     {

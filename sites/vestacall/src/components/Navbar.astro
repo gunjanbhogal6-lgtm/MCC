@@ -23,6 +23,11 @@ import {
   Mail,
 } from "lucide-astro";
 
+interface Props {
+  isDark?: boolean;
+}
+
+const { isDark = false } = Astro.props;
 const navbar = navData.navbar;
 
 const iconMap = {
@@ -61,7 +66,7 @@ const iconMap = {
       style="align-items: center; height: 100%;"
     >
       <img
-        src={navbar.logo.image}
+        src={isDark ? navbar.logo.imageWhite : navbar.logo.image}
         alt={navbar.logo.text}
         width="160"
         height="40"
@@ -76,7 +81,7 @@ const iconMap = {
           navbar.menu.map((item) =>
             "dropdown" in item ? (
               <div class="group relative">
-                <button class="flex items-center gap-1.5 px-3 lg:px-4 py-2.5 rounded-full text-sm font-bold transition-colors duration-200 text-gray-600 hover:text-gray-900 hover:bg-gray-100/50">
+                <button class={`flex items-center gap-1.5 px-3 lg:px-4 py-2.5 rounded-full text-sm font-bold transition-colors duration-200 ${isDark ? 'text-white/90 hover:text-white hover:bg-white/10' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/50'}`}>
                   {item.label}
                   <ChevronDown class="w-3.5 h-3.5 opacity-60 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
@@ -115,7 +120,7 @@ const iconMap = {
             ) : (
               <a
                 href={item.url}
-                class="px-3 lg:px-4 py-2.5 rounded-full text-sm font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-100/50 transition-colors duration-200"
+                class={`px-3 lg:px-4 py-2.5 rounded-full text-sm font-bold transition-colors duration-200 ${isDark ? 'text-white/90 hover:text-white hover:bg-white/10' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/50'}`}
               >
                 {item.label}
               </a>
@@ -128,7 +133,7 @@ const iconMap = {
     <div class="hidden lg:flex items-center gap-3 shrink-0">
       <a
         href="/login"
-        class="px-4 py-2 text-sm font-bold text-gray-900 hover:text-vesta-purple transition-colors"
+        class={`px-4 py-2 text-sm font-bold transition-colors ${isDark ? 'text-white hover:text-white/80' : 'text-gray-900 hover:text-vesta-purple'}`}
         >Log In</a
       >
       <a
