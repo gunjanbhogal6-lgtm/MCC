@@ -330,24 +330,24 @@ const connectionPaths = connections.map(([fi, ti], idx) => {
     }
   }
 
-  /* SVG Animation Classes */
-  .vc-conn-flow {
+  /* SVG Animation Classes - Only active when container has .map-viz-ready */
+  .map-viz-ready .vc-conn-flow {
     animation: vc-flowDash var(--vc-speed, 3s) linear infinite;
     animation-delay: var(--vc-delay, 0s);
   }
-  .vc-conn-packet {
+  .map-viz-ready .vc-conn-packet {
     animation: vc-flowPacket var(--vc-speed, 4s) linear infinite;
     animation-delay: var(--vc-delay, 0s);
   }
-  .vc-node-glow {
+  .map-viz-ready .vc-node-glow {
     animation: vc-pulseGlow 3s ease-in-out infinite;
     animation-delay: var(--vc-delay, 0s);
   }
-  .vc-signal-ring {
+  .map-viz-ready .vc-signal-ring {
     animation: vc-signalRing 3s ease-out infinite;
     animation-delay: var(--vc-delay, 0s);
   }
-  .vc-city-label {
+  .map-viz-ready .vc-city-label {
     animation: vc-fadeInUp 1s ease-out both;
     animation-delay: var(--vc-delay, 0s);
   }
@@ -362,3 +362,14 @@ const connectionPaths = connections.map(([fi, ti], idx) => {
     }
   }
 </style>
+
+<!-- Defer animation start logic -->
+<script is:inline>
+  // Delay animation start to ensure main thread is free during initial paint/TBT measurement
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const container = document.querySelector(".map-viz-container");
+      if (container) container.classList.add("map-viz-ready");
+    }, 1500); // 1.5s delay to clear the TBT window
+  });
+</script>

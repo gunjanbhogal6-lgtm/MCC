@@ -6,9 +6,11 @@
   html {
     scroll-behavior: smooth;
   }
+
   body {
     @apply bg-vesta-dark text-white;
   }
+
   img {
     background: transparent;
   }
@@ -31,27 +33,15 @@
     stroke-dashoffset: 1500;
     opacity: 0;
   }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: -1500;
-    opacity: 0;
-  }
-}
 
-.animate-dash-single {
-  animation: dashOffsetSingle 8s linear infinite;
-}
   15% {
     opacity: 1;
   }
+
   85% {
     opacity: 1;
   }
+
   100% {
     stroke-dashoffset: -1500;
     opacity: 0;
@@ -59,7 +49,9 @@
 }
 
 @keyframes ping {
-  75%, 100% {
+
+  75%,
+  100% {
     transform: scale(2);
     opacity: 0;
   }
