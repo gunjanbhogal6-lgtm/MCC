@@ -2,7 +2,7 @@
   "organization": {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "VestaCall",
+    "name": "Vestacall Limited",
     "description": "AI-Powered Cloud Contact Center for Global Business Communication",
     "url": "https://vestacall.com",
     "logo": "https://vestacall.com/logo.svg",
@@ -13,7 +13,7 @@
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-800-555-0199",
+      "telephone": "+1-914-635-4252",
       "contactType": "sales",
       "availableLanguage": [
         "English"
@@ -21,11 +21,11 @@
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Innovation Drive",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "postalCode": "94105",
-      "addressCountry": "US"
+      "streetAddress": "Room 1911A, Unit F, 19/F, Golden Bear Centre, 66 Chai Wan Kok Street",
+      "addressLocality": "Tsuen Wan",
+      "addressRegion": "Hong Kong",
+      "postalCode": "999077",
+      "addressCountry": "HK"
     }
   },
   "website": {
@@ -187,21 +187,16 @@
   "localBusiness": {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "VestaCall",
+    "name": "Vestacall Limited",
     "image": "https://vestacall.com/logo.svg",
-    "telephone": "+1-800-555-0199",
+    "telephone": "+1-914-635-4252",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Innovation Drive",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "postalCode": "94105",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 37.7749,
-      "longitude": -122.4194
+      "streetAddress": "Room 1911A, Unit F, 19/F, Golden Bear Centre, 66 Chai Wan Kok Street",
+      "addressLocality": "Tsuen Wan",
+      "addressRegion": "Hong Kong",
+      "postalCode": "999077",
+      "addressCountry": "HK"
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",

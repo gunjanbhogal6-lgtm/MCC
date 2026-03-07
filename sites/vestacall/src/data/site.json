@@ -12,16 +12,16 @@
   "defaultImage": "/og-image.png",
   "googleAnalyticsId": "",
   "contact": {
-    "email": "hello@vestacall.com",
-    "phone": "+1 (800) 555-0199",
+    "email": "info@vestacall.com",
+    "phone": "+1 (914) 635-4252",
     "salesEmail": "sales@vestacall.com",
     "supportEmail": "support@vestacall.com",
     "address": {
-      "street": "123 Innovation Drive",
-      "city": "San Francisco",
-      "state": "CA",
-      "zip": "94105",
-      "country": "USA"
+      "street": "Room 1911A, Unit F, 19/F, Golden Bear Centre, 66 Chai Wan Kok Street",
+      "city": "Tsuen Wan",
+      "state": "Hong Kong",
+      "zip": "999077",
+      "country": "HK"
     }
   },
   "social": {

@@ -24,26 +24,22 @@ import MainLayout from '../../layouts/MainLayout.astro';
   <section class="py-24 bg-white border-t border-gray-100">
     <div class="container mx-auto px-6 max-w-6xl">
       <h2 class="text-2xl font-black text-gray-900 mb-8">Open Positions</h2>
-      <div class="space-y-4">
-        {[
-          { title: "Senior Software Engineer", dept: "Engineering", location: "Remote" },
-          { title: "Product Manager", dept: "Product", location: "San Francisco" },
-          { title: "Customer Success Manager", dept: "Customer Success", location: "Remote" },
-          { title: "Sales Development Representative", dept: "Sales", location: "San Francisco" },
-          { title: "DevOps Engineer", dept: "Infrastructure", location: "Remote" },
-        ].map((job) => (
-          <a href="/company/careers" class="block p-6 bg-white border border-gray-100 rounded-2xl hover:border-vesta-purple/20 hover:shadow-md transition-all">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div>
-                <h3 class="text-lg font-bold text-gray-900">{job.title}</h3>
-                <p class="text-gray-500 font-medium text-sm">{job.dept} · {job.location}</p>
-              </div>
-              <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-vesta-purple/10 text-vesta-purple font-bold text-sm">
-                Apply Now <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              </span>
-            </div>
-          </a>
-        ))}
+      <div class="bg-gray-50 border border-dashed border-gray-300 rounded-3xl p-12 text-center max-w-4xl mx-auto">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+          <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2 italic">Current Opportunity Snapshot</h3>
+        <p class="text-gray-500 font-medium mb-8 max-w-lg mx-auto">
+          We don't have any active open positions right now, but we're always looking for exceptional talent to join our future growth.
+        </p>
+        <a 
+          href="/contact" 
+          class="inline-flex items-center gap-2 bg-vesta-purple text-white font-bold px-8 py-3 rounded-full hover:bg-vesta-purple/90 transition-all shadow-lg hover:shadow-vesta-purple/20"
+        >
+          Send Your Resume <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </a>
       </div>
     </div>
   </section>

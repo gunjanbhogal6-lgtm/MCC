@@ -1,7 +1,7 @@
 {
   "navbar": {
     "logo": {
-      "text": "VestaCall",
+      "text": "Vestacall Limited",
       "image": "/logo.svg",
       "imageWhite": "/white-loog.png"
     },
@@ -97,7 +97,7 @@
         "dropdown": [
           {
             "name": "Blog",
-            "url": "/resources/blog",
+            "url": "/blog",
             "description": "Insights & guides",
             "keywords": "Insights",
             "icon": "FileText"
@@ -160,7 +160,7 @@
   },
   "footer": {
     "brand": {
-      "name": "VestaCall",
+      "name": "Vestacall Limited",
       "tagline": "AI-powered cloud contact center for modern businesses. Connect, support, and grow globally."
     },
     "sections": {
@@ -244,7 +244,7 @@
         "links": [
           {
             "name": "Blog",
-            "url": "/resources/blog",
+            "url": "/blog",
             "keywords": "Insights"
           },
           {
@@ -267,7 +267,7 @@
       "PCI DSS Compliant"
     ],
     "trust": "Trusted by 50,000+ businesses worldwide",
-    "copyright": "© 2026 VestaCall. All rights reserved."
+    "copyright": "© 2026 Vestacall Limited. All rights reserved."
   },
   "_lastUpdated": "2026-03-03T00:00:00.000000"
 }

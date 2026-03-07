@@ -1,62 +1,71 @@
 ---
-import homeData from '../data/home.json';
 import schemaData from '../data/schemas.json';
 
-const faqData = homeData.faq;
-
-// Map keywords to relevant pages
-const keywordLinks: Record<string, string> = {
-  "AI-powered features": "/conversational-ai",
-  "global coverage": "/sip-trunking",
-  "SIP trunking": "/sip-trunking",
-  "CRM integrations": "/products/crm-integrations",
-  "99.999% uptime": "/company/security",
-  "HIPAA": "/company/security",
-  "GDPR": "/company/security",
-  "sentiment analysis": "/products/sentiment-analysis",
-  "AI receptionist": "/conversational-ai"
+const faqData = {
+  title: "Frequently Asked Questions",
+  description: "Everything you need to know about the product and billing.",
+  items: [
+    {
+      question: "How long does it take to get started?",
+      answer: "VestaCall is designed for rapid deployment. Our cloud-native architecture allows most teams to go live in under 24 hours with full SIP integration and AI receptionist setup."
+    },
+    {
+      question: "Do you integrate with CRM tools like Salesforce or Hubspot?",
+      answer: "Yes, VestaCall offers native bi-directional integrations with Salesforce, HubSpot, Zendesk, and 50+ other leading CRM and helpdesk tools to keep your customer data perfectly synced."
+    },
+    {
+      question: "Is there a limit to how many concurrent calls I can have?",
+      answer: "Our global cloud infrastructure is elastically scalable. Whether you need 5 or 5,000 concurrent channels, VestaCall handles your peak-hour volume with zero latency and 99.999% reliability."
+    },
+    {
+      question: "Does VestaCall support local numbers in my country?",
+      answer: "We provide local, national, and toll-free numbers in over 120 countries. Our global Tier-1 network ensuring your business maintains a local presence anywhere in the world."
+    },
+    {
+      question: "Is my customers' call data secure and compliant?",
+      answer: "Security is our core pillar. VestaCall is SOC-2 Type II certified and fully compliant with HIPAA, GDPR, and PCI-DSS, featuring end-to-end encryption for all voice and data transmissions."
+    }
+  ]
 };
-
-// Function to process answers with links
-function processAnswerWithLinks(answer: string): string {
-  let processedAnswer = answer;
-  for (const [keyword, url] of Object.entries(keywordLinks)) {
-    const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
-    processedAnswer = processedAnswer.replace(regex, `<a href="${url}" class="text-vesta-purple font-semibold hover:underline">${keyword}</a>`);
-  }
-  return processedAnswer;
-}
 ---
 
-<section class="py-24 bg-gray-50 relative border-t border-gray-200">
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-vesta-purple/5 blur-[120px] rounded-full pointer-events-none"></div>
+<section class="py-24 bg-[#fbfbfe] relative overflow-hidden">
+  {/* Soft background glow */}
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-purple-100 opacity-20 blur-[150px] pointer-events-none"></div>
 
-  <div class="container mx-auto px-6 max-w-3xl relative z-10">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-black mb-4 text-gray-900 tracking-tight">
-        {faqData.title}
+  <div class="container mx-auto px-6 max-w-4xl relative z-10">
+    <div class="text-center mb-20">
+      <h2 class="text-3xl sm:text-5xl md:text-6xl font-black mb-6 text-slate-900 tracking-tight">
+        Frequently Asked <span class="bg-gradient-to-r from-purple-600 to-fuchsia-500 bg-clip-text text-transparent">Questions</span>
       </h2>
-      <p class="text-gray-600 text-lg font-medium">{faqData.description}</p>
+      <p class="text-slate-500 text-lg font-medium">{faqData.description}</p>
     </div>
 
-    <div class="space-y-4" id="faq-container">
+    <div class="space-y-5" id="faq-container">
       {faqData.items.map((faq, index) => (
-        <div class="faq-item border rounded-2xl overflow-hidden transition-all duration-300 bg-white border-gray-200 hover:border-vesta-purple/40 hover:shadow-sm" data-index={index}>
+        <div class={`faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden transition-all duration-300 hover:border-purple-200 hover:shadow-[0_15px_30px_rgba(124,58,237,0.05)] ${index >= 3 ? 'hidden sm:block' : ''}`} data-index={index}>
           <button
-            class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none group"
+            class="w-full px-6 sm:px-10 py-8 flex items-center justify-between text-left focus:outline-none"
             onclick="toggleFaq(this)"
           >
-            <span class="text-lg font-bold text-gray-900 group-hover:text-vesta-purple transition-colors faq-question">{faq.question}</span>
-            <span class="flex-shrink-0 ml-4 p-1.5 rounded-full border text-gray-400 border-gray-200 bg-gray-50 group-hover:bg-vesta-purple/10 group-hover:text-vesta-purple group-hover:border-vesta-purple/20 transition-colors faq-icon">
-              <svg class="w-4.5 h-4.5 plus-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
-              <svg class="w-4.5 h-4.5 minus-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg>
+            <span class="text-xl font-bold text-slate-800 group-hover:text-purple-600 transition-colors faq-question leading-tight">{faq.question}</span>
+            <span class="flex-shrink-0 ml-4 w-10 h-10 rounded-full border border-slate-100 flex items-center justify-center text-slate-300 group-hover:bg-purple-50 group-hover:text-purple-600 group-hover:border-purple-100 transition-all faq-icon">
+              <svg class="w-5 h-5 transition-transform duration-300 plus-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" /></svg>
             </span>
           </button>
-          <div class="faq-answer hidden overflow-hidden bg-white">
-            <div class="px-6 pb-6 pt-2 text-gray-600 font-medium leading-relaxed border-t border-gray-50 mt-2" set:html={processAnswerWithLinks(faq.answer)} />
+          <div class="faq-answer hidden bg-white">
+            <div class="px-10 pb-10 pt-2 text-slate-500 text-lg font-medium leading-relaxed max-w-3xl">
+              {faq.answer}
+            </div>
           </div>
         </div>
       ))}
+    </div>
+
+    <div class="mt-8 text-center sm:hidden">
+      <button class="px-8 py-3 rounded-full border border-purple-200 text-purple-600 font-bold hover:bg-purple-50 transition-all" onclick="document.querySelectorAll('.faq-item.hidden').forEach(el => el.classList.remove('hidden')); this.parentElement.remove();">
+        Show More Questions
+      </button>
     </div>
   </div>
 </section>
@@ -67,57 +76,42 @@ function processAnswerWithLinks(answer: string): string {
   function toggleFaq(button) {
     const item = button.closest('.faq-item');
     const answer = item.querySelector('.faq-answer');
-    const plusIcon = item.querySelector('.plus-icon');
-    const minusIcon = item.querySelector('.minus-icon');
     const question = item.querySelector('.faq-question');
     const iconContainer = item.querySelector('.faq-icon');
+    const plusIcon = item.querySelector('.plus-icon');
     
     const isOpen = !answer.classList.contains('hidden');
     
+    // Close all others
     document.querySelectorAll('.faq-item').forEach(otherItem => {
       if (otherItem !== item) {
-        const otherAnswer = otherItem.querySelector('.faq-answer');
-        const otherPlus = otherItem.querySelector('.plus-icon');
-        const otherMinus = otherItem.querySelector('.minus-icon');
-        const otherQuestion = otherItem.querySelector('.faq-question');
-        const otherIcon = otherItem.querySelector('.faq-icon');
-        
-        // Add null checks
-        if (!otherAnswer || !otherPlus || !otherMinus || !otherQuestion || !otherIcon) return;
-        
-        otherAnswer.classList.add('hidden');
-        otherPlus.classList.remove('hidden');
-        otherMinus.classList.add('hidden');
-        otherQuestion.classList.remove('text-vesta-purple');
-        otherQuestion.classList.add('text-gray-900');
-        otherIcon.classList.remove('text-white', 'border-vesta-purple', 'bg-vesta-purple');
-        otherIcon.classList.add('text-gray-400', 'border-gray-200', 'bg-gray-50');
-        otherItem.classList.remove('border-vesta-purple', 'shadow-md', 'shadow-vesta-purple/10');
-        otherItem.classList.add('border-gray-200');
+        otherItem.querySelector('.faq-answer').classList.add('hidden');
+        otherItem.querySelector('.faq-question').classList.remove('text-purple-600');
+        otherItem.querySelector('.faq-question').classList.add('text-slate-800');
+        otherItem.querySelector('.faq-icon').classList.remove('bg-purple-50', 'text-purple-600', 'border-purple-100');
+        otherItem.querySelector('.faq-icon').classList.add('bg-transparent', 'text-slate-300', 'border-slate-100');
+        otherItem.querySelector('.plus-icon').style.transform = 'rotate(0deg)';
+        otherItem.classList.remove('border-purple-200', 'shadow-[0_15px_30px_rgba(124,58,237,0.1)]');
       }
     });
     
     if (isOpen) {
       answer.classList.add('hidden');
-      plusIcon.classList.remove('hidden');
-      minusIcon.classList.add('hidden');
-      question.classList.remove('text-vesta-purple');
-      question.classList.add('text-gray-900');
-      iconContainer.classList.remove('text-white', 'border-vesta-purple', 'bg-vesta-purple');
-      iconContainer.classList.add('text-gray-400', 'border-gray-200', 'bg-gray-50');
-      item.classList.remove('border-vesta-purple', 'shadow-md', 'shadow-vesta-purple/10');
-      item.classList.add('border-gray-200');
+      question.classList.remove('text-purple-600');
+      question.classList.add('text-slate-800');
+      iconContainer.classList.remove('bg-purple-50', 'text-purple-600', 'border-purple-100');
+      iconContainer.classList.add('bg-transparent', 'text-slate-300', 'border-slate-100');
+      plusIcon.style.transform = 'rotate(0deg)';
+      item.classList.remove('border-purple-200', 'shadow-[0_15px_30px_rgba(124,58,237,0.1)]');
     } else {
       answer.classList.remove('hidden');
-      plusIcon.classList.add('hidden');
-      minusIcon.classList.remove('hidden');
-      question.classList.add('text-vesta-purple');
-      question.classList.remove('text-gray-900');
-      iconContainer.classList.add('text-white', 'border-vesta-purple', 'bg-vesta-purple');
-      iconContainer.classList.remove('text-gray-400', 'border-gray-200', 'bg-gray-50');
-      item.classList.add('border-vesta-purple', 'shadow-md', 'shadow-vesta-purple/10');
-      item.classList.remove('border-gray-200');
+      question.classList.add('text-purple-600');
+      question.classList.remove('text-slate-800');
+      iconContainer.classList.add('bg-purple-50', 'text-purple-600', 'border-purple-100');
+      iconContainer.classList.remove('bg-transparent', 'text-slate-300', 'border-slate-100');
+      plusIcon.style.transform = 'rotate(45deg)';
+      item.classList.add('border-purple-200', 'shadow-[0_15px_30px_rgba(124,58,237,0.1)]');
     }
   }
-  window.toggleFaq = toggleFaq;
 </script>
+

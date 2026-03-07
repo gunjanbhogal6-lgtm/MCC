@@ -1,0 +1,56 @@
+---
+// src/components/home/LogoCloud.astro
+const partners = [
+  { name: "Nimbus", icon: "☁️" },
+  { name: "NovaCore", icon: "💠" },
+  { name: "Synergy", icon: "♾️" },
+  { name: "AcmeCorp", icon: "💎" },
+  { name: "Globalnet", icon: "🌐" },
+  { name: "Vertex", icon: "📐" },
+];
+---
+
+<section class="py-16 bg-white border-y border-slate-100 relative overflow-hidden">
+  <div class="container mx-auto px-6 mb-10 text-center">
+    <p class="text-slate-400 text-xs font-bold uppercase tracking-[0.4em]">
+      Trusted by the world's most innovative teams
+    </p>
+  </div>
+  
+  <div class="relative flex overflow-hidden group">
+    {/* Gradient Masks for smooth fade */}
+    <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+    <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+    <div class="animate-marquee flex whitespace-nowrap items-center py-4">
+      {[...partners, ...partners, ...partners, ...partners].map((company) => (
+        <div class="flex items-center gap-4 px-12 group/item cursor-default">
+          <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 border border-slate-100 group-hover/item:bg-purple-50 group-hover/item:border-purple-200 group-hover/item:scale-110 transition-all duration-300">
+            <span class="text-xl filter grayscale group-hover/item:grayscale-0 contrast-125">{company.icon}</span>
+          </div>
+          <span class="text-2xl font-black text-slate-300 group-hover/item:text-slate-900 transition-colors duration-300 tracking-tight lowercase">
+            {company.name}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-25%); }
+  }
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+
+
+  </style>
+</section>

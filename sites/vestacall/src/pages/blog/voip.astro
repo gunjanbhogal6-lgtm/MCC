@@ -1,0 +1,251 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Cta from '../../components/Cta.astro';
+---
+
+<MainLayout 
+  title="What is VoIP? The Ultimate Guide to Business Cloud Voice | VestaCall" 
+  description="Learn everything about Voice over Internet Protocol (VoIP). How it works, why your business needs it, and how to choose the right provider for your needs."
+  pathname="/blog/voip"
+>
+  <article class="pt-32 bg-white">
+    <!-- Hero Section -->
+    <section class="relative pb-20 border-b border-gray-100">
+      <div class="absolute top-0 right-0 w-[50%] h-full bg-vesta-purple/5 blur-[120px] pointer-events-none rounded-full"></div>
+      <div class="container mx-auto px-6 max-w-4xl relative z-10">
+        <div class="inline-flex items-center gap-2 bg-vesta-purple/10 border border-vesta-purple/20 rounded-full px-4 py-2 mb-8">
+          <span class="text-sm font-bold text-vesta-purple">VoIP Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-8">
+          What is <span class="bg-gradient-to-r from-purple-600 to-fuchsia-500 bg-clip-text text-transparent italic">VoIP?</span> <br/>
+          The Future of Voice.
+        </h1>
+        <div class="flex items-center gap-4 text-gray-500 font-bold text-sm mb-12">
+          <span>By VestaCall Engineering Team</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+          <span>10 Min Read</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+          <span>March 7, 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <section class="py-20">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="flex flex-col lg:flex-row gap-16">
+          <!-- Main Article Content -->
+          <div class="lg:w-2/3 prose prose-lg prose-purple max-w-none">
+            <h2 id="introduction" class="text-3xl font-black text-gray-900 mb-6 group flex items-center gap-3">
+              Introduction to Voice over IP
+              <a href="#introduction" class="opacity-0 group-hover:opacity-100 text-vesta-purple transition-opacity text-xl">#</a>
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              Voice over Internet Protocol (VoIP) is a technology that allows you to make voice calls using a broadband Internet connection instead of a regular (analog) phone line. While traditional telephony relies on physical circuit switching through complex public networks, VoIP transforms your voice into digital "packets" that travel across the same infrastructure as your emails and web browsing.
+            </p>
+
+            <h2 id="how-it-works" class="text-3xl font-black text-gray-900 mb-6 font-primary group flex items-center gap-3">
+              How Does VoIP Work?
+              <a href="#how-it-works" class="opacity-0 group-hover:opacity-100 text-vesta-purple transition-opacity text-xl">#</a>
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              The process is essentially a real-time translation:
+            </p>
+            <ul class="space-y-4 mb-10 list-none p-0">
+              <li class="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                <div class="w-8 h-8 rounded-full bg-vesta-purple text-white flex items-center justify-center font-bold shrink-0">1</div>
+                <div>
+                  <strong class="text-gray-900 block mb-1">Analog-to-Digital Conversion:</strong>
+                  <span class="text-gray-600">Your phone or computer captures sound waves and converts them into binary data.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                <div class="w-8 h-8 rounded-full bg-vesta-purple text-white flex items-center justify-center font-bold shrink-0">2</div>
+                <div>
+                  <strong class="text-gray-900 block mb-1">Packetization:</strong>
+                  <span class="text-gray-600">This data is split into small packets, each labeled with a destination address.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                <div class="w-8 h-8 rounded-full bg-vesta-purple text-white flex items-center justify-center font-bold shrink-0">3</div>
+                <div>
+                  <strong class="text-gray-900 block mb-1">Internet Routing:</strong>
+                  <span class="text-gray-600">Packets travel across the fastest available routes on the internet to reach the recipient.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                <div class="w-8 h-8 rounded-full bg-vesta-purple text-white flex items-center justify-center font-bold shrink-0">4</div>
+                <div>
+                  <strong class="text-gray-900 block mb-1">Reassembly:</strong>
+                  <span class="text-gray-600">The recipient's device reassembles the packets and converts them back into audible sound.</span>
+                </div>
+              </li>
+            </ul>
+
+            <h2 id="benefits" class="text-3xl font-black text-gray-900 mb-6 group flex items-center gap-3">
+              Key Benefits for Business
+              <a href="#benefits" class="opacity-0 group-hover:opacity-100 text-vesta-purple transition-opacity text-xl">#</a>
+            </h2>
+            <div class="grid sm:grid-cols-2 gap-6 mb-12 text-base leading-relaxed p-0 list-none">
+              <div class="p-6 bg-gradient-to-br from-vesta-purple/5 to-transparent border border-vesta-purple/10 rounded-3xl">
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Massive Cost Savings</h4>
+                <p class="text-gray-600 text-sm">Eliminate expensive hardware maintenance and long-distance charges. VoIP calls often cost 60-80% less than PSTN.</p>
+              </div>
+              <div class="p-6 bg-gradient-to-br from-fuchsia-500/5 to-transparent border border-fuchsia-500/10 rounded-3xl">
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Infinite Scalability</h4>
+                <p class="text-gray-600 text-sm">Add 1,000 users in minutes, not months. No more waiting for technicians to run new copper lines to your office.</p>
+              </div>
+              <div class="p-6 bg-gradient-to-br from-blue-500/5 to-transparent border border-blue-500/10 rounded-3xl">
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Global Mobility</h4>
+                <p class="text-gray-600 text-sm">Your business phone goes where you go. Whether on a laptop in London or a phone in New York, you stay connected.</p>
+              </div>
+              <div class="p-6 bg-gradient-to-br from-emerald-500/5 to-transparent border border-emerald-500/10 rounded-3xl">
+                <h4 class="text-xl font-bold text-gray-900 mb-2">AI Integration</h4>
+                <p class="text-gray-600 text-sm">Modern VoIP (like VestaCall) integrates directly with CRM and AI agents for automated transcription and sentiment tracking.</p>
+              </div>
+            </div>
+
+            <h2 id="comparison" class="text-3xl font-black text-gray-900 mb-6 group flex items-center gap-3">
+              VoIP vs. Traditional Phones
+              <a href="#comparison" class="opacity-0 group-hover:opacity-100 text-vesta-purple transition-opacity text-xl">#</a>
+            </h2>
+            <div class="overflow-x-auto mb-12">
+              <table class="w-full border-collapse border border-gray-100 rounded-2xl">
+                <thead>
+                  <tr class="bg-gray-50">
+                    <th class="p-4 text-left border border-gray-100">Feature</th>
+                    <th class="p-4 text-left border border-gray-100 font-bold text-vesta-purple">VoIP</th>
+                    <th class="p-4 text-left border border-gray-100">PSTN (Landline)</th>
+                  </tr>
+                </thead>
+                <tbody class="text-gray-600 text-base">
+                  <tr>
+                    <td class="p-4 border border-gray-100 font-bold text-gray-900">Cost</td>
+                    <td class="p-4 border border-gray-100">Low (Software based)</td>
+                    <td class="p-4 border border-gray-100">High (Hardware based)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-4 border border-gray-100 font-bold text-gray-900">Setup</td>
+                    <td class="p-4 border border-gray-100">Minutes (Virtual)</td>
+                    <td class="p-4 border border-gray-100">Days/Weeks (Physical)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-4 border border-gray-100 font-bold text-gray-900">Portability</td>
+                    <td class="p-4 border border-gray-100">Universal (Internet)</td>
+                    <td class="p-4 border border-gray-100">Fixed (Physical Wire)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-4 border border-gray-100 font-bold text-gray-900">Features</td>
+                    <td class="p-4 border border-gray-100">Advanced AI/Analytics</td>
+                    <td class="p-4 border border-gray-100">Basic Voice Only</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="why-vestacall" class="text-3xl font-black text-gray-900 mb-6 group flex items-center gap-3">
+              Why Modern Enterprises Choose VestaCall
+              <a href="#why-vestacall" class="opacity-0 group-hover:opacity-100 text-vesta-purple transition-opacity text-xl">#</a>
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              Not all VoIP is created equal. While many providers rely on public internet paths that cause "jitter" and lag, VestaCall utilizes a dedicated carrier-grade network with 99.999% uptime. Our architecture is built with a mobile-first approach, ensuring that your enterprise communication remains pristine, encrypted, and intelligently routed — regardless of where your agents are located.
+            </p>
+
+            <div class="bg-gray-950 rounded-[40px] p-10 text-white relative overflow-hidden my-16">
+              <div class="absolute top-0 right-0 w-64 h-64 bg-vesta-purple/20 blur-[100px] pointer-events-none"></div>
+              <h3 class="text-2xl font-black mb-4 relative z-10 font-primary">Is your business ready for the cloud?</h3>
+              <p class="text-white/70 mb-8 relative z-10">Stop paying for legacy copper. Start connecting with AI-powered voice today.</p>
+              <a href="/contact" class="inline-block px-8 py-4 bg-vesta-purple rounded-full font-bold hover:bg-[#5a24b5] transition-all relative z-10 no-underline">
+                Get a Custom VoIP Quote
+              </a>
+            </div>
+          </div>
+
+          <!-- Sidebar / Table of Contents -->
+          <aside class="hidden lg:block lg:w-1/3 relative">
+            <div class="sticky top-32 space-y-8 h-fit">
+              <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm shadow-vesta-purple/5">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6 font-primary">In This Article</h3>
+                <nav class="space-y-4" id="toc-nav">
+                  {[
+                    { id: "introduction", label: "Introduction" },
+                    { id: "how-it-works", label: "How Does VoIP Work?" },
+                    { id: "benefits", label: "Key Benefits" },
+                    { id: "comparison", label: "VoIP vs. PSTN" },
+                    { id: "why-vestacall", label: "Why VestaCall" }
+                  ].map(item => (
+                    <a 
+                      href={`#${item.id}`} 
+                      class="toc-link block text-gray-600 hover:text-vesta-purple font-medium transition-all flex items-center gap-2 group no-underline text-base hover:translate-x-1"
+                      data-section={item.id}
+                    >
+                      <span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-vesta-purple transition-all scale-100 group-hover:scale-125"></span>
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+
+              <div class="bg-gradient-to-br from-vesta-purple/90 to-fuchsia-600/90 backdrop-blur-md rounded-3xl p-8 text-white shadow-xl shadow-vesta-purple/10 border border-white/20">
+                <h4 class="text-xl font-bold mb-4 font-primary">Ready to Switch?</h4>
+                <p class="text-white/80 text-sm mb-6 leading-relaxed">Join 50,000+ businesses already saving on their communication costs.</p>
+                <a href="/contact" class="block text-center py-3.5 bg-white text-vesta-purple font-bold rounded-xl hover:bg-gray-50 transition-all shadow-lg no-underline hover:-translate-y-0.5">
+                  Start Free Trial
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <Cta />
+  </article>
+
+  <style>
+    /* Smooth scroll margin to account for fixed header */
+    h2[id] {
+      scroll-margin-top: 120px;
+    }
+
+    .toc-link.active {
+      @apply text-vesta-purple translate-x-1;
+    }
+
+    .toc-link.active span {
+      @apply bg-vesta-purple scale-125;
+    }
+  </style>
+
+  <script>
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        const tocLink = document.querySelector(`.toc-link[data-section="${id}"]`);
+        
+        if (entry.isIntersecting) {
+          // Remove active class from all links
+          document.querySelectorAll('.toc-link').forEach(link => {
+            link.classList.remove('active');
+          });
+          
+          // Add active class to current link
+          if (tocLink) {
+            tocLink.classList.add('active');
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Track all H2 headers with IDs
+    document.querySelectorAll('h2[id]').forEach((h2) => {
+      observer.observe(h2);
+    });
+  </script>
+</MainLayout>

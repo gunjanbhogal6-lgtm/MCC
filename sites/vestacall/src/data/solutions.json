@@ -3,102 +3,398 @@
     {
       "id": "inbound_support",
       "name": "Inbound Support",
-      "description": "Transform your inbound support operations with AI-powered routing and intelligent IVR.",
+      "description": "Enterprise-grade inbound support solutions powered by AI. Optimize your customer service with intelligent call routing, advanced IVR, and real-time omnichannel analytics.",
       "url": "/solutions/inbound-support",
       "icon": "phone",
       "hero": {
         "h1": "Inbound Support",
-        "subtitle": "AI-Powered Customer Support",
-        "description": "Deliver exceptional customer experiences with intelligent call routing, AI-powered IVR, and real-time sentiment analysis."
+        "subtitle": "Next-Gen AI Customer Service",
+        "description": "Transform your support center into a high-performance growth engine. Our AI-driven inbound solutions ensure every customer reaches the right agent at the perfect moment, reducing wait times and boosting CSAT scores."
       },
       "features": [
-        { "title": "Smart Call Routing", "description": "Route calls to the right agent based on skills, language, and availability." },
-        { "title": "AI-Powered IVR", "description": "Self-service options that resolve 60% of inquiries without agent transfer." },
-        { "title": "Real-time Sentiment", "description": "Detect frustrated customers and escalate automatically." },
-        { "title": "Callback Queue", "description": "Offer callbacks instead of hold times." }
+        {
+          "title": "Skill-Based Routing",
+          "description": "Automatically route callers to the most qualified agent based on expertise, language, and historical data."
+        },
+        {
+          "title": "AI-Powered Conversational IVR",
+          "description": "Replace rigid touch-tone menus with natural language processing that resolves 60% of routine queries."
+        },
+        {
+          "title": "Real-time Sentiment Analysis",
+          "description": "Monitor caller emotions in real-time. Automatically flag frustrated customers for immediate supervisor escalation."
+        },
+        {
+          "title": "Queue Callback & SMS",
+          "description": "Eliminate hold times by offering automated callbacks or switching to convenient asynchronous SMS support."
+        },
+        {
+          "title": "Omnichannel CRM Sync",
+          "description": "Instant screen pops with full customer history from Salesforce, HubSpot, or Zendesk for personalized service."
+        },
+        {
+          "title": "Smart Overflow Management",
+          "description": "Dynamically adjust routing rules during peak volume to maintain SLAs and prevent customer churn."
+        }
       ],
       "benefits": [
-        "Reduce wait times by 50%",
-        "Increase first-call resolution by 35%",
-        "Improve CSAT scores by 20%",
-        "Lower cost per call by 40%"
+        "85% reduction in average wait times",
+        "40% increase in First Call Resolution (FCR)",
+        "25% boost in Agent Productivity",
+        "Crystal-clear HD Voice quality",
+        "No hardware or maintenance costs",
+        "Deploy global support in minutes"
       ],
-      "keywords": ["inbound support", "customer support", "call routing", "IVR"]
+      "keywords": [
+        "inbound support software",
+        "cloud contact center inbound",
+        "skill-based routing",
+        "AI customer service",
+        "interactive voice response",
+        "IVR solutions",
+        "omnichannel support platform",
+        "customer experience management"
+      ],
+      "stats": [
+        {
+          "label": "Avg Response Time",
+          "value": "12s"
+        },
+        {
+          "label": "Customer Satisfaction",
+          "value": "98%"
+        },
+        {
+          "label": "Call Volume Capacity",
+          "value": "10k/hr"
+        },
+        {
+          "label": "Language Support",
+          "value": "50+"
+        }
+      ],
+      "howItWorks": [
+        {
+          "title": "Configure Routing",
+          "description": "Define rules based on agent skills, customer priority, or inquiry type using our visual builder."
+        },
+        {
+          "title": "AI Training",
+          "description": "Our AI learns from your knowledge base to handle routine queries autonomously through natural language."
+        },
+        {
+          "title": "Real-time Optimization",
+          "description": "Monitor performance live and adjust routing dynamically to maintain peak service levels."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What is skill-based routing?",
+          "answer": "Skill-based routing is a strategy that assigns incoming calls to the most qualified agent based on their expertise, language, and case history, rather than just choosing the first available agent."
+        },
+        {
+          "question": "Can I integrate my existing CRM?",
+          "answer": "Yes, VestaCall offers native, zero-code integrations with Salesforce, HubSpot, Zendesk, and more, allowing for instant screen pops and automatic data synchronization."
+        },
+        {
+          "question": "How does the AI-powered IVR improve CX?",
+          "answer": "By using natural language processing instead of rigid menus, customers can simply state their needs, leading to faster resolution and a more human-like interaction."
+        }
+      ]
     },
     {
       "id": "outbound_sales",
       "name": "Outbound Sales",
-      "description": "Power your sales team with predictive dialers, local presence, and AI-powered conversation intelligence.",
+      "description": "Accelerate your sales cycle with AI-powered predictive dialers, local presence tools, and real-time conversation intelligence designed for high-performance sales teams.",
       "url": "/solutions/outbound-sales",
       "icon": "zap",
       "hero": {
         "h1": "Outbound Sales",
-        "subtitle": "Sales Acceleration Platform",
-        "description": "Empower your sales team with AI-powered dialers, local presence, and conversation intelligence that closes more deals."
+        "subtitle": "High-Velocity Sales Acceleration",
+        "description": "Empower your sales organization with the tools to connect faster and close more deals. From predictive dialing to local presence, VestaCall maximizes every outbound interaction."
       },
       "features": [
-        { "title": "Predictive Dialer", "description": "AI-powered dialing that maximizes talk time." },
-        { "title": "Local Presence", "description": "Display local numbers to increase answer rates by 400%." },
-        { "title": "Conversation Intelligence", "description": "Real-time coaching and talk ratio analysis." },
-        { "title": "CRM Sync", "description": "Automatic logging and activity tracking." }
+        {
+          "title": "Predictive Dialer Software",
+          "description": "AI algorithms predict agent availability and dial multiple numbers simultaneously to eliminate idle time."
+        },
+        {
+          "title": "Dynamic Local Presence",
+          "description": "Boost answer rates by 400% by automatically displaying a local caller ID that matches the lead's location."
+        },
+        {
+          "title": "Conversation Intelligence",
+          "description": "Real-time AI analysis of talk-to-listen ratios and keyword detection to coach agents during live calls."
+        },
+        {
+          "title": "TCPA Compliance Suite",
+          "description": "Stay compliant with built-in scrubbers for DNC lists and automated consent verification workflows."
+        },
+        {
+          "title": "CRM Power Dialer",
+          "description": "Trigger dialer sequences directly from within Salesforce, HubSpot, or Microsoft Dynamics with one click."
+        }
       ],
       "benefits": [
-        "Increase connect rates by 300%",
-        "Double talk time per hour",
-        "Improve close rates by 25%",
-        "Reduce admin time by 80%"
+        "Increase talk time by up to 300%",
+        "Achieve 99% Answer Seizure Ratio (ASR)",
+        "Reduce manual dialing time by 80%",
+        "Improve lead conversion by 25%",
+        "Enterprise-grade call quality",
+        "Instant global number provisioning"
       ],
-      "keywords": ["outbound sales", "predictive dialer", "sales acceleration", "local presence"]
+      "keywords": [
+        "outbound sales software",
+        "predictive dialer system",
+        "sales acceleration platform",
+        "local presence dialer",
+        "automated sales outreach",
+        "call center outbound solutions",
+        "TCPA compliant dialer",
+        "inside sales tools"
+      ],
+      "stats": [
+        {
+          "label": "Connection Rate Boost",
+          "value": "400%"
+        },
+        {
+          "label": "Calls Per Hour / Agent",
+          "value": "65+"
+        },
+        {
+          "label": "Talk Time Increase",
+          "value": "3x"
+        },
+        {
+          "label": "CRM Data Accuracy",
+          "value": "100%"
+        }
+      ],
+      "howItWorks": [
+        {
+          "title": "Upload Leads",
+          "description": "Import leads directly from your CRM or CSV and segment them into high-priority campaigns."
+        },
+        {
+          "title": "Activate Dialer",
+          "description": "Choose between Predictive, Power, or Preview dialing modes based on your workflow needs."
+        },
+        {
+          "title": "Scale Outreach",
+          "description": "Let the AI handle the dialing while your agents focus solely on having meaningful conversations."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What is a predictive dialer?",
+          "answer": "A predictive dialer is an automated system that calls several numbers at once and uses algorithms to connect an available agent as soon as a live person answers, significantly reducing idle time."
+        },
+        {
+          "question": "How does local presence work?",
+          "answer": "Our system identifies the area code of the number being dialed and automatically selects a local number from our pool to display as the Caller ID, making the lead more likely to answer."
+        },
+        {
+          "question": "Is your dialer TCPA compliant?",
+          "answer": "Yes, VestaCall includes robust TCPA compliance features, including automated DNC list scrubbing and human-initiated dialing options for regulated industries."
+        }
+      ]
     },
     {
       "id": "global_remote_teams",
       "name": "Global Remote Teams",
-      "description": "Connect your global team with enterprise-grade voice, video, and messaging.",
+      "description": "Unify your distributed workforce with enterprise-grade voice, video, and collaboration tools. Enable seamless remote work with global local presence and carrier-grade reliability.",
       "url": "/solutions/global-remote-teams",
       "icon": "globe",
       "hero": {
         "h1": "Global Remote Teams",
-        "subtitle": "Unified Communications for Distributed Teams",
-        "description": "Connect your global workforce with crystal-clear voice, HD video, and seamless collaboration tools—no matter where they work."
+        "subtitle": "Unified Communication for the Modern Workspace",
+        "description": "Connect your global workforce with crystal-clear voice, HD video, and seamless collaboration tools. Power your remote work strategy with a platform as distributed as your team."
       },
       "features": [
-        { "title": "Global Numbers", "description": "Local numbers in 100+ countries for your team." },
-        { "title": "Mobile App", "description": "Full phone system on any device, anywhere." },
-        { "title": "Video Conferencing", "description": "HD video meetings with screen sharing." },
-        { "title": "Team Messaging", "description": "Secure team chat with file sharing." }
+        {
+          "title": "Global Virtual Numbers",
+          "description": "Instantly provision local, national, and toll-free numbers in 100+ countries to establish a local presence anywhere."
+        },
+        {
+          "title": "Cloud PBX on Mobile & Web",
+          "description": "Your business phone system follows you everywhere. Full-featured apps for iOS, Android, and Desktop."
+        },
+        {
+          "title": "Cross-Border SIP Trunking",
+          "description": "Connect remote offices with high-quality VoIP termination, ensuring low latency and high ASR regardless of location."
+        },
+        {
+          "title": "Integrated Video & Chat",
+          "description": "One platform for voice, HD video conferencing, and team messaging to keep distributed teams perfectly synchronized."
+        },
+        {
+          "title": "Global Billing Precision",
+          "description": "Optimized cost management with 1-second billing increments and a unified dashboard for all global communications."
+        }
       ],
       "benefits": [
-        "Enable work from anywhere",
-        "Reduce telecom costs by 60%",
-        "Improve team collaboration",
-        "Maintain local presence globally"
+        "100% cloud-based – no hardware required",
+        "Secure remote access with TLS/SRTP encryption",
+        "Unified inbox for voice, chat, and email",
+        "60% lower costs than traditional carriers",
+        "99.999% uptime SLA guarantee",
+        "24/7 global priority support"
       ],
-      "keywords": ["remote teams", "global communication", "work from anywhere", "team collaboration"]
+      "keywords": [
+        "remote team communication",
+        "global business phone system",
+        "distributed workforce tools",
+        "virtual local numbers",
+        "remote work solutions",
+        "cloud PBX for remote teams",
+        "unified communications for business",
+        "global voice termination"
+      ],
+      "stats": [
+        {
+          "label": "Countries Covered",
+          "value": "100+"
+        },
+        {
+          "label": "Platform Uptime",
+          "value": "99.999%"
+        },
+        {
+          "label": "Cost Savings",
+          "value": "60%"
+        },
+        {
+          "label": "Provisioning Time",
+          "value": "<5m"
+        }
+      ],
+      "howItWorks": [
+        {
+          "title": "Provision Globally",
+          "description": "Select and activate local phone numbers in any of our 100+ supported countries instantly."
+        },
+        {
+          "title": "Onboard Teams",
+          "description": "Invite users and assign them extensions, roles, and call permissions via our intuitive web portal."
+        },
+        {
+          "title": "Connect Anywhere",
+          "description": "Your team logs in from any device and has immediate access to your full enterprise communication suite."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can we keep our existing phone numbers?",
+          "answer": "Yes, VestaCall supports full number portability. We handle the technical heavy lifting to move your existing global numbers to our cloud network."
+        },
+        {
+          "question": "Is the connection secure for remote workers?",
+          "answer": "Absolutely. All voice traffic is encrypted using TLS and SRTP protocols, ensuring your business data remains private over any internet connection."
+        },
+        {
+          "question": "How do we manage costs for a global team?",
+          "answer": "Our unified billing platform gives you real-time visibility into usage across all regions, utilizing 1-second billing precision to ensure you only pay for what you use."
+        }
+      ]
     },
     {
       "id": "enterprise",
       "name": "Enterprise",
-      "description": "Enterprise-grade solutions with advanced security, compliance, and dedicated support.",
+      "description": "Scalable, secure, and carrier-grade communication infrastructure designed for global enterprises. Benefit from advanced compliance, private cloud deployments, and dedicated account management.",
       "url": "/solutions/enterprise",
       "icon": "shield",
       "hero": {
         "h1": "Enterprise Solutions",
-        "subtitle": "Secure, Scalable, Compliant",
-        "description": "Enterprise-grade cloud communications with advanced security, regulatory compliance, and dedicated support for large organizations."
+        "subtitle": "Global Infrastructure. Enterprise Scale.",
+        "description": "The foundation for your large-scale communication needs. VestaCall Enterprise provides the security, compliance, and custom-tailored reliability required by the world's leading organizations."
       },
       "features": [
-        { "title": "SSO & SAML", "description": "Single sign-on with your identity provider." },
-        { "title": "Advanced Security", "description": "End-to-end encryption and access controls." },
-        { "title": "Compliance", "description": "HIPAA, GDPR, SOC 2, and PCI DSS compliance." },
-        { "title": "Dedicated Support", "description": "24/7 premium support with SLA guarantees." }
+        {
+          "title": "Private Cloud & Hybrid Deployment",
+          "description": "Deploy our communication stack within your own VPC or leverage our private cloud for maximum control and data sovereignty."
+        },
+        {
+          "title": "Advanced Security & SSO",
+          "description": "Enterprise-grade security with SAML 2.0 based Single Sign-On, Multi-Factor Authentication, and granular role-based access controls."
+        },
+        {
+          "title": "Global Regulatory Compliance",
+          "description": "Full compliance with HIPAA, GDPR, PCI-DSS, and SOC 2 Type II. We handle the complexity of global voice regulations for you."
+        },
+        {
+          "title": "Dedicated NOC & TAM",
+          "description": "24/7 dedicated Network Operations Center monitoring and a Technical Account Manager for proactive strategy and support."
+        },
+        {
+          "title": "Elastic Carrier Services",
+          "description": "Unlimited capacity for SIP trunks and CCaaS seats with geo-redundancy and automatic failover across 15 global data centers."
+        }
       ],
       "benefits": [
-        "Meet regulatory requirements",
-        "Protect sensitive communications",
-        "Scale to 50,000+ users",
-        "99.999% uptime guaranteed"
+        "Carrier-grade 99.999% uptime SLA",
+        "Dedicated infrastructure for lower latency",
+        "Custom billing and procurement models",
+        "Priority 1 response in under 15 minutes",
+        "Comprehensive API and SDK ecosystem",
+        "Global number portability and management"
       ],
-      "keywords": ["enterprise communication", "enterprise VoIP", "secure communication", "compliance"]
+      "keywords": [
+        "enterprise VoIP solutions",
+        "corporate communication platform",
+        "carrier-grade voice services",
+        "HIPAA compliant voice",
+        "enterprise cloud PBX",
+        "secure business communication",
+        "global enterprise infrastructure",
+        "enterprise CCaaS platform"
+      ],
+      "stats": [
+        {
+          "label": "Guaranteed Uptime",
+          "value": "99.999%"
+        },
+        {
+          "label": "Daily Active Users",
+          "value": "500k+"
+        },
+        {
+          "label": "Global DC Regions",
+          "value": "15"
+        },
+        {
+          "label": "Support Response",
+          "value": "<15m"
+        }
+      ],
+      "howItWorks": [
+        {
+          "title": "Infrastructure Audit",
+          "description": "Our engineers conduct a deep-dive audit of your current voice architecture and compliance requirements."
+        },
+        {
+          "title": "Custom Implementation",
+          "description": "We build and test a custom migration strategy, including API integrations and security configurations."
+        },
+        {
+          "title": "Priority Launch",
+          "description": "Execute a zero-downtime transition with dedicated onsite or remote support from your Enterprise TAM."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you provide geo-redundant deployments?",
+          "answer": "Yes, our Enterprise tier includes active-active geo-redundancy across multiple global regions, ensuring that your communication remains online even during major regional outages."
+        },
+        {
+          "question": "Do you support custom security requirements?",
+          "answer": "Absolutely. We routinely work with enterprise security teams to implement custom firewall configurations, dedicated IP whitelisting, and specialized encryption protocols."
+        },
+        {
+          "question": "What kind of support SLA is provided?",
+          "answer": "VestaCall Enterprise includes a binding 99.999% uptime SLA and 24/7/365 access to our Tier-3 engineering team with a guaranteed <15 minute response for critical issues."
+        }
+      ]
     }
   ],
   "_lastUpdated": "2026-03-03T00:00:00.000000"

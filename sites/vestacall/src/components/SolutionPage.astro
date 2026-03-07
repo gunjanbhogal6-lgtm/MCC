@@ -21,6 +21,7 @@ if (!solution) {
       title={`${solution.name} - ${solution.hero.subtitle} | VestaCall`}
       description={solution.description}
       pathname={solution.url}
+      keywords={solution.keywords}
       breadcrumbs={[
         { name: "Home", url: "/" },
         { name: "Solutions", url: "/solutions" },
@@ -52,14 +53,17 @@ if (!solution) {
 
         <div class="container mx-auto px-6 max-w-6xl relative z-10">
           <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight mb-6">
               {solution.hero.h1}
             </h1>
             <p class="text-2xl md:text-3xl text-vesta-purple font-bold mb-6">
               {solution.hero.subtitle}
             </p>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium mb-10">
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium mb-10 hidden sm:block">
               {solution.hero.description}
+            </p>
+            <p class="text-lg text-gray-600 max-w-xl mx-auto leading-relaxed font-medium mb-8 sm:hidden">
+              {solution.hero.description.split('. ')[0]}.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -88,8 +92,8 @@ if (!solution) {
               </h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solution.features.map((feature) => (
-                <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300">
+              {solution.features.map((feature, index) => (
+                <div class={`bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 ${index >= 4 ? 'hidden sm:block' : ''}`}>
                   <h3 class="text-xl font-bold text-gray-900 mb-3">
                     {feature.title}
                   </h3>
@@ -99,6 +103,13 @@ if (!solution) {
                 </div>
               ))}
             </div>
+            {solution.features.length > 4 && (
+              <div class="mt-12 text-center sm:hidden">
+                <button class="text-vesta-purple font-bold flex items-center gap-2 mx-auto" onclick="this.parentElement.previousElementSibling.querySelectorAll('.hidden').forEach(el => el.classList.remove('hidden')); this.remove();">
+                  View All Features <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+              </div>
+            )}
           </div>
         </section>
       )}
@@ -126,6 +137,72 @@ if (!solution) {
                     />
                   </svg>
                   <span class="text-gray-700 font-medium">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {solution && solution.stats && (
+        <section class="py-20 bg-vesta-purple text-white">
+          <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              {solution.stats.map((stat: any) => (
+                <div>
+                  <div class="text-4xl lg:text-5xl font-black mb-2 tracking-tight">{stat.value}</div>
+                  <div class="text-xs font-bold text-white/70 tracking-widest uppercase">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {solution && solution.howItWorks && (
+        <section class="py-24 bg-gray-50 border-t border-gray-200">
+          <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16">
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">
+                How It Works
+              </h2>
+              <p class="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
+                Our streamlined implementation process gets you up and running in no time.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {solution.howItWorks.map((step: any, index: number) => (
+                <div class="relative group">
+                  <div class="text-6xl md:text-8xl font-black text-gray-200 absolute -top-8 -left-4 z-0 transition-colors group-hover:text-vesta-purple/10">
+                    0{index + 1}
+                  </div>
+                  <div class="relative z-10 pl-4">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">{step.title}</h3>
+                    <p class="text-gray-600 font-medium leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {solution && solution.faqs && (
+        <section class="py-24 bg-white border-t border-gray-100">
+          <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-black text-gray-900 tracking-tight mb-16 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div class="space-y-6">
+              {solution.faqs.map((faq: any) => (
+                <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 transition-all hover:bg-white hover:shadow-xl hover:border-vesta-purple/10">
+                  <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                    <span class="text-vesta-purple mt-1 flex-shrink-0">Q.</span>
+                    {faq.question}
+                  </h3>
+                  <div class="pl-8 text-gray-600 font-medium leading-relaxed">
+                    {faq.answer}
+                  </div>
                 </div>
               ))}
             </div>

@@ -2,7 +2,7 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Blog" description="Insights and industry news from VestaCall." pathname="/resources/blog">
+<MainLayout title="Blog" description="Insights and industry news from VestaCall." pathname="/blog">
   <section class="relative pt-28 pb-16 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-vesta-purple/5">
     <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-vesta-purple/10 rounded-full blur-[150px] pointer-events-none"></div>
     <div class="container mx-auto px-6 max-w-6xl relative z-10">
@@ -25,14 +25,22 @@ import MainLayout from '../../layouts/MainLayout.astro';
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
-          { tag: "Carrier Infrastructure", tagColor: "text-vesta-purple", title: "Understanding Global Connectivity: Why Carrier Quality Matters", desc: "Discover how bypassing public congestion impacts ASR/PDD metrics.", author: "Engineering Staff" },
-          { tag: "Cost Optimization", tagColor: "text-fuchsia-500", title: "Stop Paying for Seconds You Don't Use: The Business Case for 1/1 Billing", desc: "How precise billing increments save massive overhead money.", author: "Billing Team" },
-          { tag: "Security & Compliance", tagColor: "text-blue-500", title: "Combatting Spoofing: How STIR/SHAKEN Protects Your Brand", desc: "The importance of Caller ID authentication and legal traffic routing.", author: "Compliance Dept." },
-          { tag: "Analytics & ROI", tagColor: "text-emerald-500", title: "The Hidden Metrics of Success: What ASR and ACD Really Mean", desc: "How to measure the health of your communications operations.", author: "VestaCall Exec" },
-          { tag: "Product Updates", tagColor: "text-amber-500", title: "New Feature: AI-Powered Sentiment Analysis", desc: "Real-time emotional tone analysis for better customer interactions.", author: "Product Team" },
-          { tag: "Industry News", tagColor: "text-rose-500", title: "The Future of Cloud Communications in 2025", desc: "Trends and predictions from our leadership team.", author: "VestaCall Team" },
+          { 
+            tag: "VoIP Guide", 
+            tagColor: "text-vesta-purple", 
+            title: "What is VoIP? The Ultimate Guide to Business Cloud Voice", 
+            desc: "Learn everything about Voice over Internet Protocol (VoIP) and why your business needs it.", 
+            author: "Engineering Team",
+            link: "/blog/voip"
+          },
+          { tag: "Carrier Infrastructure", tagColor: "text-purple-600", title: "Understanding Global Connectivity: Why Carrier Quality Matters", desc: "Discover how bypassing public congestion impacts ASR/PDD metrics.", author: "Engineering Staff", link: "/blog" },
+          { tag: "Cost Optimization", tagColor: "text-fuchsia-500", title: "Stop Paying for Seconds You Don't Use: The Business Case for 1/1 Billing", desc: "How precise billing increments save massive overhead money.", author: "Billing Team", link: "/blog" },
+          { tag: "Security & Compliance", tagColor: "text-blue-500", title: "Combatting Spoofing: How STIR/SHAKEN Protects Your Brand", desc: "The importance of Caller ID authentication and legal traffic routing.", author: "Compliance Dept.", link: "/blog" },
+          { tag: "Analytics & ROI", tagColor: "text-emerald-500", title: "The Hidden Metrics of Success: What ASR and ACD Really Mean", desc: "How to measure the health of your communications operations.", author: "VestaCall Exec", link: "/blog" },
+          { tag: "Product Updates", tagColor: "text-amber-500", title: "New Feature: AI-Powered Sentiment Analysis", desc: "Real-time emotional tone analysis for better customer interactions.", author: "Product Team", link: "/blog" },
+          { tag: "Industry News", tagColor: "text-rose-500", title: "The Future of Cloud Communications in 2025", desc: "Trends and predictions from our leadership team.", author: "VestaCall Team", link: "/blog" },
         ].map((article) => (
-          <a href="/resources/blog" class="block group">
+          <a href={article.link} class="block group">
             <div class="bg-white rounded-3xl border border-gray-100 p-8 h-full hover:border-vesta-purple/30 hover:shadow-xl transition-all duration-300">
               <span class={`text-xs font-bold uppercase tracking-wider mb-4 block ${article.tagColor}`}>
                 {article.tag}

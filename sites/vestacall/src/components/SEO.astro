@@ -10,6 +10,7 @@ interface Props {
   image?: string;
   publishedTime?: string;
   modifiedTime?: string;
+  keywords?: string[];
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   image = siteData.defaultImage,
   publishedTime,
   modifiedTime,
+  keywords = [],
 } = Astro.props;
 
 const siteUrl = siteData.url;
@@ -29,12 +31,13 @@ const imageUrl = new URL(image, siteUrl).toString();
 const pageSEO = seoData.pages[pathname as keyof typeof seoData.pages] || {};
 const finalTitle = pageSEO.title || title;
 const finalDescription = pageSEO.description || description;
+const finalKeywords = [...new Set([...seoData.global.lsiKeywords, ...keywords])];
 ---
 
 <title>{finalTitle}</title>
 <meta name="title" content={finalTitle} />
 <meta name="description" content={finalDescription} />
-<meta name="keywords" content={seoData.global.lsiKeywords.join(", ")} />
+<meta name="keywords" content={finalKeywords.join(", ")} />
 <meta name="author" content={siteData.author} />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href={canonicalUrl} />
@@ -67,5 +70,5 @@ const finalDescription = pageSEO.description || description;
   )
 }
 
-<meta name="geo.region" content="US-CA" />
-<meta name="geo.placename" content="San Francisco" />
+<meta name="geo.region" content="HK" />
+<meta name="geo.placename" content="Hong Kong" />

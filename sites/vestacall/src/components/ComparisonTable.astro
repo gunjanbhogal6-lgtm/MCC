@@ -5,8 +5,6 @@ interface ComparisonRow {
   feature: string;
   vestacall: string;
   competitor1: string;
-  competitor2: string;
-  competitor3: string;
   [key: string]: string;
 }
 
@@ -17,29 +15,29 @@ const rows = homeData.comparison.rows as ComparisonRow[];
   <div class="container mx-auto px-6 max-w-7xl">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
-        VestaCall vs. Competitors
+        {homeData.comparison.title || "VestaCall vs. Competitors"}
       </h2>
       <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-        See how our AI-native engineering stacks up against industry leaders.
+        {homeData.comparison.description || "See how our AI-native engineering stacks up against industry leaders."}
       </p>
     </div>
 
     <div class="bg-white rounded-[2rem] border border-gray-100 shadow-xl overflow-hidden">
       <!-- Desktop Grid -->
       <div class="hidden lg:block">
-        <table class="w-full border-collapse">
+        <table class="w-full border-collapse" style="table-layout: fixed;">
           <thead>
             <tr class="bg-gray-50/50">
-              <th class="text-left py-6 px-8 text-xs uppercase tracking-widest font-black text-gray-600" scope="col">Capabilities</th>
-              <th class="py-6 px-8 text-center" scope="col">
+              <th class="text-left py-6 px-8 text-xs uppercase tracking-widest font-black text-gray-600 w-1/3" scope="col">Capabilities</th>
+              <th class="py-6 px-8 text-center w-1/3" scope="col">
                 <div class="flex flex-col items-center">
                   <span class="text-xl font-black text-gray-900 leading-none">Vesta<span class="text-vesta-purple">Call</span></span>
                   <span class="text-[9px] uppercase tracking-widest font-black text-vesta-purple mt-2">Recommended</span>
                 </div>
               </th>
-              <th class="py-6 px-8 text-sm font-bold text-gray-600" scope="col">RingCentral</th>
-              <th class="py-6 px-8 text-sm font-bold text-gray-600" scope="col">8x8</th>
-              <th class="py-6 px-8 text-sm font-bold text-gray-600" scope="col">Nextiva</th>
+              {homeData.comparison.headers.slice(2).map(header => (
+                <th class="py-6 px-8 text-sm font-bold text-gray-600 w-1/3" scope="col">{header}</th>
+              ))}
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
@@ -57,16 +55,16 @@ const rows = homeData.comparison.rows as ComparisonRow[];
                   </div>
                 </td>
 
-                {['competitor1', 'competitor2', 'competitor3'].map((key) => {
-                  const val = row[key];
-                  const hasWarning = val.includes('⚠️');
-                  const hasError = val.includes('❌');
-                  const cleanText = val.replace(/✅|⚠️|❌/g, '').trim();
+                <td class="py-6 px-8 text-center">
+                  {(() => {
+                    const val = row.competitor1;
+                    const hasWarning = val.includes('⚠️') || val.includes('Limited') || val.includes('Add-on');
+                    const hasError = val.includes('❌') || val.includes('Extra');
+                    const cleanText = val.replace(/✅|⚠️|❌/g, '').trim();
 
-                  return (
-                    <td class="py-6 px-8 text-center">
+                    return (
                       <div class="flex items-center justify-center gap-2">
-                        {hasWarning && (
+                        {hasWarning && !hasError && (
                           <svg class="w-4 h-4 text-amber-500/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                         )}
                         {hasError && (
@@ -74,9 +72,9 @@ const rows = homeData.comparison.rows as ComparisonRow[];
                         )}
                         <span class="text-sm font-medium text-gray-500">{cleanText}</span>
                       </div>
-                    </td>
-                  );
-                })}
+                    );
+                  })()}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -93,20 +91,10 @@ const rows = homeData.comparison.rows as ComparisonRow[];
                 <span class="text-xs font-black text-vesta-purple">VestaCall</span>
                 <span class="text-xs font-black text-vesta-purple">{row.vestacall.replace(/✅|⚠️|❌/g, '').trim()}</span>
               </div>
-              {[
-                { name: 'RingCentral', key: 'competitor1' },
-                { name: '8x8', key: 'competitor2' },
-                { name: 'Nextiva', key: 'competitor3' }
-              ].map(comp => {
-                const val = row[comp.key];
-                const cleanText = val.replace(/✅|⚠️|❌/g, '').trim();
-                return (
-                  <div class="flex justify-between items-center px-3 text-gray-600">
-                    <span class="text-xs font-bold uppercase">{comp.name}</span>
-                    <span class="text-xs">{cleanText}</span>
-                  </div>
-                );
-              })}
+              <div class="flex justify-between items-center px-3 text-gray-600">
+                <span class="text-xs font-bold uppercase">{homeData.comparison.headers[2] || 'Legacy Providers'}</span>
+                <span class="text-xs">{row.competitor1.replace(/✅|⚠️|❌/g, '').trim()}</span>
+              </div>
             </div>
           </div>
         ))}

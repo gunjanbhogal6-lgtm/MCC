@@ -1,166 +1,150 @@
 {
   "hero": {
-    "h1": "The #1 AI-Powered Cloud Contact Center for Global Teams",
-    "subtitle": "The premier Reliable VoIP Provider, offering intelligent Global Voice Termination. VestaCall helps modern businesses connect, support, and grow seamlessly.",
-    "definition": "VestaCall is an AI-powered cloud contact center platform that unifies voice, messaging, video, and AI communication tools into one seamless solution for modern businesses.",
-    "cta1": "Start Free Trial",
+    "h1": "AI-Powered Cloud Contact Center & VoIP Solution for Global Teams",
+    "subtitle": "Deliver seamless customer connections, scale instantly, and reduce operational costs with our AI-enabled contact center and VoIP infrastructure.",
+    "definition": "VestaCall unifies voice, messaging, analytics, and automation into one intelligent cloud communication platform — designed to elevate support, sales, and remote operations.",
+    "cta1": "Start Your Free Trial",
     "cta2": "Book a Demo",
     "containers": [
       {
         "id": 1,
         "title": "AI-Powered Intelligence",
-        "description": "Real-time analytics, instant sentiment processing, and deep performance tracking to empower your agents with predictive context.",
+        "description": "Leverage real-time analytics, predictive sentiment insights, and intelligent routing to understand your customers before they speak.",
         "icon": "brain",
         "color": "from-vesta-purple to-fuchsia-600",
         "keywords": [
-          "AI Analytics",
-          "Sentiment Analysis",
-          "Predictive Routing"
+          "Real-Time AI Analytics",
+          "Automatic Sentiment Detection",
+          "Predictive Agent Context",
+          "AI Workforce Insights"
         ],
         "painPoint": "Stop guessing what customers need—AI knows before they ask."
       },
       {
         "id": 2,
-        "title": "Global Voice Network",
-        "description": "99.999% uptime with auto-failover across global data centers. High ASR, low PDD, crystal-clear HD voice quality worldwide.",
+        "title": "Global Cloud Network",
+        "description": "Deliver crystal-clear voice quality with low latency across 100+ countries using our global cloud VoIP network.",
         "icon": "globe",
         "color": "from-blue-500 to-cyan-500",
         "keywords": [
-          "Global Coverage",
-          "Voice Termination",
-          "99.999% Uptime"
+          "Worldwide SIP Termination",
+          "High ASR & Low PDD",
+          "99.999% SLA Uptime",
+          "Redundant Network Architecture"
         ],
         "painPoint": "Your calls connect instantly, anywhere in the world."
       },
       {
         "id": 3,
-        "title": "Enterprise Security",
-        "description": "SOC 2 Type II certified, GDPR & HIPAA compliant. End-to-end encryption on every call, every time.",
+        "title": "Enterprise-Grade Security",
+        "description": "Secure every interaction with bank-grade compliance and industry-standard encryption.",
         "icon": "shield",
         "color": "from-emerald-500 to-teal-500",
         "keywords": [
-          "SOC 2 Certified",
-          "GDPR Compliant",
-          "End-to-End Encryption"
+          "GDPR & SOC 2 Compliance",
+          "End-to-End Call Encryption",
+          "Secure Access Controls",
+          "Continuous Monitoring"
         ],
         "painPoint": "Bank-grade security without the bank-grade complexity."
       }
     ]
   },
   "why_vestacall": {
-    "title": "Why 50,000+ Businesses Choose VestaCall",
-    "description": "Enterprise-grade intelligence that pays for itself.",
+    "title": "Why Choose VestaCall",
+    "description": "Businesses trust VestaCall for reliability, scalability, and intelligent automation.",
     "items": [
       {
         "number": "99.999%",
-        "label": "Uptime SLA",
-        "testimonial": "Your business never stops—neither do we."
+        "label": "SLA Uptime",
+        "testimonial": "Enterprise reliability for mission-critical operations"
       },
       {
         "number": "100+",
         "label": "Countries",
-        "testimonial": "Local presence anywhere your customers are."
+        "testimonial": "Local presence, global reach with VoIP termination"
       },
       {
         "number": "60%",
-        "label": "Cost Reduction",
-        "testimonial": "AI automation that pays for itself."
+        "label": "Avg. Cost Savings",
+        "testimonial": "Automated workflows that reduce support expenses"
       },
       {
         "number": "24/7",
-        "label": "AI Availability",
-        "testimonial": "Always-on support, zero wait times."
+        "label": "AI Support",
+        "testimonial": "Instant self-service and always-on customer engagement"
       }
     ]
   },
   "features": {
-    "title": "Powerful AI-Powered Features Built In",
+    "title": "Powerful AI-Driven Features",
     "description": "Every feature designed to automate what slows you down and amplify what matters: customer relationships.",
     "items": [
       {
         "heading": "Smart Call Routing & IVR",
-        "description": "Route calls based on skills, language, availability, and customer history. Drag-and-drop IVR builder included.",
-        "keywords": "Smart Routing, IVR Builder, Skills-Based Routing"
+        "description": "Build IVR workflows visually and route every customer to the right agent based on skill, language, or priority.",
+        "keywords": "Smart Routing, IVR Builder, Skills-Based Queues"
       },
       {
-        "heading": "AI-Powered Sentiment Analysis",
-        "description": "Detect customer emotions in real-time. Identify at-risk customers and intervene before they churn.",
-        "keywords": "Sentiment Analysis, Customer Insights, Churn Prevention"
+        "heading": "AI Sentiment & Engagement Insights",
+        "description": "Detect mood, urgency, and satisfaction in real-time to improve agent outcomes and boost retention.",
+        "keywords": "Live Sentiment Scoring, Customer Journey Insights, Churn Alerts"
       },
       {
-        "heading": "Global Voice Termination",
-        "description": "Connect calls to 100+ countries with high ASR and low PDD. Tier-1 carrier quality at wholesale prices.",
-        "keywords": "Voice Termination, Wholesale VoIP, Global Coverage"
+        "heading": "Global Voice & SIP Trunking",
+        "description": "Connect calls across borders with high quality voice termination and cost-competitive SIP channels.",
+        "keywords": "Wholesale Rates, Local Numbers, Unlimited Channels"
       },
       {
-        "heading": "24/7 AI Receptionist",
-        "description": "Never miss a call. AI handles FAQs, qualifies leads, and transfers to humans when needed.",
-        "keywords": "AI Receptionist, 24/7 Support, Lead Qualification"
+        "heading": "24/7 Virtual AI Receptionist",
+        "description": "Manage calls when your team is offline — automated lead qualification, FAQs, and transfers.",
+        "keywords": "AI Reception, Lead Capture, 24/7 Availability"
       },
       {
         "heading": "Unified Omnichannel Inbox",
-        "description": "Voice, chat, email, WhatsApp, and social media—all in one agent dashboard.",
-        "keywords": "Omnichannel, Unified Inbox, Multi-Channel Support"
+        "description": "Support voice, chat, email, and social messaging from a single agent workspace.",
+        "keywords": "Omnichannel, Unified Ticketing, Cross-Platform Sync"
       },
       {
-        "heading": "CRM Integrations",
-        "description": "Native Salesforce, HubSpot, Zendesk integration. Automatic call logging and screen pops.",
-        "keywords": "CRM Integration, Salesforce, HubSpot, Zendesk"
+        "heading": "CRM & Business Integrations",
+        "description": "Automate logging and screen-pop customer data from Salesforce, HubSpot, Zendesk, and more.",
+        "keywords": "Native CRM Connectors, One-Click Logging, Contact Sync"
       }
     ]
   },
   "comparison": {
     "title": "VestaCall vs. Competitors",
-    "description": "See why thousands switch from RingCentral, 8x8, and Nextiva.",
+    "description": "See why thousands switch to VestaCall.",
     "headers": [
       "Feature",
       "VestaCall",
-      "RingCentral",
-      "8x8",
-      "Nextiva"
+      "Legacy Providers"
     ],
     "rows": [
       {
-        "feature": "AI Receptionist (24/7)",
-        "vestacall": "✅ Included",
-        "competitor1": "⚠️ Add-on cost",
-        "competitor2": "⚠️ Limited",
-        "competitor3": "❌ Not available"
+        "feature": "24/7 AI Receptionist",
+        "vestacall": "Included",
+        "competitor1": "Limited/Add-on"
       },
       {
-        "feature": "Global Voice Termination",
-        "vestacall": "✅ 100+ countries, wholesale rates",
-        "competitor1": "⚠️ Limited coverage",
-        "competitor2": "⚠️ Higher rates",
-        "competitor3": "⚠️ Restricted"
+        "feature": "Global Coverage",
+        "vestacall": "100+ Countries",
+        "competitor1": "Smaller Footprint"
       },
       {
-        "feature": "Uptime SLA",
-        "vestacall": "✅ 99.999% with financial guarantee",
-        "competitor1": "⚠️ 99.99%",
-        "competitor2": "⚠️ 99.99%",
-        "competitor3": "⚠️ 99.95%"
+        "feature": "99.999% Uptime",
+        "vestacall": "SLA Backed",
+        "competitor1": "99.99% or Lower"
       },
       {
-        "feature": "Billing Precision",
-        "vestacall": "✅ 1-second billing",
-        "competitor1": "❌ 60-second rounding",
-        "competitor2": "❌ 30-second minimum",
-        "competitor3": "❌ 60-second rounding"
+        "feature": "One-Second Billing",
+        "vestacall": "Precision",
+        "competitor1": "Minute-Based Rounding"
       },
       {
-        "feature": "SIP Trunking",
-        "vestacall": "✅ Unlimited channels included",
-        "competitor1": "⚠️ Per-channel fees",
-        "competitor2": "⚠️ Limited channels",
-        "competitor3": "⚠️ Add-on cost"
-      },
-      {
-        "feature": "Sentiment Analysis",
-        "vestacall": "✅ Real-time AI included",
-        "competitor1": "⚠️ Enterprise tier only",
-        "competitor2": "❌ Not available",
-        "competitor3": "❌ Not available"
+        "feature": "Unlimited SIP",
+        "vestacall": "Included",
+        "competitor1": "Extra Fees"
       }
     ]
   },
@@ -169,30 +153,30 @@
     "description": "Everything you need to know about VestaCall.",
     "items": [
       {
-        "question": "What is UCaaS and how does VestaCall help?",
-        "answer": "UCaaS (Unified Communications as a Service) is a cloud-based phone system that integrates voice, messaging, video, and AI communication tools into one platform. VestaCall provides enterprise-grade UCaaS with 99.999% uptime, global coverage, and AI-powered features at a fraction of traditional costs."
+        "question": "What is a cloud contact center?",
+        "answer": "A cloud contact center is a web-hosted communication hub that unifies voice, email, chat, and social channels to support customer engagement without on-premise hardware."
       },
       {
-        "question": "How long does it take to set up VestaCall?",
-        "answer": "You can create an account and port your existing numbers entirely online in under 5 minutes. Our onboarding is completely self-serve with zero-code CRM integrations for Salesforce, HubSpot, and Zendesk."
+        "question": "How quickly can I launch VestaCall?",
+        "answer": "You can launch and configure your contact center in minutes with drag-and-drop tools, cloud portals, and automated onboarding."
       },
       {
-        "question": "Does VestaCall support international calling?",
-        "answer": "Absolutely. We offer local, mobile, and toll-free numbers in over 100 countries. Our global voice termination network ensures crystal-clear calls with high ASR and low PDD metrics worldwide."
+        "question": "Do you support international calling?",
+        "answer": "Yes — our global SIP termination connects to more than 100 countries with high ASR and optimized routes."
       },
       {
-        "question": "What is the difference between VestaCall and RingCentral?",
-        "answer": "Unlike RingCentral, VestaCall includes AI-powered features (sentiment analysis, AI receptionist) at no extra cost, offers 1-second billing precision vs. 60-second rounding, provides unlimited SIP trunking channels, and guarantees 99.999% uptime with financial penalties."
+        "question": "What differentiates VestaCall from traditional VoIP?",
+        "answer": "Unlike traditional VoIP, VestaCall offers real-time AI, omnichannel routing, and automation natively — not as expensive add-ons."
       },
       {
-        "question": "Is VestaCall HIPAA and GDPR compliant?",
-        "answer": "Yes. VestaCall is SOC 2 Type II certified, HIPAA compliant for healthcare, GDPR compliant for European data protection, and PCI DSS compliant for payment processing. Your data is encrypted end-to-end."
+        "question": "Is the platform secure and compliant?",
+        "answer": "Yes — VestaCall is fully encrypted and compliant with GDPR, HIPAA, and SOC 2 security standards."
       }
     ]
   },
   "cta": {
-    "title": "Stop Losing Revenue to Missed Calls and Poor Customer Experience",
-    "description": "Experience the difference AI-powered cloud communication makes. Free setup, free number porting, 14-day free trial.",
+    "title": "Stop Losing Revenue to Missed Calls & Poor CX",
+    "description": "Get started with a free setup, number porting, and a 14-day no-credit-card free trial.",
     "primary": "Start Free Trial",
     "secondary": "Book a Demo",
     "guarantee": "No credit card required. Full access. Start in 5 minutes."
@@ -219,5 +203,5 @@
       "keywords": "Always Available"
     }
   ],
-  "_lastUpdated": "2026-03-03T00:00:00.000000"
+  "_lastUpdated": "2026-03-04T22:45:00.000000"
 }

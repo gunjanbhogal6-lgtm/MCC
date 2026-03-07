@@ -8,37 +8,85 @@
     "products": {
       "title": "products",
       "links": [
-        { "name": "Cloud PBX", "url": "/cloud-pbx" },
-        { "name": "SIP Trunking", "url": "/sip-trunking" },
-        { "name": "Conversational AI", "url": "/conversational-ai" },
-        { "name": "Live Analytics", "url": "/live-analytics" }
+        {
+          "name": "Cloud PBX",
+          "url": "/cloud-pbx"
+        },
+        {
+          "name": "SIP Trunking",
+          "url": "/sip-trunking"
+        },
+        {
+          "name": "Conversational AI",
+          "url": "/conversational-ai"
+        },
+        {
+          "name": "Live Analytics",
+          "url": "/live-analytics"
+        }
       ]
     },
     "solutions": {
       "title": "solutions",
       "links": [
-        { "name": "Customer Service", "url": "/solutions/customer-service" },
-        { "name": "Sales", "url": "/solutions/sales" },
-        { "name": "Support", "url": "/solutions/support" },
-        { "name": "Remote Work", "url": "/solutions/remote-work" }
+        {
+          "name": "Customer Service",
+          "url": "/solutions/customer-service"
+        },
+        {
+          "name": "Sales",
+          "url": "/solutions/sales"
+        },
+        {
+          "name": "Support",
+          "url": "/solutions/support"
+        },
+        {
+          "name": "Remote Work",
+          "url": "/solutions/remote-work"
+        }
       ]
     },
     "company": {
       "title": "company",
       "links": [
-        { "name": "About", "url": "/company/about" },
-        { "name": "Careers", "url": "/company/careers" },
-        { "name": "Security", "url": "/company/security" },
-        { "name": "Mission", "url": "/company/mission" }
+        {
+          "name": "About",
+          "url": "/company/about"
+        },
+        {
+          "name": "Careers",
+          "url": "/company/careers"
+        },
+        {
+          "name": "Security",
+          "url": "/company/security"
+        },
+        {
+          "name": "Mission",
+          "url": "/company/mission"
+        }
       ]
     },
     "resources": {
       "title": "resources",
       "links": [
-        { "name": "Blog", "url": "/resources/blog" },
-        { "name": "Help Center", "url": "/resources/help-center" },
-        { "name": "Case Studies", "url": "/resources/case-studies" },
-        { "name": "Pricing", "url": "/pricing" }
+        {
+          "name": "Blog",
+          "url": "/blog"
+        },
+        {
+          "name": "Help Center",
+          "url": "/resources/help-center"
+        },
+        {
+          "name": "Case Studies",
+          "url": "/resources/case-studies"
+        },
+        {
+          "name": "Pricing",
+          "url": "/pricing"
+        }
       ]
     }
   },
@@ -48,5 +96,5 @@
     "GDPR Compliant",
     "HIPAA Ready"
   ],
-  "copyright": "© 2026 VestaCall. All rights reserved."
+  "copyright": "© 2026 Vestacall Limited. All rights reserved."
 }

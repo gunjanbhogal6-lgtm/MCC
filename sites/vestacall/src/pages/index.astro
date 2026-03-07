@@ -1,9 +1,12 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import Hero from '../components/Hero.astro';
+import Hero from '../components/home/Hero.astro';
+import LogoCloud from '../components/home/LogoCloud.astro';
+import NetworkReliability from '../components/home/NetworkReliability.astro';
+import Features from '../components/home/Features.astro';
 import WhyVestaCall from '../components/WhyVestaCall.astro';
-import Features from '../components/Features.astro';
 import ComparisonTable from '../components/ComparisonTable.astro';
+import Testimonials from '../components/home/Testimonials.astro';
 import Faq from '../components/Faq.astro';
 import Stats from '../components/Stats.astro';
 import Cta from '../components/Cta.astro';
@@ -16,9 +19,12 @@ import Cta from '../components/Cta.astro';
   breadcrumbs={[]}
 >
   <Hero />
-  <WhyVestaCall />
+  <LogoCloud />
+  <NetworkReliability />
   <Features />
+  <WhyVestaCall />
   <ComparisonTable />
+  <Testimonials />
   <Faq />
   <Stats />
   <Cta />

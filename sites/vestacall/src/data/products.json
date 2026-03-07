@@ -15,11 +15,24 @@
         "HD voice quality with Opus codec"
       ],
       "pricing": "$19/user/month",
-      "keywords": ["cloud PBX", "virtual phone system", "business PBX", "hosted PBX"],
+      "keywords": [
+        "cloud PBX",
+        "virtual phone system",
+        "business PBX",
+        "hosted PBX"
+      ],
       "hero": {
         "h1": "Cloud PBX",
         "subtitle": "Enterprise Virtual Phone System",
         "description": "Scale from 5 to 50,000 users with enterprise-grade voice quality, global coverage, and AI-powered features. No hardware required."
+      },
+      "heroPbx": {
+        "badge": "Core Platform",
+        "h1": "Cloud PBX",
+        "h1Highlight": "Reimagined.",
+        "description": "A global virtual phone system designed for modern businesses. Simplify your Business PBX Migration: set up in minutes, not months. Scale from 5 to 50,000 users seamlessly with 1-Second Billing precision.",
+        "primaryButton": "Start Free Trial",
+        "secondaryButton": "Watch Demo"
       },
       "benefits": [
         "Reduce phone costs by 60%",
@@ -30,13 +43,129 @@
         "24/7 AI-powered support"
       ],
       "featureList": [
-        { "title": "Auto Attendant", "description": "Professional IVR with custom greetings and routing.", "icon": "phone" },
-        { "title": "Call Recording", "description": "Automatic call recording with AI transcription.", "icon": "activity" },
-        { "title": "Voicemail to Email", "description": "Transcribed voicemails delivered to your inbox.", "icon": "message" },
-        { "title": "Mobile App", "description": "Make and receive calls from anywhere on any device.", "icon": "globe" },
-        { "title": "Call Analytics", "description": "Real-time dashboards and performance metrics.", "icon": "activity" },
-        { "title": "Team Messaging", "description": "Built-in team chat and file sharing.", "icon": "users" }
-      ]
+        {
+          "title": "Auto Attendant",
+          "description": "Professional IVR with custom greetings and routing.",
+          "icon": "phone"
+        },
+        {
+          "title": "Call Recording",
+          "description": "Automatic call recording with AI transcription.",
+          "icon": "activity"
+        },
+        {
+          "title": "Voicemail to Email",
+          "description": "Transcribed voicemails delivered to your inbox.",
+          "icon": "message"
+        },
+        {
+          "title": "Mobile App",
+          "description": "Make and receive calls from anywhere on any device.",
+          "icon": "globe"
+        },
+        {
+          "title": "Call Analytics",
+          "description": "Real-time dashboards and performance metrics.",
+          "icon": "activity"
+        },
+        {
+          "title": "Team Messaging",
+          "description": "Built-in team chat and file sharing.",
+          "icon": "users"
+        }
+      ],
+      "whyChoosePbx": {
+        "title": "Why Businesses",
+        "titleHighlight": "Choose Us",
+        "benefits": [
+          "Port existing numbers in under 5 minutes",
+          "Zero code CRM integrations (Salesforce, HubSpot, Zendesk)",
+          "Auto-attendant with multi-level IVR menus",
+          "Call recording with AI-powered transcription",
+          "Real-time call analytics dashboard",
+          "24/7 priority technical support"
+        ],
+        "pricingCard": {
+          "price": "$19",
+          "unit": "/user/mo",
+          "subtitle": "Starting price. No contracts.",
+          "features": [
+            "Unlimited domestic calls",
+            "100+ country coverage",
+            "HD voice quality",
+            "Mobile & desktop apps",
+            "CRM integrations",
+            "24/7 support"
+          ],
+          "buttonText": "Get Started"
+        },
+        "banner": {
+          "title": "Want to understand your true ROI?",
+          "text": "Read our insight report: ",
+          "linkText": "The Hidden Metrics of Success: What ASR and ACD Really Mean for Your ROI.",
+          "linkUrl": "/blog",
+          "buttonText": "Read Article"
+        }
+      },
+      "howItWorks": {
+        "title": "Business PBX",
+        "titleHighlight": "Migration",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Account Setup",
+            "description": "Configure your extensions and departments in minutes via our web portal."
+          },
+          {
+            "number": "2",
+            "title": "Number Porting",
+            "description": "Seamlessly migrate your existing numbers or select new ones from 100+ countries."
+          },
+          {
+            "number": "3",
+            "title": "Connect Everywhere",
+            "description": "Log in via Desktop, Mobile, or Desk phone and start making HD quality calls."
+          }
+        ],
+        "stats": [
+          {
+            "label": "Avg Migration Time",
+            "value": "15m"
+          },
+          {
+            "label": "Uptime Guarantee",
+            "value": "99.999%"
+          },
+          {
+            "label": "Cost Savings",
+            "value": "60%"
+          },
+          {
+            "label": "Global DC Regions",
+            "value": "15"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is Cloud PBX?",
+          "answer": "Cloud PBX (Private Branch Exchange) is a business phone system that operates over the internet instead of traditional phone lines, eliminating the need for expensive on-premise hardware."
+        },
+        {
+          "question": "Can I use my existing handsets?",
+          "answer": "Yes, VestaCall works with most SIP-enabled desk phones from major brands like Polycom, Yealink, and Cisco, as well as our full-featured mobile and desktop applications."
+        },
+        {
+          "question": "How secure is your virtual phone system?",
+          "answer": "Our system is SOC 2 Type II certified and utilizes enterprise-grade TLS and SRTP encryption to ensure all communications remain private and secure."
+        }
+      ],
+      "cta": {
+        "title": "Ready to Elevate Your Communication?",
+        "description": "Transform your business phone system with enterprise-grade cloud PBX. Join thousands of companies already using Vesta Call to power their communications.",
+        "primaryButton": "Request a Demo",
+        "secondaryButton": "Contact Sales"
+      }
     },
     {
       "id": "sip_trunking",
@@ -53,7 +182,12 @@
         "STIR/SHAKEN compliant"
       ],
       "pricing": "Pay per minute",
-      "keywords": ["SIP trunking", "wholesale VoIP", "voice termination", "SIP provider"],
+      "keywords": [
+        "SIP trunking",
+        "wholesale VoIP",
+        "voice termination",
+        "SIP provider"
+      ],
       "hero": {
         "h1": "SIP Trunking",
         "subtitle": "Wholesale VoIP Termination",
@@ -68,13 +202,96 @@
         "24/7 NOC monitoring"
       ],
       "featureList": [
-        { "title": "Global DID Numbers", "description": "Local and toll-free numbers in 100+ countries.", "icon": "globe" },
-        { "title": "Emergency Calling", "description": "E911 compliance with dynamic location routing.", "icon": "shield" },
-        { "title": "Call Routing", "description": "Advanced routing with failover and load balancing.", "icon": "network" },
-        { "title": "Real-time Monitoring", "description": "Live call quality metrics and alerts.", "icon": "activity" },
-        { "title": "Encryption", "description": "TLS and SRTP encryption for all calls.", "icon": "shield" },
-        { "title": "API Access", "description": "REST API for provisioning and management.", "icon": "server" }
-      ]
+        {
+          "title": "Global DID Numbers",
+          "description": "Local and toll-free numbers in 100+ countries.",
+          "icon": "globe"
+        },
+        {
+          "title": "Emergency Calling",
+          "description": "E911 compliance with dynamic location routing.",
+          "icon": "shield"
+        },
+        {
+          "title": "Call Routing",
+          "description": "Advanced routing with failover and load balancing.",
+          "icon": "network"
+        },
+        {
+          "title": "Real-time Monitoring",
+          "description": "Live call quality metrics and alerts.",
+          "icon": "activity"
+        },
+        {
+          "title": "Encryption",
+          "description": "TLS and SRTP encryption for all calls.",
+          "icon": "shield"
+        },
+        {
+          "title": "API Access",
+          "description": "REST API for provisioning and management.",
+          "icon": "server"
+        }
+      ],
+      "howItWorks": {
+        "title": "Scalable SIP",
+        "titleHighlight": "Deployment",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Configure IP Auth",
+            "description": "Whitelist your PBX IP addresses or configure User/Secret authentication for secure access."
+          },
+          {
+            "number": "2",
+            "title": "Setup Outbound",
+            "description": "Configure your dial plan to point to our global tier-1 network for wholesale termination."
+          },
+          {
+            "number": "3",
+            "title": "Go Live",
+            "description": "Instantly scale from 10 to 10,000 concurrent channels without needing to pre-provision."
+          }
+        ],
+        "stats": [
+          {
+            "label": "Avg ASR",
+            "value": "99.2%"
+          },
+          {
+            "label": "Mean Opinion Score",
+            "value": "4.4"
+          },
+          {
+            "label": "Network Latency",
+            "value": "<20ms"
+          },
+          {
+            "label": "Concurrent Slots",
+            "value": "10k+"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is SIP Trunking?",
+          "answer": "SIP Trunking is a method of delivering voice and media services over the internet to an existing on-site PBX or UCaaS platform, replacing traditional T1/E1 lines with elastic cloud capacity."
+        },
+        {
+          "question": "Do you support STIR/SHAKEN?",
+          "answer": "Yes, our network is fully STIR/SHAKEN compliant, ensuring that your caller ID is properly authenticated and preventing your calls from being flagged as 'Scam Likely'."
+        },
+        {
+          "question": "What is 1-second billing?",
+          "answer": "Unlike most providers who bill in 60-second increments, VestaCall offers 1/1 billing (1-second increments), ensuring you only pay for the exact duration of every connection."
+        }
+      ],
+      "cta": {
+        "title": "Ready to Elevate Your Communication?",
+        "description": "Connect your infrastructure to the global network with carrier-grade SIP trunking. Experience the reliability and reach that only Vesta Call delivers.",
+        "primaryButton": "Request a Demo",
+        "secondaryButton": "Contact Sales"
+      }
     },
     {
       "id": "conversational_ai",
@@ -91,11 +308,24 @@
         "Voice biometrics"
       ],
       "pricing": "Enterprise pricing",
-      "keywords": ["conversational AI", "AI voice bot", "voice AI", "AI agent"],
+      "keywords": [
+        "conversational AI",
+        "AI voice bot",
+        "voice AI",
+        "AI agent"
+      ],
       "hero": {
         "h1": "Conversational AI",
         "subtitle": "AI Voice Bot & Agent",
         "description": "Deploy AI-powered voice bots that handle customer inquiries 24/7, qualify leads, and seamlessly transfer to human agents when needed."
+      },
+      "heroAi": {
+        "badge": "AI Add-on",
+        "h1": "Conversational\nAI",
+        "h1Highlight": "That\nUnderstands.",
+        "description": "Natural language IVR bots that truly understand your customers. Resolve 70% of inquiries automatically while delivering a human-like experience.",
+        "primaryButton": "Try AI Demo",
+        "secondaryButton": "See Use Cases"
       },
       "benefits": [
         "Handle 80% of routine inquiries",
@@ -106,13 +336,96 @@
         "Continuous learning & improvement"
       ],
       "featureList": [
-        { "title": "Natural Language", "description": "Understand intent and context in real-time.", "icon": "brain" },
-        { "title": "Call Routing", "description": "Intelligent routing based on customer needs.", "icon": "network" },
-        { "title": "Appointment Booking", "description": "Schedule appointments and send reminders.", "icon": "calendar" },
-        { "title": "Lead Qualification", "description": "Score and qualify leads automatically.", "icon": "users" },
-        { "title": "CRM Integration", "description": "Log all interactions to your CRM.", "icon": "server" },
-        { "title": "Analytics", "description": "Detailed reports on bot performance.", "icon": "activity" }
-      ]
+        {
+          "title": "Natural Language",
+          "description": "Understand intent and context in real-time.",
+          "icon": "brain"
+        },
+        {
+          "title": "Call Routing",
+          "description": "Intelligent routing based on customer needs.",
+          "icon": "network"
+        },
+        {
+          "title": "Appointment Booking",
+          "description": "Schedule appointments and send reminders.",
+          "icon": "calendar"
+        },
+        {
+          "title": "Lead Qualification",
+          "description": "Score and qualify leads automatically.",
+          "icon": "users"
+        },
+        {
+          "title": "CRM Integration",
+          "description": "Log all interactions to your CRM.",
+          "icon": "server"
+        },
+        {
+          "title": "Analytics",
+          "description": "Detailed reports on bot performance.",
+          "icon": "activity"
+        }
+      ],
+      "howItWorks": {
+        "title": "How It",
+        "titleHighlight": "Works",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Caller Speaks",
+            "description": "Customer calls in and speaks naturally. No pressing buttons, no rigid menus."
+          },
+          {
+            "number": "2",
+            "title": "AI Understands",
+            "description": "Our NLU engine processes intent, sentiment, and context in real time."
+          },
+          {
+            "number": "3",
+            "title": "Resolved or Routed",
+            "description": "Either resolves the inquiry instantly or routes to the perfect agent with full context."
+          }
+        ],
+        "stats": [
+          {
+            "value": "70%",
+            "label": "AUTO-RESOLUTION"
+          },
+          {
+            "value": "50+",
+            "label": "LANGUAGES"
+          },
+          {
+            "value": "3s",
+            "label": "AVG RESPONSE"
+          },
+          {
+            "value": "95%",
+            "label": "CSAT SCORE"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is NLU?",
+          "answer": "Natural Language Understanding (NLU) allows our AI to understand human speech patterns, idioms, and intent, rather than just matching keywords like traditional IVR systems."
+        },
+        {
+          "question": "What is the latency for voice bots?",
+          "answer": "Our edge-optimized AI engine delivers responses in under 500ms, ensuring a fluid, natural conversation that feels human-like and eliminates awkward pauses."
+        },
+        {
+          "question": "How does human handoff work?",
+          "answer": "If the AI detects complexity or frustration beyond its scope, it instantly transfers the call to a live agent along with a full transcript of the conversation so the customer never has to repeat themselves."
+        }
+      ],
+      "cta": {
+        "title": "Ready to Elevate Your Communication?",
+        "description": "Deploy AI-powered voice bots that handle customer inquiries around the clock. Be the first to experience the future of conversational AI with Vesta Call.",
+        "primaryButton": "Request a Demo",
+        "secondaryButton": "Contact Sales"
+      }
     },
     {
       "id": "cloud_contact_center",
@@ -128,7 +441,12 @@
         "Agent dashboard",
         "Quality management"
       ],
-      "keywords": ["cloud contact center", "CCaaS", "call center software", "contact center solution"],
+      "keywords": [
+        "cloud contact center",
+        "CCaaS",
+        "call center software",
+        "contact center solution"
+      ],
       "hero": {
         "h1": "Cloud Contact Center",
         "subtitle": "Complete Contact Center Solution",
@@ -143,13 +461,378 @@
         "AI-powered agent assistance"
       ],
       "featureList": [
-        { "title": "Omnichannel Routing", "description": "Unified queue management across all channels.", "icon": "network" },
-        { "title": "IVR Builder", "description": "Drag-and-drop IVR designer. No coding required.", "icon": "server" },
-        { "title": "Agent Dashboard", "description": "360° customer view with interaction history.", "icon": "users" },
-        { "title": "Quality Management", "description": "Call recording and AI-powered quality scoring.", "icon": "shield" },
-        { "title": "Workforce Management", "description": "Forecasting, scheduling, and adherence.", "icon": "activity" },
-        { "title": "CRM Integration", "description": "Native Salesforce, Zendesk, HubSpot integrations.", "icon": "bot" }
-      ]
+        {
+          "title": "Omnichannel Routing",
+          "description": "Unified queue management across all channels.",
+          "icon": "network"
+        },
+        {
+          "title": "IVR Builder",
+          "description": "Drag-and-drop IVR designer. No coding required.",
+          "icon": "server"
+        },
+        {
+          "title": "Agent Dashboard",
+          "description": "360° customer view with interaction history.",
+          "icon": "users"
+        },
+        {
+          "title": "Quality Management",
+          "description": "Call recording and AI-powered quality scoring.",
+          "icon": "shield"
+        },
+        {
+          "title": "Workforce Management",
+          "description": "Forecasting, scheduling, and adherence.",
+          "icon": "activity"
+        },
+        {
+          "title": "CRM Integration",
+          "description": "Native Salesforce, Zendesk, HubSpot integrations.",
+          "icon": "bot"
+        }
+      ],
+      "whyChoose": {
+        "title": "Why Choose Vesta Call for Your",
+        "titleHighlight": "Contact Center?",
+        "description": "We don't just provide software; we provide the global infrastructure that powers it. Unlike traditional providers, we own the routing, ensuring that every interaction is backed by the same precision we bring to our wholesale operations.",
+        "features": [
+          {
+            "icon": "headset",
+            "title": "Omnichannel Integration",
+            "description": "Manage voice, SMS, and chat from a single, unified interface to provide a consistent customer journey."
+          },
+          {
+            "icon": "zap",
+            "title": "Carrier-Grade Reliability",
+            "description": "Built on our global network, ensuring high ASR (Answer Seizure Ratio) and minimal PDD (Post Dial Delay) for every call."
+          },
+          {
+            "icon": "globe",
+            "title": "Global Reach",
+            "description": "Effortlessly connect with customers in over 100 countries using our premium CLI and CC routes."
+          },
+          {
+            "icon": "chart",
+            "title": "Rapid Scalability",
+            "description": "Scale your seat count up or down instantly based on seasonal demand or business growth."
+          }
+        ]
+      },
+      "keyFeatures": {
+        "title": "Key Features for",
+        "titleHighlight": "Modern Teams",
+        "subtitle": "Omnichannel Contact Center, SIP Trunking, Predictive Dialer Software, and more.",
+        "pillars": [
+          {
+            "number": 1,
+            "icon": "phone",
+            "title": "Intelligent Inbound Management",
+            "description": "Never miss a customer connection. Our intelligent routing ensures every caller reaches the right agent at the right time.",
+            "items": [
+              {
+                "label": "IVR:",
+                "text": "Design custom call flows to resolve queries faster."
+              },
+              {
+                "label": "ACD:",
+                "text": "Route calls based on agent skill, availability, or customer priority."
+              },
+              {
+                "label": "Virtual Numbers:",
+                "text": "Establish a local presence in global markets with international virtual numbers."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "icon": "zap",
+            "title": "High-Performance Outbound Suite",
+            "description": "Maximize your agents' talk time with powerful dialing tools designed for efficiency and compliance.",
+            "items": [
+              {
+                "label": "Predictive & Power Dialers:",
+                "text": "Reduce idle time and increase your CPS (Calls Per Second) capability."
+              },
+              {
+                "label": "Precision Billing:",
+                "text": "Benefit from 1/1 (1-second) billing increments, ensuring you only pay for the exact duration of your connections."
+              },
+              {
+                "label": "Campaign Analytics:",
+                "text": "Monitor performance in real-time with detailed CDR and campaign insights."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "icon": "chart",
+            "title": "Advanced Reporting & Insights",
+            "description": "Turn data into decisions with our real-time analytics dashboard.",
+            "items": [
+              {
+                "label": "Live Monitoring:",
+                "text": "Listen-in or whisper to agents during live calls to ensure quality of service."
+              },
+              {
+                "label": "Deep-Dive Metrics:",
+                "text": "Track ACD (Average Call Duration) and success rates to optimize your ROI."
+              },
+              {
+                "label": "Custom Dashboards:",
+                "text": "Tailor your view to the KPIs that matter most to your business."
+              }
+            ]
+          }
+        ]
+      },
+      "compliance": {
+        "title": "Compliance You Can Trust",
+        "subtitle": "Operating in the USA or Canada? We handle the regulatory heavy lifting so you can focus on your customers.",
+        "cards": [
+          {
+            "title": "STIR/SHAKEN Ready",
+            "description": "We implement the latest protocols to authenticate your Caller ID and protect your brand reputation."
+          },
+          {
+            "title": "Robocall Mitigation",
+            "description": "Fully FCC Compliance registered with the Robocall Mitigation Database (RMD) to ensure your traffic is never blocked."
+          },
+          {
+            "title": "TCPA & DNC Compliance",
+            "description": "Tools and guidance to help you manage Do Not Call (DNC) lists and maintain lawful traffic standards."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "Seamless CCaaS",
+        "titleHighlight": "Onboarding",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Design Flows",
+            "description": "Use our drag-and-drop builder to create omnichannel customer journeys across voice, chat, and email."
+          },
+          {
+            "number": "2",
+            "title": "Assign Agents",
+            "description": "Configure agent profiles, skills, and queues. Connect your CRM for instant data synchronization."
+          },
+          {
+            "number": "3",
+            "title": "Optimize Live",
+            "description": "Launch your center and use live analytics to fine-tune routing and agent performance in real-time."
+          }
+        ],
+        "stats": [
+          {
+            "label": "Avg Handle Time",
+            "value": "-30%"
+          },
+          {
+            "label": "First Call Resolution",
+            "value": "+45%"
+          },
+          {
+            "label": "Agent Utilization",
+            "value": "92%"
+          },
+          {
+            "label": "CRM Data Sync",
+            "value": "Real-time"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is CCaaS?",
+          "answer": "CCaaS (Contact Center as a Service) is a cloud-based customer experience solution that allows companies to manage all customer interactions across multiple channels without maintaining physical hardware."
+        },
+        {
+          "question": "Do you support omnichannel routing?",
+          "answer": "Yes, VestaCall unifies voice, SMS, email, and social media into a single agent desktop, ensuring a consistent context-aware experience for customers."
+        },
+        {
+          "question": "Can we scale seat counts seasonally?",
+          "answer": "Absolutely. Our platform is built for elasticity, allowing you to scale from 10 to 1,000+ seats instantly to meet seasonal demand without long-term commitments."
+        }
+      ],
+      "cta": {
+        "title": "Ready to Elevate Your Communication?",
+        "description": "Transform your contact center from a cost center into a growth engine. Join the waitlist for the Vesta Call CCaaS Solution launch and be the first to experience the future of voice.",
+        "primaryButton": "Request a Demo",
+        "secondaryButton": "Contact Sales"
+      }
+    },
+    {
+      "id": "live_analytics",
+      "name": "Live Analytics",
+      "shortDescription": "Track performance and quality in real-time with AI-driven insights.",
+      "description": "Every call, every agent, every metric — visualized live. Track performance and quality in real-time with AI-driven insights.",
+      "url": "/live-analytics",
+      "badge": "AI Add-on",
+      "icon": "activity",
+      "features": [
+        "Real-time call volume tracking",
+        "Agent performance & AHT monitoring",
+        "Live CSAT & sentiment analysis",
+        "Customizable dashboard widgets"
+      ],
+      "keywords": [
+        "call analytics",
+        "real-time monitoring",
+        "agent performance",
+        "call center metrics"
+      ],
+      "hero": {
+        "h1": "Live Analytics",
+        "subtitle": "Real-Time AI-Driven Insights",
+        "description": "Every call, every agent, every metric — visualized live. Track performance and quality in real-time with AI-driven insights."
+      },
+      "heroAnalytics": {
+        "badge": "AI Add-on",
+        "h1": "Live Analytics",
+        "h1Highlight": "In Real Time.",
+        "description": "Every call, every agent, every metric — visualized live. Make data-driven decisions in seconds, not days. Track what matters and take action before issues escalate.",
+        "primaryButton": "See Live Demo",
+        "secondaryButton": "View Features"
+      },
+      "metricsSection": {
+        "title": "Metrics That",
+        "titleHighlight": "Matter",
+        "items": [
+          {
+            "label": "AVG WAIT TIME",
+            "value": "2.4s",
+            "trend": "18%"
+          },
+          {
+            "label": "FIRST CALL RESOLUTION",
+            "value": "94%",
+            "trend": "12%"
+          },
+          {
+            "label": "AVG HANDLE TIME",
+            "value": "3:22",
+            "trend": "8%"
+          },
+          {
+            "label": "AGENT CSAT",
+            "value": "4.8/5",
+            "trend": "5%"
+          }
+        ]
+      },
+      "visibilitySection": {
+        "title": "Complete",
+        "titleHighlight": "Visibility",
+        "subtitle": "From high-level KPIs to individual call recordings, see everything that matters.",
+        "features": [
+          {
+            "title": "Real-Time Dashboards",
+            "description": "Live wallboards showing active calls, queue depths, agent status, and SLA performance at a glance.",
+            "icon": "activity"
+          },
+          {
+            "title": "Trend Analysis",
+            "description": "Historical reporting with AI-powered insights. Spot patterns, predict peaks, and optimize staffing proactively.",
+            "icon": "chart"
+          },
+          {
+            "title": "Agent Scorecards",
+            "description": "Individual performance metrics including AHT, FCR, CSAT, and custom KPIs. Gamify excellence.",
+            "icon": "users"
+          },
+          {
+            "title": "Live Monitoring",
+            "description": "Listen, whisper, and barge into active calls. Coach agents in real time without the caller knowing.",
+            "icon": "phone"
+          },
+          {
+            "title": "SLA Tracking",
+            "description": "Automated alerting when service levels are at risk. Never breach a commitment again.",
+            "icon": "shield"
+          },
+          {
+            "title": "Custom Reports",
+            "description": "Build any report you need with drag-and-drop. Schedule automated delivery to stakeholders.",
+            "icon": "server"
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "Real-Time",
+        "titleHighlight": "Insights",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Data Capture",
+            "description": "Our network captures every packet and event from your active calls in real-time with zero overhead."
+          },
+          {
+            "number": "2",
+            "title": "AI Synthesis",
+            "description": "Raw data is processed through our AI engine to calculate sentiment, trends, and projected SLA targets."
+          },
+          {
+            "number": "3",
+            "title": "Instant Alerts",
+            "description": "Visual wallboards and automated alerts notify your supervisors the moment a metric slips out of bounds."
+          }
+        ],
+        "stats": [
+          {
+            "label": "Data Processing",
+            "value": "Real-time"
+          },
+          {
+            "label": "Historical Retention",
+            "value": "24mo"
+          },
+          {
+            "label": "Report Latency",
+            "value": "<1s"
+          },
+          {
+            "label": "Custom Widgets",
+            "value": "100+"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Is the data truly real-time?",
+          "answer": "Yes, our analytics engine is built directly into our carrier-grade switching fabric, meaning metrics are updated within milliseconds of an event occurring."
+        },
+        {
+          "question": "Can I export historical data?",
+          "answer": "Absolutely. VestaCall allows you to export detailed CSV or PDF reports, or connect directly to your BI tools (like Tableau or PowerBI) via our robust REST API."
+        },
+        {
+          "question": "Do you provide sentiment analysis?",
+          "answer": "Yes, our AI-driven sentiment analysis monitors call audio in real-time to detect customer frustration or joy, providing a live 'mood' score for every active interaction."
+        }
+      ],
+      "includedList": {
+        "title": "Everything",
+        "titleHighlight": "Included",
+        "items": [
+          "Real-time wallboard with auto-refresh",
+          "Historical data up to 24 months",
+          "Custom KPI builder with drag-and-drop",
+          "Automated email/Slack report delivery",
+          "Call recording with search & playback",
+          "Agent leaderboards & gamification",
+          "Queue performance heatmaps",
+          "API access for custom integrations"
+        ]
+      },
+      "cta": {
+        "title": "Ready to Master Your Metrics?",
+        "description": "Stop guessing and start growing. Get the real-time insights you need to build a world-class contact center performance culture.",
+        "primaryButton": "Get Started Now",
+        "secondaryButton": "Book a Strategy Call"
+      }
     }
   ],
   "_lastUpdated": "2026-03-03T00:00:00.000000"
