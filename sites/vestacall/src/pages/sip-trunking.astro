@@ -1,32 +1,72 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Radio } from 'lucide-react';
+import MainLayout from "../layouts/MainLayout.astro";
+import {
+  Globe,
+  Server,
+  Shield,
+  Zap,
+  ArrowRight,
+  CheckCircle2,
+  Network,
+  Lock,
+  Radio,
+} from "lucide-astro";
 ---
 
-<MainLayout title="SIP Trunking - Without Limits | VestaCall" description="Connect your existing PBX infrastructure to the cloud through pristine Wholesale VoIP Termination." pathname="/sip-trunking">
-  <section class="relative pt-40 pb-16 lg:pb-24 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-vesta-purple/5">
-    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-vesta-purple/10 rounded-full blur-[150px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-full h-[400px] bg-fuchsia-200/10 rounded-full blur-[120px] pointer-events-none"></div>
+<MainLayout
+  title="SIP Trunking - Without Limits | VestaCall"
+  description="Connect your existing PBX infrastructure to the cloud through pristine Wholesale VoIP Termination."
+  pathname="/sip-trunking"
+>
+  <section
+    class="relative pt-40 pb-16 lg:pb-24 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-vesta-purple/5"
+  >
+    <div
+      class="absolute top-0 right-0 w-[600px] h-[600px] bg-vesta-purple/10 rounded-full blur-[150px] pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-full h-[400px] bg-fuchsia-200/10 rounded-full blur-[120px] pointer-events-none"
+    >
+    </div>
 
     <div class="container mx-auto px-6 max-w-6xl relative z-10">
       <div class="flex flex-col lg:flex-row items-center gap-16">
         <div class="max-w-xl flex-1">
-          <div class="inline-flex items-center gap-2 bg-vesta-purple/10 border border-vesta-purple/20 rounded-full px-4 py-2 mb-6">
+          <div
+            class="inline-flex items-center gap-2 bg-vesta-purple/10 border border-vesta-purple/20 rounded-full px-4 py-2 mb-6"
+          >
             <Globe size={16} class="text-vesta-purple" />
-            <span class="text-sm font-bold text-vesta-purple">Core Platform</span>
+            <span class="text-sm font-bold text-vesta-purple"
+              >Core Platform</span
+            >
           </div>
-          <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+          <h1
+            class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight mb-6"
+          >
             SIP Trunking <br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600">Without Limits.</span>
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600"
+              >Without Limits.</span
+            >
           </h1>
-          <p class="text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed font-medium">
-            Connect your existing PBX infrastructure to the cloud through pristine Wholesale VoIP Termination. Unlimited concurrent channels, global reach, and enterprise-grade reliability — at a fraction of traditional telco costs.
+          <p
+            class="text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed font-medium"
+          >
+            Connect your existing PBX infrastructure to the cloud through
+            pristine Wholesale VoIP Termination. Unlimited concurrent channels,
+            global reach, and enterprise-grade reliability — at a fraction of
+            traditional telco costs.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="px-8 py-4 rounded-full bg-vesta-purple text-white font-bold text-lg hover:bg-[#5a24b5] shadow-lg transition-all hover:scale-105">
+            <button
+              class="px-8 py-4 rounded-full bg-vesta-purple text-white font-bold text-lg hover:bg-[#5a24b5] shadow-lg transition-all hover:scale-105"
+            >
               Start Free Trial
             </button>
-            <button class="px-8 py-4 rounded-full border border-gray-200 bg-white text-gray-900 font-bold text-lg hover:border-vesta-purple hover:text-vesta-purple transition-all shadow-sm">
+            <button
+              class="px-8 py-4 rounded-full border border-gray-200 bg-white text-gray-900 font-bold text-lg hover:border-vesta-purple hover:text-vesta-purple transition-all shadow-sm"
+            >
               See Pricing
             </button>
           </div>
@@ -35,23 +75,28 @@ import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Ra
         <!-- Live Trunk Terminal -->
         <div class="flex-1 hidden lg:flex items-center justify-center">
           <div class="relative">
-            <div class="w-80 bg-gray-950 rounded-2xl shadow-2xl shadow-vesta-purple/10 overflow-hidden border border-gray-800">
+            <div
+              class="w-80 bg-gray-950 rounded-2xl shadow-2xl shadow-vesta-purple/10 overflow-hidden border border-gray-800"
+            >
               <!-- Terminal header -->
-              <div class="flex items-center gap-2 px-4 py-3 bg-gray-900 border-b border-gray-800">
+              <div
+                class="flex items-center gap-2 px-4 py-3 bg-gray-900 border-b border-gray-800"
+              >
                 <div class="w-3 h-3 rounded-full bg-red-500"></div>
                 <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                <span class="text-[11px] font-mono text-gray-500 ml-2">sip-trunk-status</span>
+                <span class="text-[11px] font-mono text-gray-500 ml-2"
+                  >sip-trunk-status</span
+                >
               </div>
 
               <!-- Terminal content -->
               <div class="p-4 font-mono text-xs space-y-2">
-                <div class="text-gray-500">
-                  $ vesta trunk status --live
-                </div>
+                <div class="text-gray-500">$ vesta trunk status --live</div>
 
                 <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse">
+                  </div>
                   <span class="text-gray-400">US-East</span>
                   <span class="text-gray-600">|</span>
                   <span class="text-gray-500">10.0.1.42</span>
@@ -62,7 +107,8 @@ import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Ra
                 </div>
 
                 <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse">
+                  </div>
                   <span class="text-gray-400">EU-West</span>
                   <span class="text-gray-600">|</span>
                   <span class="text-gray-500">10.0.2.18</span>
@@ -73,7 +119,8 @@ import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Ra
                 </div>
 
                 <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse">
+                  </div>
                   <span class="text-gray-400">AP-South</span>
                   <span class="text-gray-600">|</span>
                   <span class="text-gray-500">10.0.3.91</span>
@@ -98,27 +145,44 @@ import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Ra
                 <div class="mt-4 pt-3 border-t border-gray-800">
                   <div class="flex items-center gap-1 mb-2">
                     <span class="text-gray-500 text-[10px]">AUDIO STREAM</span>
-                    <div class="w-2 h-2 rounded-full bg-green-500 ml-auto animate-pulse"></div>
+                    <div
+                      class="w-2 h-2 rounded-full bg-green-500 ml-auto animate-pulse"
+                    >
+                    </div>
                   </div>
                   <div class="flex items-center gap-[2px] h-8">
-                    {Array.from({ length: 40 }).map((_, i) => (
-                      <div 
-                        class="w-1 bg-gradient-to-t from-vesta-purple to-fuchsia-400 rounded-full animate-pulse"
-                        style={`height: ${Math.random() * 24 + 4}px; animation-delay: ${i * 0.05}s`}
-                      ></div>
-                    ))}
+                    {
+                      Array.from({ length: 40 }).map((_, i) => (
+                        <div
+                          class="w-1 bg-gradient-to-t from-vesta-purple to-fuchsia-400 rounded-full animate-pulse"
+                          style={`height: ${Math.random() * 24 + 4}px; animation-delay: ${i * 0.05}s`}
+                        />
+                      ))
+                    }
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Floating badges -->
-            <div class="absolute -right-14 top-8 bg-white border border-gray-200 rounded-2xl px-4 py-3 shadow-lg">
-              <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Uptime</p>
+            <div
+              class="absolute -right-14 top-8 bg-white border border-gray-200 rounded-2xl px-4 py-3 shadow-lg"
+            >
+              <p
+                class="text-[10px] font-bold text-gray-400 uppercase tracking-wider"
+              >
+                Uptime
+              </p>
               <p class="text-lg font-black text-green-600">99.999%</p>
             </div>
-            <div class="absolute -left-16 bottom-16 bg-white border border-gray-200 rounded-2xl px-4 py-3 shadow-lg">
-              <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Channels</p>
+            <div
+              class="absolute -left-16 bottom-16 bg-white border border-gray-200 rounded-2xl px-4 py-3 shadow-lg"
+            >
+              <p
+                class="text-[10px] font-bold text-gray-400 uppercase tracking-wider"
+              >
+                Channels
+              </p>
               <p class="text-lg font-black text-vesta-purple">5,265</p>
             </div>
           </div>
@@ -131,58 +195,118 @@ import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Ra
   <section class="py-24 bg-white border-t border-gray-100">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">
-          Enterprise SIP, <span class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600">Simplified</span>
+        <h2
+          class="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4"
+        >
+          Enterprise SIP, <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600"
+            >Simplified</span
+          >
         </h2>
-        <p class="text-gray-600 text-lg font-medium max-w-2xl mx-auto">Bridge your legacy infrastructure with next-generation cloud capabilities.</p>
+        <p class="text-gray-600 text-lg font-medium max-w-2xl mx-auto">
+          Bridge your legacy infrastructure with next-generation cloud
+          capabilities.
+        </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform">
+        <div
+          class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group"
+        >
+          <div
+            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform"
+          >
             <Server class="w-7 h-7 text-white" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Instant Provisioning</h3>
-          <p class="text-gray-600 font-medium leading-relaxed">Activate SIP trunks globally in seconds. No waiting for physical circuits or manual configuration.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            Instant Provisioning
+          </h3>
+          <p class="text-gray-600 font-medium leading-relaxed">
+            Activate SIP trunks globally in seconds. No waiting for physical
+            circuits or manual configuration.
+          </p>
         </div>
 
-        <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform">
+        <div
+          class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group"
+        >
+          <div
+            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform"
+          >
             <Shield class="w-7 h-7 text-white" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Encryption Built In</h3>
-          <p class="text-gray-600 font-medium leading-relaxed">TLS/SRTP encryption on every trunk. Meet compliance requirements for finance, healthcare, and government.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            Encryption Built In
+          </h3>
+          <p class="text-gray-600 font-medium leading-relaxed">
+            TLS/SRTP encryption on every trunk. Meet compliance requirements for
+            finance, healthcare, and government.
+          </p>
         </div>
 
-        <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform">
+        <div
+          class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group"
+        >
+          <div
+            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform"
+          >
             <Zap class="w-7 h-7 text-white" />
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Elastic Capacity</h3>
-          <p class="text-gray-600 font-medium leading-relaxed">Scale from 10 to 10,000 concurrent channels instantly. Only pay for what you use, no wasted capacity.</p>
+          <p class="text-gray-600 font-medium leading-relaxed">
+            Scale from 10 to 10,000 concurrent channels instantly. Only pay for
+            what you use, no wasted capacity.
+          </p>
         </div>
 
-        <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform">
+        <div
+          class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group"
+        >
+          <div
+            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform"
+          >
             <Network class="w-7 h-7 text-white" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Precision LCR Routing</h3>
-          <p class="text-gray-600 font-medium leading-relaxed">Automatic Precision LCR (Least Cost Routing) across redundant paths. Your calls stay connected even during outages.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            Precision LCR Routing
+          </h3>
+          <p class="text-gray-600 font-medium leading-relaxed">
+            Automatic Precision LCR (Least Cost Routing) across redundant paths.
+            Your calls stay connected even during outages.
+          </p>
         </div>
 
-        <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform">
+        <div
+          class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group"
+        >
+          <div
+            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform"
+          >
             <Radio class="w-7 h-7 text-white" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Codec Flexibility</h3>
-          <p class="text-gray-600 font-medium leading-relaxed">Support for G.711, G.729, Opus, and more. Adaptive codec negotiation for optimal quality.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            Codec Flexibility
+          </h3>
+          <p class="text-gray-600 font-medium leading-relaxed">
+            Support for G.711, G.729, Opus, and more. Adaptive codec negotiation
+            for optimal quality.
+          </p>
         </div>
 
-        <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform">
+        <div
+          class="bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-lg hover:border-vesta-purple/20 transition-all duration-300 group"
+        >
+          <div
+            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-vesta-purple to-fuchsia-600 flex items-center justify-center mb-6 shadow-lg shadow-vesta-purple/20 group-hover:scale-110 transition-transform"
+          >
             <Lock class="w-7 h-7 text-white" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Fraud Protection & STIR/SHAKEN</h3>
-          <p class="text-gray-600 font-medium leading-relaxed">Real-time toll fraud detection and fully STIR/SHAKEN Compliant architecture to mitigate robocalls.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            Fraud Protection & STIR/SHAKEN
+          </h3>
+          <p class="text-gray-600 font-medium leading-relaxed">
+            Real-time toll fraud detection and fully STIR/SHAKEN Compliant
+            architecture to mitigate robocalls.
+          </p>
         </div>
       </div>
     </div>
@@ -193,20 +317,36 @@ import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Ra
     <div class="container mx-auto px-6 max-w-5xl">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-          <p class="text-4xl md:text-5xl font-black text-vesta-purple mb-2">100+</p>
-          <p class="text-gray-500 font-bold text-sm uppercase tracking-wider">Countries</p>
+          <p class="text-4xl md:text-5xl font-black text-vesta-purple mb-2">
+            100+
+          </p>
+          <p class="text-gray-500 font-bold text-sm uppercase tracking-wider">
+            Countries
+          </p>
         </div>
         <div>
-          <p class="text-4xl md:text-5xl font-black text-vesta-purple mb-2">99.999%</p>
-          <p class="text-gray-500 font-bold text-sm uppercase tracking-wider">Uptime SLA</p>
+          <p class="text-4xl md:text-5xl font-black text-vesta-purple mb-2">
+            99.999%
+          </p>
+          <p class="text-gray-500 font-bold text-sm uppercase tracking-wider">
+            Uptime SLA
+          </p>
         </div>
         <div>
-          <p class="text-4xl md:text-5xl font-black text-vesta-purple mb-2">10K+</p>
-          <p class="text-gray-500 font-bold text-sm uppercase tracking-wider">Concurrent Channels</p>
+          <p class="text-4xl md:text-5xl font-black text-vesta-purple mb-2">
+            10K+
+          </p>
+          <p class="text-gray-500 font-bold text-sm uppercase tracking-wider">
+            Concurrent Channels
+          </p>
         </div>
         <div>
-          <p class="text-4xl md:text-5xl font-black text-vesta-purple mb-2">&lt;50ms</p>
-          <p class="text-gray-500 font-bold text-sm uppercase tracking-wider">Global Latency</p>
+          <p class="text-4xl md:text-5xl font-black text-vesta-purple mb-2">
+            &lt;50ms
+          </p>
+          <p class="text-gray-500 font-bold text-sm uppercase tracking-wider">
+            Global Latency
+          </p>
         </div>
       </div>
     </div>
@@ -215,50 +355,100 @@ import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Ra
   <!-- Benefits List -->
   <section class="py-24 bg-white border-t border-gray-100">
     <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-4xl font-black text-gray-900 tracking-tight mb-12 text-center">
-        Built for <span class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600">Reliability</span>
+      <h2
+        class="text-4xl font-black text-gray-900 tracking-tight mb-12 text-center"
+      >
+        Built for <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-vesta-purple to-fuchsia-600"
+          >Reliability</span
+        >
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+        <div
+          class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all"
+        >
           <CheckCircle2 class="w-6 h-6 text-vesta-purple flex-shrink-0" />
-          <span class="text-gray-700 font-medium">Bring Your Own Carrier (BYOC) support</span>
+          <span class="text-gray-700 font-medium"
+            >Bring Your Own Carrier (BYOC) support</span
+          >
         </div>
-        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+        <div
+          class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all"
+        >
           <CheckCircle2 class="w-6 h-6 text-vesta-purple flex-shrink-0" />
-          <span class="text-gray-700 font-medium">Number porting in under 24 hours</span>
+          <span class="text-gray-700 font-medium"
+            >Number porting in under 24 hours</span
+          >
         </div>
-        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+        <div
+          class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all"
+        >
           <CheckCircle2 class="w-6 h-6 text-vesta-purple flex-shrink-0" />
-          <span class="text-gray-700 font-medium">E911 emergency services compliance</span>
+          <span class="text-gray-700 font-medium"
+            >E911 emergency services compliance</span
+          >
         </div>
-        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+        <div
+          class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all"
+        >
           <CheckCircle2 class="w-6 h-6 text-vesta-purple flex-shrink-0" />
-          <span class="text-gray-700 font-medium">Automated number provisioning APIs</span>
+          <span class="text-gray-700 font-medium"
+            >Automated number provisioning APIs</span
+          >
         </div>
-        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+        <div
+          class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all"
+        >
           <CheckCircle2 class="w-6 h-6 text-vesta-purple flex-shrink-0" />
-          <span class="text-gray-700 font-medium">Multi-region redundant routing</span>
+          <span class="text-gray-700 font-medium"
+            >Multi-region redundant routing</span
+          >
         </div>
-        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+        <div
+          class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all"
+        >
           <CheckCircle2 class="w-6 h-6 text-vesta-purple flex-shrink-0" />
-          <span class="text-gray-700 font-medium">Detailed CDR and billing reports</span>
+          <span class="text-gray-700 font-medium"
+            >Detailed CDR and billing reports</span
+          >
         </div>
-        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+        <div
+          class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all"
+        >
           <CheckCircle2 class="w-6 h-6 text-vesta-purple flex-shrink-0" />
-          <span class="text-gray-700 font-medium">Quality of Service (QoS) monitoring</span>
+          <span class="text-gray-700 font-medium"
+            >Quality of Service (QoS) monitoring</span
+          >
         </div>
-        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all">
+        <div
+          class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-vesta-purple/20 transition-all"
+        >
           <CheckCircle2 class="w-6 h-6 text-vesta-purple flex-shrink-0" />
-          <span class="text-gray-700 font-medium">Dedicated account management</span>
+          <span class="text-gray-700 font-medium"
+            >Dedicated account management</span
+          >
         </div>
       </div>
 
-      <div class="mt-12 bg-vesta-purple/5 border border-vesta-purple/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div
+        class="mt-12 bg-vesta-purple/5 border border-vesta-purple/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+      >
         <div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Want to optimize your trunking costs?</h3>
-          <p class="text-gray-600 font-medium">Read our insight report: <span class="text-vesta-purple font-bold italic">Stop Paying for Seconds You Don't Use: The Business Case for 1/1 Billing</span>.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Want to optimize your trunking costs?
+          </h3>
+          <p class="text-gray-600 font-medium">
+            Read our insight report: <span
+              class="text-vesta-purple font-bold italic"
+              >Stop Paying for Seconds You Don't Use: The Business Case for 1/1
+              Billing</span
+            >.
+          </p>
         </div>
-        <a href="/blog" class="shrink-0 px-6 py-3 rounded-full bg-vesta-purple text-white font-bold hover:bg-[#5a24b5] transition-colors shadow-lg flex items-center gap-2">
+        <a
+          href="/blog"
+          class="shrink-0 px-6 py-3 rounded-full bg-vesta-purple text-white font-bold hover:bg-[#5a24b5] transition-colors shadow-lg flex items-center gap-2"
+        >
           Read Article <ArrowRight size={18} />
         </a>
       </div>
@@ -268,9 +458,18 @@ import { Globe, Server, Shield, Zap, ArrowRight, CheckCircle2, Network, Lock, Ra
   <!-- CTA -->
   <section class="py-20 bg-gray-50 border-t border-gray-100">
     <div class="container mx-auto px-6 max-w-3xl text-center">
-      <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-4">Ready to modernize your trunking?</h2>
-      <p class="text-gray-600 text-lg font-medium mb-8">Migrate your lines in under 24 hours. Zero downtime guaranteed.</p>
-      <a href="/" class="inline-flex items-center gap-2 text-vesta-purple font-bold hover:underline text-lg">
+      <h2
+        class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-4"
+      >
+        Ready to modernize your trunking?
+      </h2>
+      <p class="text-gray-600 text-lg font-medium mb-8">
+        Migrate your lines in under 24 hours. Zero downtime guaranteed.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-vesta-purple font-bold hover:underline text-lg"
+      >
         <ArrowRight size={20} /> Back to Home
       </a>
     </div>
