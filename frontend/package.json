@@ -16,8 +16,6 @@
     "@astrojs/react": "^5.0.0",
     "astro": "^5.18.1",
     "esbuild": "^0.27.3",
-    "framer-motion": "^12.34.4",
-    "lucide-react": "^0.576.0",
     "nanoid": "^3.3.11",
     "picocolors": "^1.1.1",
     "postcss": "^8.5.6",
