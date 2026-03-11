@@ -1,22 +1,34 @@
 ---
+import GlobalStyles from '../components/GlobalStyles.jsx';
 const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content={description || "Empower your business with My Call Connect’s cloud-based phone system."}>
   <title>{title || "Cloud Business Phone System | VoIP & PBX Solutions – My Call Connect"}</title>
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Global React Styles -->
+  <GlobalStyles />
+
+  <!-- CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/src/css/main.css">
+  
   <slot name="head" />
 </head>
+
 <body>
+
+  <!-- Header -->
   <header id="header">
     <div class="header-container">
       <nav>
@@ -27,7 +39,6 @@ const { title, description } = Astro.props;
           <span></span>
         </button>
         <ul class="nav-links">
-          <li><a href="/">Home</a></li>
           <li class="nav-dropdown-wrap">
             <a href="javascript:void(0)" class="nav-dropdown-trigger nav-products-btn" aria-haspopup="true" aria-expanded="false">
               Products
@@ -102,12 +113,14 @@ const { title, description } = Astro.props;
           <li><a href="/resources">Resources</a></li>
           <li><a href="/about">About Us</a></li>
         </ul>
+
       </nav>
     </div>
   </header>
 
   <slot />
 
+  <!-- Footer -->
   <footer id="contact">
     <div class="container">
       <div class="footer-grid">
@@ -150,7 +163,7 @@ const { title, description } = Astro.props;
   </footer>
 
   <script>
-    import "../js/main.js";
+    import "../js/modules/main.js";
   </script>
 </body>
 </html>

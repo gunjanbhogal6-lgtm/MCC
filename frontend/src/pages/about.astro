@@ -37,11 +37,6 @@ import Layout from '../layouts/Layout.astro';
           <div
             class="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl opacity-20 blur-lg hide-on-mobile">
           </div>
-          <div class="relative bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden h-64 md:h-full">
-            <img
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800&h=600"
-              alt="Business professional using My Call Connect mobile app" class="w-full h-full object-cover">
-          </div>
         </div>
       </div>
     </div>
@@ -114,7 +109,7 @@ import Layout from '../layouts/Layout.astro';
           <div
             class="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl opacity-20 blur-lg hide-on-mobile">
           </div>
-          <div class="relative bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden h-64 md:h-full">
+          <div class="relative bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden h-64 md:h-[500px]">
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=600"
               alt="Cloud phone system dashboard showing call analytics" class="w-full h-full object-cover">
           </div>
@@ -176,27 +171,49 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="section">
+  <section class="section testimonial-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header animate-up">
         <h2>Trusted by Businesses <span class="text-gradient-primary">Worldwide</span></h2>
+        <p>Hear from real customers who transformed their communication with My Call Connect.</p>
       </div>
 
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
-          <svg class="absolute top-4 left-4 text-gray-800 w-16 h-16 opacity-50" fill="currentColor" viewBox="0 0 32 32">
-            <path
-              d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-          </svg>
-          <p class="text-2xl text-gray-300 italic mb-8 relative z-10">"My Call Connect transformed how our sales team
-            operates. The setup was instant, and the call quality is crystal clear."</p>
-          <div class="flex items-center justify-center gap-4 relative z-10">
-            <div
-              class="w-12 h-12 rounded-full bg-cyan-700 flex items-center justify-center text-xl font-bold text-white">
-              SJ</div>
-            <div class="text-left">
-              <h4 class="text-white font-bold">Sarah J.</h4>
-              <p class="text-gray-400 text-sm">CEO of TechGrowth</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card animate-up">
+          <div class="testimonial-quote-icon">❝</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"My Call Connect transformed how our sales team operates. The setup was instant, and the call quality is crystal clear."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: linear-gradient(135deg, #00e5ff, #6c63ff)">SJ</div>
+            <div>
+              <h4>Sarah J.</h4>
+              <span>CEO of TechGrowth</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-up delay-1">
+          <div class="testimonial-quote-icon">❝</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We switched from a legacy PBX to My Call Connect in under a day. The cost savings and flexibility are unmatched in the market."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ff6b6b, #ffd93d)">MK</div>
+            <div>
+              <h4>Michael K.</h4>
+              <span>CTO of NexaHub</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-up delay-2">
+          <div class="testimonial-quote-icon">❝</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"International calling for our distributed team is now seamless. We have local numbers in 12 countries and our clients love it."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: linear-gradient(135deg, #2ed573, #00e5ff)">PL</div>
+            <div>
+              <h4>Priya L.</h4>
+              <span>Operations Director, GlobalBridge</span>
             </div>
           </div>
         </div>
@@ -210,21 +227,45 @@ import Layout from '../layouts/Layout.astro';
         <h2>Frequently Asked <span class="text-gradient-primary">Questions</span></h2>
       </div>
 
-      <div class="space-y-4">
-        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
-          <h3 class="text-xl font-bold text-white mb-2">What is a Cloud Business Phone System?</h3>
-          <p class="text-gray-400">A cloud business phone system (VoIP) uses the internet to handle calls instead of
-            traditional copper wires, offering more features at a lower cost.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            What is a Cloud Business Phone System?
+            <div class="faq-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            A cloud business phone system (VoIP) uses the internet to handle calls instead of traditional copper wires, offering more features at a lower cost.
+          </div>
         </div>
-        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
-          <h3 class="text-xl font-bold text-white mb-2">Can I keep my existing business number?</h3>
-          <p class="text-gray-400">Yes! My Call Connect offers seamless number porting so you can switch without losing
-            your brand identity.</p>
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I keep my existing business number?
+            <div class="faq-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Yes! My Call Connect offers seamless number porting so you can switch without losing your brand identity.
+          </div>
         </div>
-        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
-          <h3 class="text-xl font-bold text-white mb-2">Is My Call Connect suitable for small businesses?</h3>
-          <p class="text-gray-400">Absolutely. Our scalable solutions grow with you, whether you have 2 employees or
-            2,000.</p>
+        <div class="faq-item">
+          <div class="faq-question">
+            Is My Call Connect suitable for small businesses?
+            <div class="faq-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Absolutely. Our scalable solutions grow with you, whether you have 2 employees or 2,000.
+          </div>
         </div>
       </div>
     </div>
@@ -239,7 +280,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="cta-desc text-lg">Join thousands of businesses scaling with My Call Connect.</p>
           <div class="flex justify-center gap-4 mt-8 flex-wrap">
             <a href="/contact" class="btn btn-light">Schedule a Demo</a>
-            <a href="/support" class="btn border border-white text-white hover:bg-white/10">Contact Support</a>
+            <a href="/support" class="btn btn-light">Contact Support</a>
           </div>
         </div>
       </div>

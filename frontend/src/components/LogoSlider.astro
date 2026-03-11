@@ -1,0 +1,100 @@
+---
+const logos = [
+  { name: "Salesforce", url: "https://www.salesforce.com", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/1280px-Salesforce.com_logo.svg.png" },
+  { name: "HubSpot", url: "https://www.hubspot.com", img: "https://cdn.simpleicons.org/hubspot" },
+  { name: "Zendesk", url: "https://www.zendesk.com", img: "https://cdn.simpleicons.org/zendesk" },
+  { name: "Slack", url: "https://slack.com", img: "https://cdn.iconscout.com/icon/free/png-256/free-slack-icon-svg-download-png-1205068.png" },
+  { name: "Microsoft", url: "https://www.microsoft.com", img: "https://www.logo.wine/a/logo/Microsoft_Teams/Microsoft_Teams-Logo.wine.svg" },
+  { name: "Zoom", url: "https://zoom.us", img: "https://cdn.simpleicons.org/zoom" }
+];
+---
+
+<section class="section section-alt hide-on-mobile">
+  <div class="container">
+    <div class="section-header">
+      <h2>Seamless <span class="text-gradient-primary">Integrations</span></h2>
+      <p>Connect My Call Connect with your favorite tools and build custom workflows with our powerful API</p>
+    </div>
+    <!-- Integration Logos Slider -->
+    <div class="logo-slider">
+      <div class="logo-track">
+        {/* Original Set */}
+        {logos.map((logo) => (
+          <a href={logo.url} target="_blank" rel="noopener noreferrer" class="logo-item" title={logo.name}>
+            <img src={logo.img} alt={logo.name} class="logo-img" width="40" height="40" />
+          </a>
+        ))}
+        {/* Duplicate Set 1 */}
+        {logos.map((logo) => (
+          <a href={logo.url} target="_blank" rel="noopener noreferrer" class="logo-item" aria-hidden="true" tabindex="-1">
+            <img src={logo.img} alt={logo.name} class="logo-img" width="40" height="40" />
+          </a>
+        ))}
+        {/* Duplicate Set 2 */}
+        {logos.map((logo) => (
+          <a href={logo.url} target="_blank" rel="noopener noreferrer" class="logo-item" aria-hidden="true" tabindex="-1">
+            <img src={logo.img} alt={logo.name} class="logo-img" width="40" height="40" />
+          </a>
+        ))}
+        {/* Duplicate Set 3 to ensure smooth scrolling on large screens */}
+        {logos.map((logo) => (
+          <a href={logo.url} target="_blank" rel="noopener noreferrer" class="logo-item" aria-hidden="true" tabindex="-1">
+            <img src={logo.img} alt={logo.name} class="logo-img" width="40" height="40" />
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .logo-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    padding: 2rem 0;
+  }
+
+  .logo-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    gap: 5rem;
+  }
+
+  .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+  }
+
+  .logo-item:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% / 4)); /* 4 sets of logos */
+    }
+  }
+
+  /* Pause animation on hover */
+  .logo-track:hover {
+    animation-play-state: paused;
+  }
+</style>

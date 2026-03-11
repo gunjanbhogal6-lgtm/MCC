@@ -1,3 +1,14 @@
+import { c as createComponent, b as addAttribute, r as renderComponent, d as renderScript, e as renderSlot, f as renderHead, a as renderTemplate, g as createAstro } from './astro/server_Dk78qWC5.mjs';
+import 'piccolore';
+import 'html-escaper';
+import { jsx } from 'react/jsx-runtime';
+import 'react';
+
+function GlobalStyles() {
+  return /* @__PURE__ */ jsx("style", { dangerouslySetInnerHTML: { __html: `
+/* =====================================
+   1. GLOBAL VARIABLES & THEME
+   ===================================== */
 :root {
   --primary: #00bcd4;
   --primary-hover: #00acc1;
@@ -131,7 +142,9 @@ h1, h2, h3, h4, .logo {
   max-width: 900px;
 }
 
-/* Header */
+/* =====================================
+   2. HEADER STYLING
+   ===================================== */
 header {
   position: fixed;
   top: 20px;
@@ -627,7 +640,9 @@ nav {
   display: none !important;
 }
 
-/* Hero */
+/* =====================================
+   3. HERO SECTION (HOME PAGE)
+   ===================================== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -962,7 +977,9 @@ nav {
   transform: translateY(-2px);
 }
 
-/* Sections */
+/* =====================================
+   4. SECTIONS & LAYOUTS
+   ===================================== */
 .section {
   padding: 120px 0;
   position: relative;
@@ -1023,7 +1040,9 @@ nav {
   gap: 2rem;
 }
 
-/* Cards */
+/* =====================================
+   5. CARDS COMPONENTS
+   ===================================== */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1275,7 +1294,9 @@ nav {
   padding-bottom: 1rem;
 }
 
-/* Footer */
+/* =====================================
+   6. FOOTER STYLING
+   ===================================== */
 footer {
   background: linear-gradient(135deg, #0a1f25 0%, #002b36 100%); /* Dark cyan blue */
   padding: 100px 0 40px;
@@ -1455,7 +1476,9 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Footer */
+/* =====================================
+   6. FOOTER STYLING
+   ===================================== */
 footer {
   background: #000000;
   padding: 100px 0 40px;
@@ -1523,7 +1546,9 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive */
+/* =====================================
+   7. RESPONSIVE STYLING
+   ===================================== */
 @media (max-width: 1024px) {
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
@@ -1706,3 +1731,18 @@ footer {
     font-size: 1.75rem;
   }
 }
+
+    ` } });
+}
+
+const $$Astro = createAstro();
+const $$Layout = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$Layout;
+  const { title, description } = Astro2.props;
+  return renderTemplate`<html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description"${addAttribute(description || "Empower your business with My Call Connect\u2019s cloud-based phone system.", "content")}><title>${title || "Cloud Business Phone System | VoIP & PBX Solutions \u2013 My Call Connect"}</title><!-- Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet"><!-- Global React Styles -->${renderComponent($$result, "GlobalStyles", GlobalStyles, {})}<!-- CSS -->${renderScript($$result, "C:/Users/User/Documents/trae_projects/mycallconnect/frontend/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts")}${renderSlot($$result, $$slots["head"])}${renderHead()}</head> <body> <!-- Header --> <header id="header"> <div class="header-container"> <nav> <a href="/" class="logo"><img src="/images/mycalllogo.png" alt="My Call Connect"></a> <button class="mobile-menu-btn" aria-label="Toggle menu"> <span></span> <span></span> <span></span> </button> <ul class="nav-links"> <li><a href="/">Home</a></li> <li class="nav-dropdown-wrap"> <a href="javascript:void(0)" class="nav-dropdown-trigger nav-products-btn" aria-haspopup="true" aria-expanded="false">
+Products
+<svg class="nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <polyline points="6 9 12 15 18 9"></polyline> </svg> </a> <div class="nav-dropdown nav-products"> <ul class="dropdown-list"> <li> <a href="/wholesale-voice" class="dropdown-item"> <span class="drop-icon"> <svg class="icon-wave" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <path d="M3 12c2 0 2-6 4-6s2 12 4 12 2-12 4-12 2 6 4 6"></path> </svg> </span> <span class="drop-text"><strong>Wholesale Voice</strong><small>Global SIP trunking</small></span> </a> </li> <li> <a href="/virtual-phone-number" class="dropdown-item"> <span class="drop-icon"> <svg class="icon-phone" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.6 2.41a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.77.28 1.58.48 2.41.6A2 2 0 0 1 22 16.92z"></path> <path class="ring" d="M15 3a6 6 0 0 1 6 6"></path> </svg> </span> <span class="drop-text"><strong>Virtual Phone Number</strong><small>Ringing numbers worldwide</small></span> </a> </li> <li> <a href="/international-top-up" class="dropdown-item"> <span class="drop-icon"> <svg class="icon-globe" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="12" cy="12" r="9"></circle> <path d="M2 12h20M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path> </svg> </span> <span class="drop-text"><strong>International Top-Up</strong><small>Global recharge</small></span> </a> </li> <li> <a href="/sms-service" class="dropdown-item"> <span class="drop-icon"> <svg class="icon-sms" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path> <circle class="dot" cx="10" cy="10" r="1.2"></circle> <circle class="dot" cx="14" cy="10" r="1.2"></circle> <circle class="dot" cx="18" cy="10" r="1.2"></circle> </svg> </span> <span class="drop-text"><strong>SMS Service</strong><small>Notifications at scale</small></span> </a> </li> <li> <a href="/cc-routes" class="dropdown-item"> <span class="drop-icon"> <svg class="icon-flow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="5" cy="5" r="2"></circle> <circle cx="19" cy="5" r="2"></circle> <circle cx="12" cy="19" r="2"></circle> <path class="flow" d="M7 6c3 0 3 6 5 6s2-6 5-6M12 13v4"></path> </svg> </span> <span class="drop-text"><strong>CC Routes</strong><small>Optimized call paths</small></span> </a> </li> </ul> </div> </li> <li><a href="/solutions">Solutions</a></li> <li><a href="/resources">Resources</a></li> <li><a href="/about">About Us</a></li> </ul> </nav> </div> </header> ${renderSlot($$result, $$slots["default"])} <!-- Footer --> <footer id="contact"> <div class="container"> <div class="footer-grid"> <div class="footer-col"> <a href="#" class="logo logo-footer"><img src="/images/mycalllogowhite.png" alt="My Call Connect"></a> <p class="footer-p">Empowering startups and enterprises with premium phone numbers from 50+ countries worldwide.</p> </div> <div class="footer-col" id="products"> <h3>VoIP Solutions</h3> <ul class="footer-links"> <li><a href="/wholesale-voice">Wholesale Voice</a></li> <li><a href="/virtual-phone-number">Virtual Phone Number</a></li> <li><a href="/international-top-up">International Top-Up</a></li> <li><a href="/sms-service">SMS Service</a></li> <li><a href="/cc-routes">CC Routes</a></li> </ul> </div> <div class="footer-col" id="learn"> <h3>Learn</h3> <ul class="footer-links"> <li><a href="/about">About Us</a></li> <li><a href="/blog">Blog & News</a></li> <li><a href="/knowledge-base">Knowledge Base</a></li> <li><a href="/case-studies">Case Studies</a></li> </ul> </div> <div class="footer-col"> <h3>Contact</h3> <ul class="footer-links"> <li><a href="/support">Support 24/7</a></li> <li><a href="/contact">Sales Team</a></li> <li><a href="/partners">Partner Program</a></li> </ul> </div> </div> <div class="copyright"> <p>Copyright © 2026 My Call Connect. All Rights Reserved. Crafted with precision.</p> </div> </div> </footer> ${renderScript($$result, "C:/Users/User/Documents/trae_projects/mycallconnect/frontend/src/layouts/Layout.astro?astro&type=script&index=1&lang.ts")} </body> </html>`;
+}, "C:/Users/User/Documents/trae_projects/mycallconnect/frontend/src/layouts/Layout.astro", void 0);
+
+export { $$Layout as $ };

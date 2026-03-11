@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LogoSlider from '../components/LogoSlider.astro';
 ---
 
 <Layout title="Resource Center | My Call Connect" description="Explore My Call Connect's resource center for guides, tutorials, case studies, and more to help you succeed.">
@@ -24,24 +25,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="section section-alt hide-on-mobile">
-    <div class="container">
-      <div class="section-header">
-        <h2>Seamless <span class="text-gradient-primary">Integrations</span></h2>
-        <p>Connect My Call Connect with your favorite tools and build custom workflows with our powerful API</p>
-      </div>
-      <!-- Integration Logos Placeholder -->
-      <div class="flex flex-wrap justify-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-        <!-- Using generic SVGs as placeholders for logos -->
-        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center"><span class="font-bold text-gray-500">SF</span></div>
-        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center"><span class="font-bold text-gray-500">HS</span></div>
-        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center"><span class="font-bold text-gray-500">ZD</span></div>
-        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center"><span class="font-bold text-gray-500">SL</span></div>
-        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center"><span class="font-bold text-gray-500">MS</span></div>
-        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center"><span class="font-bold text-gray-500">ZM</span></div>
-      </div>
-    </div>
-  </section>
+  <LogoSlider />
 
   <section class="section">
     <div class="container">
@@ -88,12 +72,12 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="section section-alt">
     <div class="container">
-      <div class="section-header flex justify-between items-end">
-        <div class="text-left">
-          <h2>Featured <span class="text-gradient-primary">Resources</span></h2>
-          <p class="mx-0">Hand-picked content to help you succeed</p>
+      <div class="section-header">
+        <h2>Featured <span class="text-gradient-primary">Resources</span></h2>
+        <p>Hand-picked content to help you succeed</p>
+        <div class="mt-4">
+          <a href="#" class="text-link">View All</a>
         </div>
-        <a href="#" class="text-link">View All</a>
       </div>
       
       <div class="grid-3">
@@ -138,12 +122,12 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="section">
     <div class="container">
-      <div class="section-header flex justify-between items-end">
-        <div class="text-left">
-          <h2>Guides & <span class="text-gradient-primary">Tutorials</span></h2>
-          <p class="mx-0">Step-by-step instructions for every feature</p>
+      <div class="section-header">
+        <h2>Guides & <span class="text-gradient-primary">Tutorials</span></h2>
+        <p>Step-by-step instructions for every feature</p>
+        <div class="mt-4">
+          <a href="#" class="text-link">Browse All Guides</a>
         </div>
-        <a href="#" class="text-link">Browse All Guides</a>
       </div>
       
       <div class="grid-3">
@@ -188,49 +172,6 @@ import Layout from '../layouts/Layout.astro';
           <h3>Admin Panel: Complete Guide</h3>
           <p class="mb-4">Manage users, billing, and settings</p>
           <div class="text-sm text-gray-500">20 min</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header flex justify-between items-end">
-        <div class="text-left">
-          <h2>Videos & <span class="text-gradient-primary">Webinars</span></h2>
-          <p class="mx-0">Watch and learn from the experts</p>
-        </div>
-        <a href="#" class="text-link">Browse All Guides</a>
-      </div>
-      
-      <div class="grid-3">
-        <!-- Video 1 -->
-        <div class="card card-hover-effect">
-          <div class="aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center relative group cursor-pointer overflow-hidden">
-             <!-- Placeholder for Video Thumbnail -->
-             <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900 to-blue-900 opacity-80"></div>
-             <svg class="w-12 h-12 text-white relative z-10 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-          </div>
-          <h3>Product Demo: Full Platform Walkthrough</h3>
-          <p class="text-sm text-gray-500">12K views</p>
-        </div>
-        <!-- Video 2 -->
-        <div class="card card-hover-effect">
-          <div class="aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center relative group cursor-pointer overflow-hidden">
-             <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900 to-blue-900 opacity-80"></div>
-             <svg class="w-12 h-12 text-white relative z-10 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-          </div>
-          <h3>Customer Success Story: Global Corp</h3>
-          <p class="text-sm text-gray-500">6.2K views</p>
-        </div>
-        <!-- Video 3 -->
-        <div class="card card-hover-effect">
-          <div class="aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center relative group cursor-pointer overflow-hidden">
-             <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900 to-blue-900 opacity-80"></div>
-             <svg class="w-12 h-12 text-white relative z-10 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-          </div>
-          <h3>Expert Panel: AI in Communications</h3>
-          <p class="text-sm text-gray-500">9.8K views</p>
         </div>
       </div>
     </div>
@@ -359,12 +300,12 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="section">
     <div class="container">
-      <div class="section-header flex justify-between items-end">
-        <div class="text-left">
-          <h2>Latest from <span class="text-gradient-primary">Our Blog</span></h2>
-          <p class="mx-0">Tips, insights, and updates from the My Call Connect team</p>
+      <div class="section-header">
+        <h2>Latest from <span class="text-gradient-primary">Our Blog</span></h2>
+        <p>Tips, insights, and updates from the My Call Connect team</p>
+        <div class="mt-4">
+          <a href="#" class="text-link">Browse All Blog Posts</a>
         </div>
-        <a href="#" class="text-link">Browse All Guides</a>
       </div>
       
       <div class="grid-3">
@@ -402,23 +343,32 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="grid-3">
         <div class="card card-hover-effect">
+          <div class="card-icon mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
           <h3>API Documentation</h3>
           <p class="mb-4">Complete reference for all API endpoints</p>
-          <a href="#" class="btn btn-primary text-sm py-2 px-4">View Docs</a>
+          <a href="#" class="btn btn-primary text-sm py-2 px-4 shadow-sm hover:shadow-md transition-all">View Docs</a>
         </div>
         <div class="card card-hover-effect">
+          <div class="card-icon mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
           <h3>SDK Libraries</h3>
           <p class="mb-4">Official SDKs for popular languages</p>
-          <a href="#" class="btn btn-primary text-sm py-2 px-4">Browse SDKs</a>
+          <a href="#" class="btn btn-primary text-sm py-2 px-4 shadow-sm hover:shadow-md transition-all">Browse SDKs</a>
         </div>
         <div class="card card-hover-effect">
+          <div class="card-icon mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
           <h3>Code Examples</h3>
           <p class="mb-4">Sample code and implementation guides</p>
-          <a href="#" class="btn btn-primary text-sm py-2 px-4">View Examples</a>
+          <a href="#" class="btn btn-primary text-sm py-2 px-4 shadow-sm hover:shadow-md transition-all">View Examples</a>
         </div>
       </div>
-      <div class="text-center mt-8">
-        <a href="#" class="text-link">Developer Forum - Connect with other developers</a>
+      <div class="text-center mt-12 w-full">
+        <a href="#" class="text-link font-semibold hover:opacity-80 transition-opacity">Developer Forum - Connect with other developers</a>
       </div>
     </div>
   </section>
@@ -453,14 +403,50 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="section bg-gradient-to-r from-gray-900 to-blue-900 text-white rounded-3xl mx-4 lg:mx-auto max-w-6xl my-12 p-12 text-center">
-    <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
-    <p class="mb-8 opacity-80 max-w-xl mx-auto">Subscribe to our newsletter for the latest resources, tips, and product updates</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-      <input type="email" placeholder="Enter your email" class="px-6 py-3 rounded-full text-gray-900 w-full focus:outline-none focus:ring-2 focus:ring-cyan-400">
-      <button class="btn btn-primary whitespace-nowrap">Subscribe</button>
+  <section class="section" aria-labelledby="newsletter-heading">
+    <div class="container container-sm">
+      <div class="newsletter-box">
+        <div class="relative z-10">
+          <span class="newsletter-pill">Stay Updated</span>
+          
+          <h2 id="newsletter-heading" class="newsletter-heading">
+            Subscribe to our<br/>newsletter
+          </h2>
+          
+          <p class="newsletter-sub">
+            Get the latest resources, tips, and product updates delivered straight to your inbox.
+          </p>
+          
+          <form class="newsletter-input-container" action="#" method="POST" aria-label="Newsletter Subscription Form">
+            <div style="width: 100%; text-align: left;">
+              <label for="newsletter-email" style="display: block; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem; padding-left: 0.25rem;">Email Address</label>
+              <div class="newsletter-input-wrapper">
+                <span class="newsletter-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </span>
+                <input 
+                  id="newsletter-email" 
+                  type="email" 
+                  name="email" 
+                  placeholder="Enter your email address" 
+                  required 
+                  class="newsletter-input" 
+                />
+              </div>
+            </div>
+            
+            <button type="submit" class="newsletter-btn">
+              <span>Subscribe</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+            </button>
+          </form>
+          
+          <p class="newsletter-footer">
+            Join 25,000+ subscribers. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
     </div>
-    <p class="text-xs mt-4 opacity-60">Join 25,000+ subscribers. Unsubscribe anytime.</p>
   </section>
 
   <section class="section">
@@ -471,7 +457,7 @@ import Layout from '../layouts/Layout.astro';
           <h2>Explore our resources and see how My Call Connect can transform your business communications</h2>
           <div class="flex justify-center gap-4 mt-8">
             <a href="/contact" class="btn btn-light">Start Free Trial</a>
-            <a href="/contact" class="btn border border-white text-white hover:bg-white/10">Contact Sales</a>
+            <a href="/contact" class="btn btn-light">Contact Sales</a>
           </div>
         </div>
       </div>
