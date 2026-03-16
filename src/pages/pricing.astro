@@ -1,0 +1,629 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Pricing & Plans | My Call Connect" description="Simple, transparent pricing for businesses of all sizes. Choose the plan that fits your needs.">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-ring ring-1 hide-on-mobile"></div>
+      <div class="hero-ring ring-2 hide-on-mobile"></div>
+      
+      <div class="hero-content animate-up">
+        <span class="badge">Flexible Plans</span>
+        <h1>Simple, Transparent <br><span class="text-gradient">Pricing</span></h1>
+        <p class="delay-1 animate-up">Choose the perfect plan for your business communication needs. No hidden fees, just powerful features.</p>
+        
+        <div class="pricing-toggle delay-2 animate-up">
+          <span class="toggle-label active">Annually <span class="save-badge">Save 20%</span></span>
+          <!-- Toggle switch visual only for now, implying annual is selected -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="pricing-grid">
+        <!-- Starter Plan -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <h3>Starter</h3>
+            <p class="plan-desc">Perfect for small organizations needing the essentials.</p>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">16</span>
+              <span class="period">/user/month</span>
+            </div>
+            <p class="billing-note">billed annually ($24 monthly)</p>
+            <a href="/contact" class="btn btn-outline-primary full-width">Try Free Demo</a>
+          </div>
+          <div class="card-features">
+            <ul>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Unlimited domestic calling</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> SMS and MMS</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> IVR & Visual voicemail</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Google, Microsoft integrations</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Single sign-on</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Real-time QoS Analytics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Business Plan -->
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <div class="card-header">
+            <h3>Business</h3>
+            <p class="plan-desc">Advanced features for growing teams and businesses.</p>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">20</span>
+              <span class="period">/user/month</span>
+            </div>
+            <p class="billing-note">billed annually ($28 monthly)</p>
+            <a href="/contact" class="btn btn-primary full-width">Try Free Demo</a>
+          </div>
+          <div class="card-features">
+            <ul>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Starter, plus:</strong></li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Auto call recording</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> CRM integrations (Salesforce, HubSpot)</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Multi-site management</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Unlimited internet fax</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Advanced call monitoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card">
+          <div class="value-badge">Best Value</div>
+          <div class="card-header">
+            <h3>Enterprises</h3>
+            <p class="plan-desc">Maximum scalability and security for large organizations.</p>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">28</span>
+              <span class="period">/user/month</span>
+            </div>
+            <p class="billing-note">billed annually ($36 monthly)</p>
+            <a href="/contact" class="btn btn-outline-primary full-width">Contact Sales</a>
+          </div>
+          <div class="card-features">
+            <ul>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Business, plus:</strong></li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Customizable business analytics</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Unlimited AI video meetings (200 participants)</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Device analytics and alerts</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Unlimited storage</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Custom roles & permissions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Compare <span class="text-gradient-primary">Features</span></h2>
+        <p>Detailed breakdown of what's included in each plan</p>
+      </div>
+
+      <div class="table-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="feature-col">Features</th>
+              <th>Starter</th>
+              <th>Business</th>
+              <th>Enterprises</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cloud phone system -->
+            <tr class="section-row"><td colspan="4">Cloud phone system</td></tr>
+            <tr>
+              <td>Business phone or toll-free numbers</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Toll-free minutes</td>
+              <td>100</td>
+              <td>1000</td>
+              <td>10,000</td>
+            </tr>
+            <tr>
+              <td>Unlimited domestic calling (US/Canada)</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Enhanced Business SMS</td>
+              <td>25/user/mo</td>
+              <td>100/user/mo</td>
+              <td>200/user/mo</td>
+            </tr>
+            <tr>
+              <td>Visual voicemail</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Multi-level auto attendant and IVR</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Shared lines</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+             <tr>
+              <td>HD voice, AI-noise cancellation</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+             <tr>
+              <td>Up to 8-digit extensions with site codes</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Advanced call monitoring (whisper, barge)</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Hot desking</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+
+            <!-- Unified communications -->
+            <tr class="section-row"><td colspan="4">Unified communications</td></tr>
+            <tr>
+              <td>Team messaging and file sharing</td>
+              <td>Limited storage</td>
+              <td>Limited storage</td>
+              <td>Unlimited storage</td>
+            </tr>
+            <tr>
+              <td>Video meetings participants</td>
+              <td>100</td>
+              <td>100</td>
+              <td>200</td>
+            </tr>
+             <tr>
+              <td>AI Meeting Insights & Transcription</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Unlimited internet fax</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Unlimited storage</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+
+            <!-- Administration -->
+            <tr class="section-row"><td colspan="4">Administration</td></tr>
+            <tr>
+              <td>99.999% uptime SLA</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Single sign-on (SSO)</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✕</span></td>
+            </tr>
+             <tr>
+              <td>24/7 support</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✕</span></td>
+            </tr>
+            <tr>
+              <td>Cost center management</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✕</span></td>
+            </tr>
+            <tr>
+              <td>Multi-site admin</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Custom roles and permissions</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+
+            <!-- Analytics -->
+            <tr class="section-row"><td colspan="4">Analytics</td></tr>
+            <tr>
+              <td>Call log reports</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Real-time QoS analytics</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Business Analytics Essentials</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✕</span></td>
+            </tr>
+             <tr>
+              <td>Device analytics and alerts</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+             <tr>
+              <td>Live Reports for queue management</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+
+             <!-- Platform -->
+            <tr class="section-row"><td colspan="4">Platform & Integrations</td></tr>
+            <tr>
+              <td>Developer platform & APIs</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Integrations (Office 365, Google, Slack)</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>CRM integrations (Salesforce, Zendesk)</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Industry-specific integrations</td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="cross">✕</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-sm">
+      <div class="cta-box">
+        <div class="cta-content">
+          <span class="badge badge-light">Need a Custom Solution?</span>
+          <h2>Talk to Our Sales Team</h2>
+          <p>Have specific requirements or need a large-scale deployment? We can tailor a solution just for you.</p>
+          <div class="flex justify-center gap-4 mt-8">
+            <a href="/contact" class="btn btn-light">Contact Sales</a>
+            <a href="tel:8005745290" class="btn btn-outline-white">(800) 574 5290</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Pricing Grid */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .pricing-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    position: relative;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--primary);
+  }
+
+  .pricing-card.popular {
+    border: 2px solid var(--primary);
+    background: linear-gradient(to bottom, rgba(0, 188, 212, 0.05), var(--surface));
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+  }
+
+  .value-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pricing-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .plan-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    height: 48px; /* Fixed height for alignment */
+  }
+
+  .price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 2px;
+  }
+
+  .amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .period {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+  }
+
+  .billing-note {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+  }
+
+  .card-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .btn-outline-primary {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .btn-outline-primary:hover {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .btn-outline-white {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .btn-outline-white:hover {
+    background: white;
+    color: var(--primary);
+    border-color: white;
+  }
+
+  .full-width {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Table Styles */
+  .table-container {
+    overflow-x: auto;
+    background: var(--surface);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+  }
+
+  .comparison-table th {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--border);
+    font-family: 'DM Serif Text', serif;
+  }
+
+  .comparison-table th.feature-col {
+    text-align: left;
+    width: 40%;
+  }
+
+  .comparison-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .comparison-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .section-row td {
+    background: rgba(0, 188, 212, 0.05);
+    font-weight: 800;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 1rem;
+    text-align: left !important;
+  }
+
+  .check {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .cross {
+    color: #cbd5e1;
+    font-size: 1.2rem;
+  }
+
+  .pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .toggle-label {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+  }
+  
+  .toggle-label.active {
+    color: var(--text-main);
+  }
+
+  .save-badge {
+    background: #dbeafe;
+    color: var(--accent);
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    .pricing-card {
+      padding: 2rem 1.5rem;
+    }
+    
+    .amount {
+      font-size: 3rem;
+    }
+    
+    .table-container {
+      padding: 1rem;
+    }
+  }
+</style>
